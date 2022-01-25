@@ -82,7 +82,7 @@ il_mgmt_banners:
     Please contact the rightful owner(s) before making changes:
 
       Michael Pergament <mp@arista.com> - Systems Engineer
-      Florian Hibler <florian@arista.com> - Advanced Services Engineer
+      Florian Hibler <florian@arista.com> - Systems Engineer
 
     EOF
   motd: |
@@ -238,13 +238,16 @@ pe:
         smm310:
           id: 9
           mgmt_ip: 172.28.135.207/20
+        cdv470:
+          id: 10
+          mgmt_ip: 172.30.181.154/20
     hamburg:
       filter:
         tenants: [  ]
         tags: [ hamburg ]
       nodes:
         cdv469:
-          id: 10
+          id: 11
           mgmt_ip: 172.28.136.166/20
 rr:
   defaults:
@@ -282,90 +285,63 @@ connected_endpoints_keys:
   cpes:
     type: cpe
 
-# backbone_interfaces:
-#   p2p_links_ip_pools:
-#     underlay_pool: 100.64.48.0/24
-#   p2p_links_profiles:
-#     default_bb_profile:
-#       speed: 100full
-#       mtu: 1500
-#       isis_hello_padding: false
-#       isis_metric: 60
-#       ip_pool: underlay_pool
-#       isis_circuit_type: level-2
-#       ipv6_enable: true
-#       isis_authentication_mode: md5
-#       isis_authentication_key: $1c$sTNAlR6rKSw=
-#   p2p_links:
-#     # PE1 links
-#     # If using IP unnumbered we don't even need 2 nodes or id or pool or a second interface...
-#     # If pool is missing we default to unnumbered?
-#     - nodes: [ pe1, pe2 ]
-#       id: 1
-#       interfaces: [ Ethernet1, Ethernet1 ]
-#       profile: default_bb_profile
-#       # bfd: false # should default to true
-#     - nodes: [ pe1, p6 ]
-#       id: 2
-#       interfaces: [ Ethernet2, Ethernet2 ]
-#       ip_pool: underlay_pool
-#       speed: 100full
-#       mtu: 1500
-#       isis_hello_padding: true
-#       isis_circuit_type: level-2
-#       isis_metric: 60
-#       # qos_profile: someprofile
-#     - nodes: [ pe1, rr7 ]
-#       id: 3
-#       interfaces: [ Ethernet3, Ethernet2 ]
-#       profile: default_bb_profile
-
-#     # PE2 links
-#     - nodes: [ pe2, rr8 ]
-#       id: 4
-#       interfaces: [ Ethernet3, Ethernet1 ]
-#       profile: default_bb_profile
-#     - nodes: [ pe2, pe3 ]
-#       id: 5
-#       interfaces: [ Ethernet2, Ethernet2 ]
-#       profile: default_bb_profile
-
-#     # PE3 links
-#     - nodes: [ pe3, rr7 ]
-#       id: 6
-#       interfaces: [ Ethernet3, Ethernet1 ]
-#       profile: default_bb_profile
-#     - nodes: [ pe3, p4 ]
-#       id: 7
-#       interfaces: [ Ethernet1, Ethernet1 ]
-#       profile: default_bb_profile
-
-#     # P4 links
-#     - nodes: [ p4, rr7 ]
-#       id: 8
-#       interfaces: [ Ethernet3, Ethernet4 ]
-#       profile: default_bb_profile
-#     - nodes: [ p4, pe5 ]
-#       id: 9
-#       interfaces: [ Ethernet2, Ethernet2 ]
-#       profile: default_bb_profile
-
-#     # PE5 links
-#     - nodes: [ pe5, rr7 ]
-#       id: 10
-#       interfaces: [ Ethernet3, Ethernet3 ]
-#       ip: ["unnumbered loopback0", "unnumbered loopback0"]
-#     - nodes: [ pe5, p6 ]
-#       id: 11
-#       interfaces: [ Ethernet1, Ethernet1 ]
-#       profile: default_bb_profile
-
-#     # RR8 links
-#     - nodes: [ rr7, rr8 ]
-#       id: 12
-#       port_channel:
-#         mode: active
-#         nodes_child_interfaces:
-#           rr7: [ Ethernet5, Ethernet6 ]
-#           rr8: [ Ethernet2, Ethernet3 ]
-#       profile: default_bb_profile
+backbone_interfaces:
+  p2p_links_profiles:
+    default_bb_profile:
+      mtu: 9214
+      isis_hello_padding: false
+      # ip_pool: underlay_pool
+      isis_circuit_type: level-2
+      ipv6_enable: true
+      isis_authentication_mode: md5
+      isis_authentication_key: $1c$sTNAlR6rKSw=
+      ip: ["unnumbered loopback0", "unnumbered loopback0"]
+  p2p_links:
+    - nodes: [ lyv558, lyv559 ]
+      id: 1
+      interfaces: [ Ethernet1/1, Ethernet1/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv558, smm310 ]
+      id: 2
+      interfaces: [ Ethernet2/1, Ethernet33/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv558, smm153 ]
+      id: 3
+      interfaces: [ Ethernet2/1, Ethernet33/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv558, smm154 ]
+      id: 4
+      interfaces: [ Ethernet3/1, Ethernet33/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv559, lyv582 ]
+      id: 5
+      interfaces: [ Ethernet2/1, Ethernet1/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv559, smm153 ]
+      id: 6
+      interfaces: [ Ethernet3/1, Ethernet34/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv559, smm154 ]
+      id: 7
+      interfaces: [ Ethernet4/1, Ethernet34/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv559, smm311 ]
+      id: 8
+      interfaces: [ Ethernet5/1, Ethernet35/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv582, smm313 ]
+      id: 9
+      interfaces: [ Ethernet3/1, Ethernet33/1 ]
+      profile: default_bb_profile
+    - nodes: [ smm312, smm311 ]
+      id: 10
+      interfaces: [ Ethernet33/1, Ethernet33/1 ]
+      profile: default_bb_profile
+    - nodes: [ smm311, smm310 ]
+      id: 11
+      interfaces: [ Ethernet34/1, Ethernet34/1 ]
+      profile: default_bb_profile
+    - nodes: [ smm310, cdv470 ]
+      id: 12
+      interfaces: [ Ethernet1/1, Ethernet49/1 ]
+      profile: default_bb_profile
