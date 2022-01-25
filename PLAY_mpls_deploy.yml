@@ -26,8 +26,6 @@
       import_role:
         name: arista.avd.eos_cli_config_gen
 
-
-
 # - name: Configuration deployment with CVP
 #   hosts: cv_server
 #   connection: local

@@ -51,6 +51,9 @@ aaa_root:
 il_mgmt_load_interval:
   default: 2
 
+il_mgmt_logging:
+  console: informational
+
 # Timezone
 il_mgmt_clock:
   timezone: Europe/Berlin
@@ -91,15 +94,10 @@ il_mgmt_banners:
     EOF
 
 local_users:
-  someuser:
+  arista:
     privilege: 15
     role: network-admin
-    sha512_password: "someshapassword"
-
-  cvpadmin:
-    privilege: 15
-    role: network-admin
-    sha512_password: "someshapassword"
+    sha512_password: "$6$PazQmSHwPM9QfmMU$qjnIx5.v8IWKe80pJXhMhxKc223/buiLlJB.gFEZsMNX0N63Z4mEzIyfb4Y2I8JNqzNh.pxLV8Vs4w3jZVCO31"
 
 il_mgmt_management_api_http:
   enable_http: true
@@ -244,7 +242,7 @@ pe:
           mgmt_ip: 172.28.135.207/20
         cdv470:
           id: 10
-          mgmt_ip: 172.30.181.154/20
+          mgmt_ip: 172.28.136.167/20
     hamburg:
       filter:
         tenants: [  ]
