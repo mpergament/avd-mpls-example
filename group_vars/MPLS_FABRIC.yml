@@ -78,6 +78,10 @@ il_mgmt_aaa_authentication:
     local:
       allow_nopassword: true
 
+il_mgmt_aaa_authorization:
+  exec:
+    default: local
+
 # Banners 
 il_mgmt_banners:
   login: |
@@ -157,6 +161,17 @@ p:
     raw_eos_cli: |
       management security
          password encryption-key common
+      !
+      router isis MPLS_UNDERLAY
+        segment-routing mpls
+          no shutdown
+          flex-algo latency advertised
+      !
+      router traffic-engineering
+        flex-algo
+            flex-algo 128 latency
+              metric min-delay
+              color 100
   node_groups:
     frankfurt:
       filter:
@@ -201,6 +216,17 @@ pe:
     raw_eos_cli: |
       management security
          password encryption-key common
+      !
+      router isis MPLS_UNDERLAY
+        segment-routing mpls
+          no shutdown
+          flex-algo latency advertised
+      !
+      router traffic-engineering
+        flex-algo
+            flex-algo 128 latency
+              metric min-delay
+              color 100
   node_groups:
     frankfurt:
       filter:
@@ -302,6 +328,7 @@ backbone_interfaces:
     - nodes: [ lyv558, lyv559 ]
       id: 1
       interfaces: [ Ethernet1/1, Ethernet1/1 ]
+      te_delay: 30
       profile: default_bb_profile
     - nodes: [ lyv558, smm310 ]
       id: 2
