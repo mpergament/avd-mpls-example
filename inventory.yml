@@ -18,6 +18,16 @@ all:
 
     MPLS_FABRIC:
       children:
+        P:
+          vars:
+            type: p
+          hosts:
+            lyv558:
+              ansible_host: 172.28.129.36
+            lyv559:
+              ansible_host: 172.28.135.18
+            lyv582:
+              ansible_host: 172.28.136.27
         PE:
           vars:
             type: pe
@@ -28,10 +38,6 @@ all:
                   ansible_host: 172.28.135.121
                 smm154:
                   ansible_host: 172.28.135.163
-                lyv558:
-                  ansible_host: 172.28.129.36
-                lyv559:
-                  ansible_host: 172.28.135.18
             BERLIN:
               hosts:
                 smm311:
@@ -46,8 +52,6 @@ all:
                   ansible_host: 172.30.181.154
             AMSTERDAM:
               hosts:
-                lyv582:
-                  ansible_host: 172.28.136.27
                 smm313:
                   ansible_host: 172.28.135.184
             HAMBURG:

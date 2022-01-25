@@ -17,7 +17,7 @@ isis_ti_lfa:
   local_convergence_delay: 15000
 
 # What should the defaults be?
-isis_default_is_type: level-1-2
+isis_default_is_type: level-2
 isis_default_circuit_type: level-2
 isis_default_metric: 50
 isis_advertise_passive_only: true
@@ -149,7 +149,7 @@ bfd_multihop:
 
 # P Routers
 p:
-  platform: vEOS-LAB
+  platform: 7280R3
   defaults:
     loopback_ipv4_pool: 100.70.0.0/24
     loopback_ipv6_pool: "2000:1234:ffff:ffff::/64"
@@ -159,25 +159,38 @@ p:
     raw_eos_cli: |
       management security
          password encryption-key common
-  nodes:
-    p4:
-      id: 4
-      mgmt_ip: 10.30.30.104/24
-    p6:
-      id: 6
-      mgmt_ip: 10.30.30.106/24
+  node_groups:
+    frankfurt:
+      filter:
+        tenants: [ ]
+        tags: [ frankfurt ]
+      nodes:
+        lyv558:
+          id: 3
+          mgmt_ip: 172.28.129.36/20
+        lyv559:
+          id: 4
+          mgmt_ip: 172.28.135.18/20
+    amsterdam:
+      filter:
+        tenants: [  ]
+        tags: [ amsterdam ]
+      nodes:
+        lyv582:
+          id: 7
+          mgmt_ip: 172.28.136.27/20
 
 pe:
   defaults:
     virtual_router_mac_address: 00:1c:73:00:dc:00
-    platform: vEOS-LAB
+    platform: 7280R3
     loopback_ipv4_pool: 192.168.0.0/24
     loopback_ipv6_pool: "2000:1234:ffff:ffff::/64"
-    is_type: level-1-2
+    # is_type: level-2
     node_sid_base: 200
     isis_system_id_prefix: '0000.0001'
     # loopback_ipv4_offset: 3
-    backbone_interface_speed: forced 100gfull
+    # backbone_interface_speed: forced 100gfull
     spanning_tree_priority: 4096
     spanning_tree_mode: mstp
     # spanning_tree_root_super: true
@@ -202,12 +215,6 @@ pe:
         smm154:
           id: 2
           mgmt_ip: 172.28.135.163/20
-        lyv558:
-          id: 3
-          mgmt_ip: 172.28.129.36/20
-        lyv559:
-          id: 4
-          mgmt_ip: 172.28.135.18/20
     berlin:
       filter:
         tenants: [  ]
@@ -224,9 +231,6 @@ pe:
         tenants: [  ]
         tags: [ amsterdam ]
       nodes:
-        lyv582:
-          id: 7
-          mgmt_ip: 172.28.136.27/20
         smm313:
           id: 8
           mgmt_ip: 172.28.135.184/20
