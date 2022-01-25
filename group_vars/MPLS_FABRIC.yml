@@ -171,7 +171,7 @@ pe:
   defaults:
     virtual_router_mac_address: 00:1c:73:00:dc:00
     platform: vEOS-LAB
-    loopback_ipv4_pool: 100.70.0.0/24
+    loopback_ipv4_pool: 192.168.0.0/24
     loopback_ipv6_pool: "2000:1234:ffff:ffff::/64"
     is_type: level-1-2
     node_sid_base: 200
@@ -252,7 +252,7 @@ pe:
 rr:
   defaults:
     platform: vEOS-LAB
-    loopback_ipv4_pool: 100.70.0.0/24
+    loopback_ipv4_pool: 192.168.0.0/24
     loopback_ipv6_pool: "2000:1234:ffff:ffff::/64"
     is_type: level-1-2
     node_sid_base: 100
