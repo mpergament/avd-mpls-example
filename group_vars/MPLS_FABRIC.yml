@@ -340,7 +340,7 @@ backbone_interfaces:
       profile: default_bb_profile
     - nodes: [ lyv558, smm154 ]
       id: 4
-      interfaces: [ Ethernet3/1, Ethernet33/1 ]
+      interfaces: [ Ethernet4/1, Ethernet33/1 ]
       profile: default_bb_profile
     - nodes: [ lyv559, lyv582 ]
       id: 5
