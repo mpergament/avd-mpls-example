@@ -22,36 +22,44 @@ all:
           vars:
             type: pe
           children:
-            SITE1:
+            FRANKFURT:
               hosts:
-                pe1:
-                  ansible_host: 10.30.30.101
-                pe2:
-                  ansible_host: 10.30.30.102
-            SITE2:
+                smm153:
+                  ansible_host: 172.28.135.121
+                smm154:
+                  ansible_host: 172.28.135.163
+                lyv558:
+                  ansible_host: 172.28.129.36
+                lyv559:
+                  ansible_host: 172.28.135.18
+            BERLIN:
               hosts:
-                pe3:
-                  ansible_host: 10.30.30.103
-            SITE3:
+                smm311:
+                  ansible_host: 172.28.135.244
+                smm312:
+                  ansible_host: 172.28.135.183
+            NUREMBURG:
               hosts:
-                pe5:
-                  ansible_host: 10.30.30.105
-            P:
-              vars:
-                type: p
+                smm310:
+                  ansible_host: 172.28.135.207
+            AMSTERDAM:
               hosts:
-                p4:
-                  ansible_host: 10.30.30.104
-                p6:
-                  ansible_host: 10.30.30.106
-            RR:
-              vars:
-                type: rr
+                lyv582:
+                  ansible_host: 172.28.136.27
+                smm313:
+                  ansible_host: 172.28.135.184
+            HAMBURG:
               hosts:
-                rr7:
-                  ansible_host: 10.30.30.107
-                rr8:
-                  ansible_host: 10.30.30.108
+                cdv469:
+                  ansible_host: 172.28.136.166
+        RR:
+          vars:
+            type: rr
+          hosts:
+            rr7:
+              ansible_host: 10.30.30.107
+            rr8:
+              ansible_host: 10.30.30.108
 
     MPLS_TENANTS:
       children:

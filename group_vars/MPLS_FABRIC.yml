@@ -3,8 +3,10 @@
 # local users
 fabric_name: MPLS_FABRIC
 
+custom_structured_configuration_prefix: [ il_mgmt_]
+
 # Optional, defaults to isis-sr
-underlay_routing_protocol: isis-sr-ldp
+underlay_routing_protocol: isis-sr
 
 
 # Disabling ISIS hello padding makes it easier with vEOS-lab.
@@ -40,7 +42,53 @@ internal_vlan_order:
     ending: 3900
 
 # Update p2p mtu
-p2p_uplinks_mtu: 1600
+p2p_uplinks_mtu: 9214
+
+aaa_root:
+  secret:
+    sha512_password: "$6$rfgRfL5cQa6pdiRz$60yX4YjN6C9UO5.yzWAEKYt8//qhIeXV5Bg931h0u3rtxtavbi1me6REcxEy7N1n/xtRAXH4ibeVDsxwwarxG1"
+
+il_mgmt_load_interval:
+  default: 2
+
+# Timezone
+il_mgmt_clock:
+  timezone: Europe/Berlin
+
+# DNS Servers
+il_mgmt_name_server:
+  source:
+    vrf: MGMT
+  nodes:
+    - 172.22.60.20
+
+il_mgmt_dns_domain: sjc.aristanetworks.com
+
+# AAA Authentication
+il_mgmt_aaa_authentication:
+  login:
+    default: local
+    serial_console: local
+  policies:
+    on_failure_log: true
+    on_success_log: true
+    local:
+      allow_nopassword: true
+
+# Banners 
+il_mgmt_banners:
+  login: |
+    This device is being used for the Inter.Link POC.
+    Please contact the rightful owner(s) before making changes:
+
+      Michael Pergament <mp@arista.com> - Systems Engineer
+      Florian Hibler <florian@arista.com> - Advanced Services Engineer
+
+    EOF
+  motd: |
+    This device is currently in use. If you need to access this device,
+    you must contact its current owner.
+    EOF
 
 local_users:
   someuser:
@@ -53,25 +101,26 @@ local_users:
     role: network-admin
     sha512_password: "someshapassword"
 
-# Cloud Vision server information
-cvp_instance_ip: 10.20.20.20
-# This ingest key is set at CVP install time.
-cvp_ingestauth_key: somekey
+il_mgmt_management_api_http:
+  enable_http: true
+  enable_https: true
+  enable_vrfs:
+    default:
+    MGMT:
 
 # OOB Management network default gateway.
-mgmt_gateway: 10.30.30.1
-
-# dns servers.
-name_servers:
-  - 10.20.20.13
-  - 8.8.8.8
+mgmt_gateway: 172.28.128.1
 
 # NTP Servers IP or DNS
 # First NTP server will be preferred
 # Sourced from Managment VRF
-ntp_servers:
-  - 0.se.pool.ntp.org
-  - 1.se.pool.ntp.org
+il_mgmt_ntp:
+  local_interface: 
+    name: Management1
+    vrf: MGMT
+  servers:
+  - name: poc-ntp.sjc.aristanetworks.com
+    vrf: MGMT
 
 # Sets the administrative subfield of IP/MAC VRF Route-Distinguishers and Route-Targets
 # These are actually the defaults. No need to set anything really.
@@ -94,14 +143,6 @@ bfd_multihop:
   min_rx: 5000
   multiplier: 3
 
-custom_structured_configuration_sflow:
-  sample: 40000
-  vrfs:
-    MGMT:
-      destinations:
-        "127.0.0.1":
-      source_interface: Management1
-  run: true
 
 # Disable vlan aware bundles
 # vxlan_vlan_aware_bundles: false
@@ -125,10 +166,6 @@ p:
     p6:
       id: 6
       mgmt_ip: 10.30.30.106/24
-
-# Leaf switch groups
-# A maximum of two nodes can form a leaf group
-# When two nodes are in a leaf group this will automatically form mlag pair
 
 pe:
   defaults:
@@ -154,34 +191,61 @@ pe:
       management security
          password encryption-key common
   node_groups:
-    pe1-2:
+    frankfurt:
       filter:
-        tenants: [ TENANT_A, TENANT_B ]
-        tags: [ site1-2 ]
+        tenants: [ ]
+        tags: [ frankfurt ]
       nodes:
-        pe1:
+        smm153:
           id: 1
-          mgmt_ip: 10.30.30.101/24
-        pe2:
+          mgmt_ip: 172.28.135.121/20
+        smm154:
           id: 2
-          mgmt_ip: 10.30.30.102/24
-    pe3:
-      filter:
-        tenants: [ TENANT_B ]
-        tags: [ site3 ]
-      nodes:
-        pe3:
+          mgmt_ip: 172.28.135.163/20
+        lyv558:
           id: 3
-          mgmt_ip: 10.30.30.103/24
-    pe5:
+          mgmt_ip: 172.28.129.36/20
+        lyv559:
+          id: 4
+          mgmt_ip: 172.28.135.18/20
+    berlin:
       filter:
-        tenants: [ TENANT_A, TENANT_B ]
-        tags: [ site5, tag1 ]
+        tenants: [  ]
+        tags: [ berlin ]
       nodes:
-        pe5:
+        smm311:
           id: 5
-          mgmt_ip: 10.30.30.105/24
-
+          mgmt_ip: 172.28.135.244/20
+        smm312:
+          id: 6
+          mgmt_ip: 172.28.135.183/20
+    amsterdam:
+      filter:
+        tenants: [  ]
+        tags: [ amsterdam ]
+      nodes:
+        lyv582:
+          id: 7
+          mgmt_ip: 172.28.136.27/20
+        smm313:
+          id: 8
+          mgmt_ip: 172.28.135.184/20
+    nuremburg:
+      filter:
+        tenants: [  ]
+        tags: [ nuremburg ]
+      nodes:
+        smm310:
+          id: 9
+          mgmt_ip: 172.28.135.207/20
+    hamburg:
+      filter:
+        tenants: [  ]
+        tags: [ hamburg ]
+      nodes:
+        cdv469:
+          id: 10
+          mgmt_ip: 172.28.136.166/20
 rr:
   defaults:
     platform: vEOS-LAB
@@ -218,90 +282,90 @@ connected_endpoints_keys:
   cpes:
     type: cpe
 
-backbone_interfaces:
-  p2p_links_ip_pools:
-    underlay_pool: 100.64.48.0/24
-  p2p_links_profiles:
-    default_bb_profile:
-      speed: 100full
-      mtu: 1500
-      isis_hello_padding: false
-      isis_metric: 60
-      ip_pool: underlay_pool
-      isis_circuit_type: level-2
-      ipv6_enable: true
-      isis_authentication_mode: md5
-      isis_authentication_key: $1c$sTNAlR6rKSw=
-  p2p_links:
-    # PE1 links
-    # If using IP unnumbered we don't even need 2 nodes or id or pool or a second interface...
-    # If pool is missing we default to unnumbered?
-    - nodes: [ pe1, pe2 ]
-      id: 1
-      interfaces: [ Ethernet1, Ethernet1 ]
-      profile: default_bb_profile
-      # bfd: false # should default to true
-    - nodes: [ pe1, p6 ]
-      id: 2
-      interfaces: [ Ethernet2, Ethernet2 ]
-      ip_pool: underlay_pool
-      speed: 100full
-      mtu: 1500
-      isis_hello_padding: true
-      isis_circuit_type: level-2
-      isis_metric: 60
-      # qos_profile: someprofile
-    - nodes: [ pe1, rr7 ]
-      id: 3
-      interfaces: [ Ethernet3, Ethernet2 ]
-      profile: default_bb_profile
+# backbone_interfaces:
+#   p2p_links_ip_pools:
+#     underlay_pool: 100.64.48.0/24
+#   p2p_links_profiles:
+#     default_bb_profile:
+#       speed: 100full
+#       mtu: 1500
+#       isis_hello_padding: false
+#       isis_metric: 60
+#       ip_pool: underlay_pool
+#       isis_circuit_type: level-2
+#       ipv6_enable: true
+#       isis_authentication_mode: md5
+#       isis_authentication_key: $1c$sTNAlR6rKSw=
+#   p2p_links:
+#     # PE1 links
+#     # If using IP unnumbered we don't even need 2 nodes or id or pool or a second interface...
+#     # If pool is missing we default to unnumbered?
+#     - nodes: [ pe1, pe2 ]
+#       id: 1
+#       interfaces: [ Ethernet1, Ethernet1 ]
+#       profile: default_bb_profile
+#       # bfd: false # should default to true
+#     - nodes: [ pe1, p6 ]
+#       id: 2
+#       interfaces: [ Ethernet2, Ethernet2 ]
+#       ip_pool: underlay_pool
+#       speed: 100full
+#       mtu: 1500
+#       isis_hello_padding: true
+#       isis_circuit_type: level-2
+#       isis_metric: 60
+#       # qos_profile: someprofile
+#     - nodes: [ pe1, rr7 ]
+#       id: 3
+#       interfaces: [ Ethernet3, Ethernet2 ]
+#       profile: default_bb_profile
 
-    # PE2 links
-    - nodes: [ pe2, rr8 ]
-      id: 4
-      interfaces: [ Ethernet3, Ethernet1 ]
-      profile: default_bb_profile
-    - nodes: [ pe2, pe3 ]
-      id: 5
-      interfaces: [ Ethernet2, Ethernet2 ]
-      profile: default_bb_profile
+#     # PE2 links
+#     - nodes: [ pe2, rr8 ]
+#       id: 4
+#       interfaces: [ Ethernet3, Ethernet1 ]
+#       profile: default_bb_profile
+#     - nodes: [ pe2, pe3 ]
+#       id: 5
+#       interfaces: [ Ethernet2, Ethernet2 ]
+#       profile: default_bb_profile
 
-    # PE3 links
-    - nodes: [ pe3, rr7 ]
-      id: 6
-      interfaces: [ Ethernet3, Ethernet1 ]
-      profile: default_bb_profile
-    - nodes: [ pe3, p4 ]
-      id: 7
-      interfaces: [ Ethernet1, Ethernet1 ]
-      profile: default_bb_profile
+#     # PE3 links
+#     - nodes: [ pe3, rr7 ]
+#       id: 6
+#       interfaces: [ Ethernet3, Ethernet1 ]
+#       profile: default_bb_profile
+#     - nodes: [ pe3, p4 ]
+#       id: 7
+#       interfaces: [ Ethernet1, Ethernet1 ]
+#       profile: default_bb_profile
 
-    # P4 links
-    - nodes: [ p4, rr7 ]
-      id: 8
-      interfaces: [ Ethernet3, Ethernet4 ]
-      profile: default_bb_profile
-    - nodes: [ p4, pe5 ]
-      id: 9
-      interfaces: [ Ethernet2, Ethernet2 ]
-      profile: default_bb_profile
+#     # P4 links
+#     - nodes: [ p4, rr7 ]
+#       id: 8
+#       interfaces: [ Ethernet3, Ethernet4 ]
+#       profile: default_bb_profile
+#     - nodes: [ p4, pe5 ]
+#       id: 9
+#       interfaces: [ Ethernet2, Ethernet2 ]
+#       profile: default_bb_profile
 
-    # PE5 links
-    - nodes: [ pe5, rr7 ]
-      id: 10
-      interfaces: [ Ethernet3, Ethernet3 ]
-      ip: ["unnumbered loopback0", "unnumbered loopback0"]
-    - nodes: [ pe5, p6 ]
-      id: 11
-      interfaces: [ Ethernet1, Ethernet1 ]
-      profile: default_bb_profile
+#     # PE5 links
+#     - nodes: [ pe5, rr7 ]
+#       id: 10
+#       interfaces: [ Ethernet3, Ethernet3 ]
+#       ip: ["unnumbered loopback0", "unnumbered loopback0"]
+#     - nodes: [ pe5, p6 ]
+#       id: 11
+#       interfaces: [ Ethernet1, Ethernet1 ]
+#       profile: default_bb_profile
 
-    # RR8 links
-    - nodes: [ rr7, rr8 ]
-      id: 12
-      port_channel:
-        mode: active
-        nodes_child_interfaces:
-          rr7: [ Ethernet5, Ethernet6 ]
-          rr8: [ Ethernet2, Ethernet3 ]
-      profile: default_bb_profile
+#     # RR8 links
+#     - nodes: [ rr7, rr8 ]
+#       id: 12
+#       port_channel:
+#         mode: active
+#         nodes_child_interfaces:
+#           rr7: [ Ethernet5, Ethernet6 ]
+#           rr8: [ Ethernet2, Ethernet3 ]
+#       profile: default_bb_profile
