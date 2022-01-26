@@ -26,16 +26,16 @@ tenants:
 {%          if ((total_count.value / 4) | round(0, 'floor') | int ) > 0 %}
 {%          set parentif_id.value = 2 + ((total_count.value / 4) | round(0, 'floor') | int ) %}
 {%          endif %}
-            interfaces: [ {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }} , {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}]
+            interfaces: [ "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}" , "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}"]
             port_channel:
               mode: active
-              short_esi: {{ service.short_esi1 }}
+              short_esi: {{ service.short_esi1 ~ ":" ~ '%04x' % total_count.value }}
           - id: {{ service.start_id2 + id2_count.value }}
             nodes: {{ service.node_set2 }}
-            interfaces: [ {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }} , {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}]
+            interfaces: [ "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}" , "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}"]
             port_channel:
               mode: active
-              short_esi: {{ service.short_esi2 }}
+              short_esi: {{ service.short_esi2 ~ ":" ~ '%04x' % total_count.value }}
 {%        set id1_count.value = id1_count.value  + service.ids|length %}
 {%        set id2_count.value = id2_count.value  + service.ids|length %}
 {%        set total_count.value = total_count.value  + 1 %}
