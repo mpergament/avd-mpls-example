@@ -1,0 +1,50 @@
+tenants:
+{%  for tenant in tenants  %}
+  {{ tenant.name }}:
+    mac_vrf_rt_base: {{ tenant.mac_vrf_rt_base }}
+    pseudowire_rt_base: {{ tenant.pseudowire_rt_base }}
+    point_to_point_services:
+{%      for service in tenant.services  %}
+{%        set id1_count = namespace(value=0) %}
+{%        set id2_count = namespace(value=0) %}
+{%        set total_count = namespace(value=0) %}
+{%        set parentif_id = namespace(value=1) %}
+{%        for service_id in tenant.service_count  %}
+      - name: {{ service.name }}_{{ service_id }}
+        type: vpws-pseudowire
+        subinterfaces:
+{%          for id in service.ids  %}
+          - number: {{ id}}
+{%          endfor %}
+        endpoints:
+          - id: {{ service.start_id1 + id1_count.value }}
+            nodes: {{ service.node_set1 }}
+{%          set subif_id = namespace(value=1) %}
+{%          if total_count.value%4 > 0 %}
+{%            set subif_id.value = total_count.value%4 + 1  %}
+{%          endif %}
+{%          if ((total_count.value / 4) | round(0, 'floor') | int ) > 0 %}
+{%          set parentif_id.value = 2 + ((total_count.value / 4) | round(0, 'floor') | int ) %}
+{%          endif %}
+            interfaces: [ {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }} , {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}]
+            port_channel:
+              mode: active
+              short_esi: {{ service.short_esi1 }}
+          - id: {{ service.start_id2 + id2_count.value }}
+            nodes: {{ service.node_set2 }}
+            interfaces: [ {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }} , {{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}]
+            port_channel:
+              mode: active
+              short_esi: {{ service.short_esi2 }}
+{%        set id1_count.value = id1_count.value  + service.ids|length %}
+{%        set id2_count.value = id2_count.value  + service.ids|length %}
+{%        set total_count.value = total_count.value  + 1 %}
+{%        endfor %}
+{%      endfor %}
+    l2vlans:
+      10:
+        name: TENANT_A_L2_SERVICE
+        tags:
+          - frankfurt
+          - berlin
+{%  endfor %}
