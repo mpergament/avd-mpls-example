@@ -8,9 +8,6 @@ custom_structured_configuration_prefix: [ il_mgmt_, il_port_specific_]
 # Optional, defaults to isis-sr
 underlay_routing_protocol: isis-sr
 
-
-# Disabling ISIS hello padding makes it easier with vEOS-lab.
-
 isis_ti_lfa:
   enabled: true
   protection: link
@@ -148,6 +145,10 @@ bfd_multihop:
   min_rx: 5000
   multiplier: 3
 
+# Add TCAM Profile to 7280R3
+platform_settings:
+  - platforms: [ 7280R3 ]
+    tcam_profile: mpls-evpn
 
 # Disable vlan aware bundles
 # vxlan_vlan_aware_bundles: false
@@ -166,6 +167,9 @@ p:
          password encryption-key common
       !
       router isis MPLS_UNDERLAY
+        metric profile backbone
+              metric ratio 400 gbps
+        !
         segment-routing mpls
           no shutdown
           flex-algo latency advertised
@@ -284,6 +288,9 @@ pe:
          password encryption-key common
       !
       router isis MPLS_UNDERLAY
+        metric profile backbone
+              metric ratio 400 gbps
+        !
         segment-routing mpls
           no shutdown
           flex-algo latency advertised
@@ -387,7 +394,7 @@ backbone_interfaces:
       # ip_pool: underlay_pool
       isis_circuit_type: level-2
       ipv6_enable: false
-      # isis_metric: false
+      isis_metric: backbone #this a hack!
       isis_authentication_mode: md5
       isis_authentication_key: $1c$sTNAlR6rKSw=
       ip: ["unnumbered loopback0", "unnumbered loopback0"]
