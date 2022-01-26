@@ -3,7 +3,7 @@
 # local users
 fabric_name: MPLS_FABRIC
 
-custom_structured_configuration_prefix: [ il_mgmt_]
+custom_structured_configuration_prefix: [ il_mgmt_, il_port_specific_]
 
 # Optional, defaults to isis-sr
 underlay_routing_protocol: isis-sr
@@ -16,7 +16,6 @@ isis_ti_lfa:
   protection: link
   local_convergence_delay: 15000
 
-# What should the defaults be?
 isis_default_is_type: level-2
 isis_default_circuit_type: level-2
 isis_default_metric: 50
@@ -230,7 +229,7 @@ pe:
   node_groups:
     frankfurt:
       filter:
-        tenants: [ ]
+        tenants: [ TENANT_A ]
         tags: [ frankfurt ]
       nodes:
         smm153:
@@ -241,7 +240,7 @@ pe:
           mgmt_ip: 172.28.135.163/20
     berlin:
       filter:
-        tenants: [  ]
+        tenants: [ TENANT_A ]
         tags: [ berlin ]
       nodes:
         smm311:
@@ -374,3 +373,15 @@ backbone_interfaces:
       id: 12
       interfaces: [ Ethernet1/1, Ethernet49/1 ]
       profile: default_bb_profile
+    - nodes: [ smm312, cdv469 ]
+      id: 13
+      interfaces: [ Ethernet21/1, Ethernet50/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv582, cdv469 ]
+      id: 14
+      interfaces: [ Ethernet2/1, Ethernet49/1 ]
+      profile: default_bb_profile
+    # - nodes: [ smm312, lyv582 ]
+    #  id: 15
+    #  interfaces: [ Ethernet2/1, Ethernet49/1 ]
+    #  profile: default_bb_profile
