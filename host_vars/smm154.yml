@@ -13,19 +13,77 @@ il_port_specific_ethernet_interfaces:
     error_correction_encoding:
       fire_code: true
     speed: 25g
+  Ethernet1/2:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet1/3:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet1/4:
+    error_correction_encoding:
+      fire_code: true
   Ethernet3/1:
     error_correction_encoding:
       fire_code: true
     speed: 25g
+  Ethernet3/2:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet3/3:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet3/4:
+    error_correction_encoding:
+      fire_code: true
   Ethernet5/1:
     error_correction_encoding:
       fire_code: true
     speed: 25g
+  Ethernet5/2:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet5/3:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet5/4:
+    error_correction_encoding:
+      fire_code: true
   Ethernet7/1:
     error_correction_encoding:
       fire_code: true
     speed: 25g
+  Ethernet7/2:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet7/3:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet7/4:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet9/1:
+    error_correction_encoding:
+      fire_code: true
+    speed: 25g
+  Ethernet9/2:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet9/3:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet9/4:
+    error_correction_encoding:
+      fire_code: true
   Ethernet11/1:
     error_correction_encoding:
       fire_code: true
     speed: 25g
+  Ethernet11/2:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet11/3:
+    error_correction_encoding:
+      fire_code: true
+  Ethernet11/4:
+    error_correction_encoding:
+      fire_code: true
