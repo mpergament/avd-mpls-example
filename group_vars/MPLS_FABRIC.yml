@@ -18,7 +18,7 @@ isis_ti_lfa:
 
 isis_default_is_type: level-2
 isis_default_circuit_type: level-2
-isis_default_metric: 50
+# isis_default_metric: 50
 isis_advertise_passive_only: true
 
 # iBGP is the default and only supported overlay protocol currently
@@ -97,6 +97,10 @@ il_mgmt_banners:
     EOF
 
 local_users:
+  admin:
+    privilege: 15
+    role: network-admin
+    no_password: true
   arista:
     privilege: 15
     role: network-admin
@@ -180,9 +184,57 @@ p:
         lyv558:
           id: 3
           mgmt_ip: 172.28.129.36/20
+          raw_eos_cli: |
+            interface Ethernet11/1
+              description P2P_LINK_TO_up735_Ethernet11/1
+              no shutdown
+              mtu 9000
+              no switchport
+              !
+            interface Ethernet11/1.1011
+              encapsulation dot1q vlan 1011
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+
+            interface Ethernet11/1.1021
+              encapsulation dot1q vlan 1021
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
         lyv559:
           id: 4
           mgmt_ip: 172.28.135.18/20
+          raw_eos_cli: |
+            interface Ethernet11/1
+              description P2P_LINK_TO_up735_Ethernet12/1
+              no shutdown
+              mtu 9000
+              no switchport
+              !
+            interface Ethernet11/1.1012
+              encapsulation dot1q vlan 1012
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+
+            interface Ethernet11/1.1022
+              encapsulation dot1q vlan 1022
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
     amsterdam:
       filter:
         tenants: [  ]
@@ -191,6 +243,21 @@ p:
         lyv582:
           id: 7
           mgmt_ip: 172.28.136.27/20
+          raw_eos_cli: |
+            interface Ethernet11/1
+              description P2P_LINK_TO_up735_Ethernet13/1
+              no shutdown
+              mtu 9000
+              no switchport
+              !
+            interface Ethernet11/1.1031
+              encapsulation dot1q vlan 1031
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
 
 pe:
   defaults:
@@ -281,7 +348,7 @@ rr:
     platform: vEOS-LAB
     loopback_ipv4_pool: 192.168.0.0/24
     loopback_ipv6_pool: "2000:1234:ffff:ffff::/64"
-    is_type: level-1-2
+    is_type: level-2
     node_sid_base: 100
     isis_system_id_prefix: '0000.0002'
     bgp_defaults:
@@ -316,10 +383,11 @@ backbone_interfaces:
   p2p_links_profiles:
     default_bb_profile:
       mtu: 9214
-      isis_hello_padding: false
+      isis_hello_padding: true
       # ip_pool: underlay_pool
       isis_circuit_type: level-2
-      ipv6_enable: true
+      ipv6_enable: false
+      # isis_metric: false
       isis_authentication_mode: md5
       isis_authentication_key: $1c$sTNAlR6rKSw=
       ip: ["unnumbered loopback0", "unnumbered loopback0"]
