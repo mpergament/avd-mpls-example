@@ -22,8 +22,6 @@ all:
           vars:
             type: p
           hosts:
-            lyv558:
-              ansible_host: 172.28.129.36
             lyv559:
               ansible_host: 172.28.135.18
             lyv582:
@@ -34,6 +32,8 @@ all:
           children:
             FRANKFURT:
               hosts:
+                lyv558:
+                  ansible_host: 172.28.129.36
                 smm153:
                   ansible_host: 172.28.135.121
                 smm154:
