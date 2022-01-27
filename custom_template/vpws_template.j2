@@ -49,4 +49,35 @@ tenants:
         tags:
           - frankfurt
           - berlin
+  TENANT_B:
+    pseudowire_rt_base: 2000
+    mac_vrf_rt_base: 20000
+    vrfs:
+      INTERNET:
+        vrf_id: 20000
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: TENANT_B_SITE_3_INTRA_L3VPN
+            enabled: true
+            interfaces:
+            - Ethernet21/1
+            ip_addresses:
+            - 172.16.3.0/31
+            nodes:
+            - smm153
+        bgp_peers:
+          172.16.3.1:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm153
+            remote_as: "65501"
+    l2vlans:
+      20:
+        name: TENANT_B_L2_SERVICE
+        tags:
+          - frankfurt
+          - berlin
 {%  endfor %}
