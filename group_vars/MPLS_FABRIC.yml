@@ -319,7 +319,7 @@ pe:
           mgmt_ip: 172.28.135.163/20
     berlin:
       filter:
-        tenants: [ TENANT_A ]
+        tenants: [ TENANT_A, TENANT_B]
         tags: [ berlin ]
       nodes:
         smm311:

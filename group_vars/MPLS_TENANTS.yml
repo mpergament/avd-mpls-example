@@ -249,6 +249,9 @@ tenants:
     vrfs:
       INTERNET:
         vrf_id: 20000
+        vtep_diagnostic:
+          loopback: 2000
+          loopback_ip_range: 10.0.0.0/24
         address_families:
           - evpn
         l3_interfaces:
@@ -256,10 +259,13 @@ tenants:
             enabled: true
             interfaces:
             - Ethernet21/1
+            - Ethernet21/1
             ip_addresses:
             - 172.16.3.0/31
+            - 172.16.4.0/31
             nodes:
             - smm153
+            - smm311
         bgp_peers:
           172.16.3.1:
             maximum_routes: 0

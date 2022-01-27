@@ -8,27 +8,6 @@
     - arista.cvp
 
   tasks:
-    - name: Generate POC Tenants
-      # tags: [poc, never]
-      template:
-        src: custom_template/vpws_template.j2
-        dest: group_vars/MPLS_TENANTS.yml
-      vars:
-        tenants:
-          - name: TENANT_A
-            mac_vrf_rt_base: 10000
-            pseudowire_rt_base: 1000
-            service_count: "{{ range(1, 10) }}"
-            services:
-              - name: TEN_A_FRA_BER_eline_vlan_based
-                ids: "{{ range(1000, 1010) }}"
-                start_id1: 20000
-                node_set1: ["smm153", "smm154"]
-                short_esi1: 0101:0202
-                start_id2: 30000
-                node_set2: ["smm311", "smm312"]
-                short_esi2: 0202:0202
-      delegate_to: localhost
     - name: 'build local folders for output'
       tags: [build, generate]
       import_role:
