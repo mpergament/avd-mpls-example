@@ -9,6 +9,7 @@ tenants:
 {%        set id2_count = namespace(value=0) %}
 {%        set total_count = namespace(value=0) %}
 {%        set parentif_id = namespace(value=1) %}
+{%        set parentif_id_offset = namespace(value=0) %}
 {%        for service_id in tenant.service_count  %}
       - name: {{ service.name }}_{{ service_id }}
         type: vpws-pseudowire
@@ -23,8 +24,9 @@ tenants:
 {%          if total_count.value%4 > 0 %}
 {%            set subif_id.value = total_count.value%4 + 1  %}
 {%          endif %}
-{%          if ((total_count.value / 4) | round(0, 'floor') | int ) > 0 %}
-{%          set parentif_id.value = 2 + ((total_count.value / 4) | round(0, 'floor') | int ) %}
+{%          if ((total_count.value / 4) | round(0, 'floor') | int ) > parentif_id_offset.value %}
+{%            set parentif_id.value = parentif_id.value + 2 %}
+{%            set parentif_id_offset.value = parentif_id_offset.value  + 1 %}
 {%          endif %}
             interfaces: [ "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}" , "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}"]
             port_channel:

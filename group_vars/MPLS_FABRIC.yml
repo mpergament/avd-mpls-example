@@ -3,6 +3,8 @@
 # local users
 fabric_name: MPLS_FABRIC
 
+evpn_overlay_bgp_rtc: true
+
 custom_structured_configuration_prefix: [ il_mgmt_, il_port_specific_]
 
 # Optional, defaults to isis-sr
@@ -188,6 +190,33 @@ p:
         tenants: [ ]
         tags: [ frankfurt ]
       nodes:
+        lyv558:
+          id: 3
+          mgmt_ip: 172.28.129.36/20
+          raw_eos_cli: |
+            interface Ethernet11/1
+              description P2P_LINK_TO_up735_Ethernet11/1
+              no shutdown
+              mtu 9000
+              no switchport
+              !
+            interface Ethernet11/1.1011
+              encapsulation dot1q vlan 1011
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+
+            interface Ethernet11/1.1021
+              encapsulation dot1q vlan 1021
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
         lyv559:
           id: 4
           mgmt_ip: 172.28.135.18/20
@@ -288,33 +317,6 @@ pe:
         smm154:
           id: 2
           mgmt_ip: 172.28.135.163/20
-        lyv558:
-          id: 3
-          mgmt_ip: 172.28.129.36/20
-          raw_eos_cli: |
-            interface Ethernet11/1
-              description P2P_LINK_TO_up735_Ethernet11/1
-              no shutdown
-              mtu 9000
-              no switchport
-              !
-            interface Ethernet11/1.1011
-              encapsulation dot1q vlan 1011
-              ip address unnumbered loopback0
-              isis enable MPLS_UNDERLAY
-              isis circuit-type level-2
-              isis network point-to-point
-              isis authentication mode md5
-              isis authentication key 7 $1c$sTNAlR6rKSw=
-
-            interface Ethernet11/1.1021
-              encapsulation dot1q vlan 1021
-              ip address unnumbered loopback0
-              isis enable MPLS_UNDERLAY
-              isis circuit-type level-2
-              isis network point-to-point
-              isis authentication mode md5
-              isis authentication key 7 $1c$sTNAlR6rKSw=
     berlin:
       filter:
         tenants: [ TENANT_A ]

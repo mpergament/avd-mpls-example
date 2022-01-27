@@ -227,13 +227,13 @@ tenants:
         endpoints:
           - id: 20080
             nodes: ['smm153', 'smm154']
-            interfaces: [ "Ethernet4/1" , "Ethernet4/1"]
+            interfaces: [ "Ethernet5/1" , "Ethernet5/1"]
             port_channel:
               mode: active
               short_esi: 0101:0202:0008
           - id: 30080
             nodes: ['smm311', 'smm312']
-            interfaces: [ "Ethernet4/1" , "Ethernet4/1"]
+            interfaces: [ "Ethernet5/1" , "Ethernet5/1"]
             port_channel:
               mode: active
               short_esi: 0202:0202:0008
