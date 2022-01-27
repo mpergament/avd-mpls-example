@@ -465,3 +465,9 @@ backbone_interfaces:
     #  id: 15
     #  interfaces: [ Ethernet2/1, Ethernet49/1 ]
     #  profile: default_bb_profile
+l3_edge:
+  p2p_links:
+    - nodes: [ mss153 ]
+      interfaces: [ Ethernet21/1 ]
+      ip: [ 172.16.3.0/31 ]
+      mtu: 9214
