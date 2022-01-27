@@ -63,6 +63,7 @@ il_common_router_bgp:
       route_map_in: TAG-INTERNET-IN-RM
 
 router_general:
+  fast_failover: true
   vrfs:
     PREMIUM1:
       fib_policy: FIB-FILTER-INTERNET-IN-RM
