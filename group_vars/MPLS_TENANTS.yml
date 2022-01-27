@@ -279,6 +279,7 @@ tenants:
         static_routes:
           - destination_address_prefix: 0.0.0.0/0
             gateway: Null0
+            tag: 50000
             nodes:
               - smm153
         bgp_peers:
