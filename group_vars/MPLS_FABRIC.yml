@@ -330,7 +330,7 @@ pe:
         tags: [ amsterdam ]
       nodes:
         smm313:
-          id: 8
+          id: 12
           mgmt_ip: 172.28.135.184/20
     nuremburg:
       filter:
