@@ -5,7 +5,7 @@ fabric_name: MPLS_FABRIC
 
 evpn_overlay_bgp_rtc: true
 
-custom_structured_configuration_prefix: [ il_mgmt_, il_port_specific_]
+custom_structured_configuration_prefix: [ il_mgmt_, il_port_specific_, il_common_]
 
 # Optional, defaults to isis-sr
 underlay_routing_protocol: isis-sr
@@ -154,10 +154,6 @@ platform_settings:
 
 # Customer prompt
 #prompt: "{% raw %}'%H.%D{%H:%M:%S}%P'{% endraw %}"
-
-# Disable vlan aware bundles
-# vxlan_vlan_aware_bundles: false
-
 # P Routers
 p:
   platform: 7280R3

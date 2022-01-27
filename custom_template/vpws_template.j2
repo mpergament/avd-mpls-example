@@ -58,6 +58,13 @@ tenants:
         vtep_diagnostic:
           loopback: 2000
           loopback_ip_range: 10.0.0.0/24
+        additional_route_targets:
+          - type: export
+            address_family: evpn
+            route_target: "65000:20001"
+          - type: export
+            address_family: evpn
+            route_target: "65000:20002"
         address_families:
           - evpn
         l3_interfaces:
@@ -80,6 +87,25 @@ tenants:
             nodes:
             - smm153
             remote_as: "65501"
+      PREMIUM1:
+        vrf_id: 20001
+        vtep_diagnostic:
+          loopback: 2001
+          loopback_ip_range: 10.0.0.0/24
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: PREMIUM1
+            enabled: true
+            interfaces:
+            - Ethernet22/1
+            - Ethernet22/1
+            ip_addresses:
+            - 172.16.3.0/31
+            - 172.16.4.0/31
+            nodes:
+            - smm153
+            - smm311
     l2vlans:
       20:
         name: TENANT_B_L2_SERVICE

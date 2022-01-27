@@ -1,0 +1,52 @@
+---
+il_common_prefix_lists:
+  DEFAULT-PL:
+    permit:
+      prefix: "0.0.0.0/0"
+
+il_common_ip_extcommunity_lists:
+  INTERNET-DEFAULT-COMM:
+    - type: permit 
+      extcommunities: "rt 65000:65000"
+
+il_common_route_maps:
+  FIB-FILTER-INTERNET-IN-RM:
+    sequence_numbers:
+      10:
+        type: permit
+        match:
+          - "source-protocol connected"
+      20:
+        type: permit
+        match:
+          - "tag 50000"
+      30:
+        type: deny
+  TAG-INTERNET-IN-RM:
+    sequence_numbers:
+      10:
+        type: permit
+        match:
+          - "extcommunity INTERNET-DEFAULT-COMM"
+        set:
+          - "tag 50000"
+      30:
+        type: permit
+  TAG-DEFAULT-ONLY-RM:
+    sequence_numbers:
+      10:
+        type: permit
+        match:
+          - "ip address prefix-list DEFAULT-PL"
+      20:
+        type: permit
+il_common_router_bgp:
+  peer_groups:
+    MPLS-OVERLAY-PEERS:
+      type: evpn
+      route_map_in: TAG-INTERNET-IN-RM
+
+router_general:
+  vrfs:
+    PREMIUM1:
+      fib_policy: FIB-FILTER-INTERNET-IN-RM
