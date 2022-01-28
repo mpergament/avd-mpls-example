@@ -1,4 +1,9 @@
 ---
+il_common_tcam_profile:
+  system: mpls-evpn-vrfselection
+  profiles:
+    traffic_policy: "{{lookup('file', '{{ root_dir }}/TCAM_TRAFFIC_POLICY.conf')}}"
+
 il_common_prefix_lists:
   DEFAULT-PL:
     sequence_numbers:
@@ -13,10 +18,10 @@ il_common_ip_extcommunity_lists:
 il_common_route_maps:
   FIB-FILTER-INTERNET-IN-RM:
     sequence_numbers:
-      5:
-        type: permit
-        match:
-          - "ip address prefix-list DEFAULT-PL"
+      # 5:
+      #   type: permit
+      #   match:
+      #     - "ip address prefix-list DEFAULT-PL"
       10:
         type: permit
         match:
@@ -67,6 +72,6 @@ router_general:
   vrfs:
     PREMIUM1:
       fib_policy: FIB-FILTER-INTERNET-IN-RM
-      leak_routes:
-        - source_vrf: INTERNET
-          subscribe_policy: LOCAL_DEFAULT_LEAK_RM
+      # leak_routes:
+      #   - source_vrf: INTERNET
+      #     subscribe_policy: LOCAL_DEFAULT_LEAK_RM

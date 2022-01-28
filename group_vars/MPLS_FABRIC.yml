@@ -288,6 +288,17 @@ pe:
       - 'graceful-restart'
     mpls_route_reflectors: [ rr7, rr8 ]
     raw_eos_cli: |
+      vrf selection policy
+        policy p1
+            match ipv4-all-default ipv4
+              actions
+                  set vrf PREMIUM1
+            !
+            match ipv6-all-default ipv6
+        !
+        vrf PREMIUM1
+            fallback vrf INTERNET
+
       management security
          password encryption-key common
       !
