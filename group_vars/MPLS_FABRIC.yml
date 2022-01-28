@@ -5,6 +5,7 @@ fabric_name: MPLS_FABRIC
 
 # Enable vlan aware bundles
 vxlan_vlan_aware_bundles: true
+vxlan_vlan_aware_bundle_global_base: 5000
 
 evpn_overlay_bgp_rtc: true
 
