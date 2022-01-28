@@ -3,6 +3,9 @@
 # local users
 fabric_name: MPLS_FABRIC
 
+# Enable vlan aware bundles
+vxlan_vlan_aware_bundles: true
+
 evpn_overlay_bgp_rtc: true
 
 custom_structured_configuration_prefix: [ il_mgmt_, il_port_specific_, il_common_]
@@ -304,8 +307,8 @@ pe:
   node_groups:
     frankfurt:
       filter:
-        tenants: [ TENANT_A, TENANT_B ]
-        tags: [ frankfurt ]
+        tenants: [ TENANT_A, TENANT_B, TENANT_C ]
+        tags: [ frankfurt, common ]
       nodes:
         smm153:
           id: 1
@@ -315,8 +318,8 @@ pe:
           mgmt_ip: 172.28.135.163/20
     berlin:
       filter:
-        tenants: [ TENANT_A, TENANT_B]
-        tags: [ berlin ]
+        tenants: [ TENANT_A, TENANT_B, TENANT_C ]
+        tags: [ berlin, common ]
       nodes:
         smm311:
           id: 5
@@ -326,16 +329,16 @@ pe:
           mgmt_ip: 172.28.135.183/20
     amsterdam:
       filter:
-        tenants: [  ]
-        tags: [ amsterdam ]
+        tenants: [ TENANT_A ]
+        tags: [ amsterdam, common ]
       nodes:
         smm313:
           id: 12
           mgmt_ip: 172.28.135.184/20
     nuremburg:
       filter:
-        tenants: [  ]
-        tags: [ nuremburg ]
+        tenants: [ TENANT_A ]
+        tags: [ nuremburg, common ]
       nodes:
         smm310:
           id: 9
@@ -345,8 +348,8 @@ pe:
           mgmt_ip: 172.28.136.167/20
     hamburg:
       filter:
-        tenants: [  ]
-        tags: [ hamburg ]
+        tenants: [ TENANT_A ]
+        tags: [ hamburg, common ]
       nodes:
         cdv469:
           id: 11
@@ -457,7 +460,7 @@ backbone_interfaces:
       id: 14
       interfaces: [ Ethernet2/1, Ethernet49/1 ]
       profile: default_bb_profile
-    # - nodes: [ smm312, lyv582 ]
-    #  id: 15
-    #  interfaces: [ Ethernet2/1, Ethernet49/1 ]
-    #  profile: default_bb_profile
+    - nodes: [ smm312, lyv582 ]
+      id: 15
+      interfaces: [ Ethernet16/1, Ethernet4/1 ]
+      profile: default_bb_profile

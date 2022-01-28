@@ -3,6 +3,8 @@ tenants:
   {{ tenant.name }}:
     mac_vrf_rt_base: {{ tenant.mac_vrf_rt_base }}
     pseudowire_rt_base: {{ tenant.pseudowire_rt_base }}
+    mac_vrf_vni_base: {{ tenant.mac_vrf_vni_base }}
+    vlan_aware_bundle_number_base: {{ tenant.vlan_aware_bundle_number_base }}
     point_to_point_services:
 {%      for service in tenant.services  %}
 {%        set id1_count = namespace(value=0) %}
@@ -42,6 +44,21 @@ tenants:
 {%        set id2_count.value = id2_count.value  + service.ids|length %}
 {%        set total_count.value = total_count.value  + 1 %}
 {%        endfor %}
+    vrfs:
+{%        set total_count = namespace(value=0) %}
+{%        for p2mp_id in tenant.p2mp_service_count  %}
+      P2MP_{{tenant.name}}_{{ p2mp_id }}:
+        vrf_id: {{tenant.p2mp_service_rt_id_base + loop.index }}
+        svis:
+{%          for vlan_id in tenant.p2mp_vlan_per_vrf_count %}
+          {{ tenant.p2mp_service_vlan_base + total_count.value  }}:
+            name: v{{ tenant.p2mp_service_vlan_base + total_count.value  }}
+            enabled: true
+            ip_address_virtual: {{ tenant.p2mp_ip_prefix }}.{{ total_count.value }}.1/24
+            tags: {{ tenant.p2mp_tag_set }}
+{%            set total_count.value = total_count.value  + 1 %}
+{%          endfor %}
+{%        endfor %}
 {%      endfor %}
     l2vlans:
       10:
@@ -52,6 +69,8 @@ tenants:
   TENANT_B:
     pseudowire_rt_base: 2000
     mac_vrf_rt_base: 20000
+    mac_vrf_vni_base: 50000
+    vlan_aware_bundle_number_base: 50000
     vrfs:
       INTERNET:
         vrf_id: 20000

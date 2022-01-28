@@ -2,6 +2,8 @@ tenants:
   TENANT_A:
     mac_vrf_rt_base: 10000
     pseudowire_rt_base: 1000
+    mac_vrf_vni_base: 40000
+    vlan_aware_bundle_number_base: 40000
     point_to_point_services:
       - name: TEN_A_FRA_BER_eline_vlan_based_1
         type: vpws-pseudowire
@@ -237,6 +239,537 @@ tenants:
             port_channel:
               mode: active
               short_esi: 0202:0202:0008
+    vrfs:
+      P2MP_TENANT_A_0:
+        vrf_id: 30001
+        svis:
+          100:
+            name: v100
+            enabled: true
+            ip_address_virtual: 10.100.0.1/24
+            tags: ['frankfurt', 'berlin']
+          101:
+            name: v101
+            enabled: true
+            ip_address_virtual: 10.100.1.1/24
+            tags: ['frankfurt', 'berlin']
+          102:
+            name: v102
+            enabled: true
+            ip_address_virtual: 10.100.2.1/24
+            tags: ['frankfurt', 'berlin']
+          103:
+            name: v103
+            enabled: true
+            ip_address_virtual: 10.100.3.1/24
+            tags: ['frankfurt', 'berlin']
+          104:
+            name: v104
+            enabled: true
+            ip_address_virtual: 10.100.4.1/24
+            tags: ['frankfurt', 'berlin']
+          105:
+            name: v105
+            enabled: true
+            ip_address_virtual: 10.100.5.1/24
+            tags: ['frankfurt', 'berlin']
+          106:
+            name: v106
+            enabled: true
+            ip_address_virtual: 10.100.6.1/24
+            tags: ['frankfurt', 'berlin']
+          107:
+            name: v107
+            enabled: true
+            ip_address_virtual: 10.100.7.1/24
+            tags: ['frankfurt', 'berlin']
+          108:
+            name: v108
+            enabled: true
+            ip_address_virtual: 10.100.8.1/24
+            tags: ['frankfurt', 'berlin']
+          109:
+            name: v109
+            enabled: true
+            ip_address_virtual: 10.100.9.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_1:
+        vrf_id: 30002
+        svis:
+          110:
+            name: v110
+            enabled: true
+            ip_address_virtual: 10.100.10.1/24
+            tags: ['frankfurt', 'berlin']
+          111:
+            name: v111
+            enabled: true
+            ip_address_virtual: 10.100.11.1/24
+            tags: ['frankfurt', 'berlin']
+          112:
+            name: v112
+            enabled: true
+            ip_address_virtual: 10.100.12.1/24
+            tags: ['frankfurt', 'berlin']
+          113:
+            name: v113
+            enabled: true
+            ip_address_virtual: 10.100.13.1/24
+            tags: ['frankfurt', 'berlin']
+          114:
+            name: v114
+            enabled: true
+            ip_address_virtual: 10.100.14.1/24
+            tags: ['frankfurt', 'berlin']
+          115:
+            name: v115
+            enabled: true
+            ip_address_virtual: 10.100.15.1/24
+            tags: ['frankfurt', 'berlin']
+          116:
+            name: v116
+            enabled: true
+            ip_address_virtual: 10.100.16.1/24
+            tags: ['frankfurt', 'berlin']
+          117:
+            name: v117
+            enabled: true
+            ip_address_virtual: 10.100.17.1/24
+            tags: ['frankfurt', 'berlin']
+          118:
+            name: v118
+            enabled: true
+            ip_address_virtual: 10.100.18.1/24
+            tags: ['frankfurt', 'berlin']
+          119:
+            name: v119
+            enabled: true
+            ip_address_virtual: 10.100.19.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_2:
+        vrf_id: 30003
+        svis:
+          120:
+            name: v120
+            enabled: true
+            ip_address_virtual: 10.100.20.1/24
+            tags: ['frankfurt', 'berlin']
+          121:
+            name: v121
+            enabled: true
+            ip_address_virtual: 10.100.21.1/24
+            tags: ['frankfurt', 'berlin']
+          122:
+            name: v122
+            enabled: true
+            ip_address_virtual: 10.100.22.1/24
+            tags: ['frankfurt', 'berlin']
+          123:
+            name: v123
+            enabled: true
+            ip_address_virtual: 10.100.23.1/24
+            tags: ['frankfurt', 'berlin']
+          124:
+            name: v124
+            enabled: true
+            ip_address_virtual: 10.100.24.1/24
+            tags: ['frankfurt', 'berlin']
+          125:
+            name: v125
+            enabled: true
+            ip_address_virtual: 10.100.25.1/24
+            tags: ['frankfurt', 'berlin']
+          126:
+            name: v126
+            enabled: true
+            ip_address_virtual: 10.100.26.1/24
+            tags: ['frankfurt', 'berlin']
+          127:
+            name: v127
+            enabled: true
+            ip_address_virtual: 10.100.27.1/24
+            tags: ['frankfurt', 'berlin']
+          128:
+            name: v128
+            enabled: true
+            ip_address_virtual: 10.100.28.1/24
+            tags: ['frankfurt', 'berlin']
+          129:
+            name: v129
+            enabled: true
+            ip_address_virtual: 10.100.29.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_3:
+        vrf_id: 30004
+        svis:
+          130:
+            name: v130
+            enabled: true
+            ip_address_virtual: 10.100.30.1/24
+            tags: ['frankfurt', 'berlin']
+          131:
+            name: v131
+            enabled: true
+            ip_address_virtual: 10.100.31.1/24
+            tags: ['frankfurt', 'berlin']
+          132:
+            name: v132
+            enabled: true
+            ip_address_virtual: 10.100.32.1/24
+            tags: ['frankfurt', 'berlin']
+          133:
+            name: v133
+            enabled: true
+            ip_address_virtual: 10.100.33.1/24
+            tags: ['frankfurt', 'berlin']
+          134:
+            name: v134
+            enabled: true
+            ip_address_virtual: 10.100.34.1/24
+            tags: ['frankfurt', 'berlin']
+          135:
+            name: v135
+            enabled: true
+            ip_address_virtual: 10.100.35.1/24
+            tags: ['frankfurt', 'berlin']
+          136:
+            name: v136
+            enabled: true
+            ip_address_virtual: 10.100.36.1/24
+            tags: ['frankfurt', 'berlin']
+          137:
+            name: v137
+            enabled: true
+            ip_address_virtual: 10.100.37.1/24
+            tags: ['frankfurt', 'berlin']
+          138:
+            name: v138
+            enabled: true
+            ip_address_virtual: 10.100.38.1/24
+            tags: ['frankfurt', 'berlin']
+          139:
+            name: v139
+            enabled: true
+            ip_address_virtual: 10.100.39.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_4:
+        vrf_id: 30005
+        svis:
+          140:
+            name: v140
+            enabled: true
+            ip_address_virtual: 10.100.40.1/24
+            tags: ['frankfurt', 'berlin']
+          141:
+            name: v141
+            enabled: true
+            ip_address_virtual: 10.100.41.1/24
+            tags: ['frankfurt', 'berlin']
+          142:
+            name: v142
+            enabled: true
+            ip_address_virtual: 10.100.42.1/24
+            tags: ['frankfurt', 'berlin']
+          143:
+            name: v143
+            enabled: true
+            ip_address_virtual: 10.100.43.1/24
+            tags: ['frankfurt', 'berlin']
+          144:
+            name: v144
+            enabled: true
+            ip_address_virtual: 10.100.44.1/24
+            tags: ['frankfurt', 'berlin']
+          145:
+            name: v145
+            enabled: true
+            ip_address_virtual: 10.100.45.1/24
+            tags: ['frankfurt', 'berlin']
+          146:
+            name: v146
+            enabled: true
+            ip_address_virtual: 10.100.46.1/24
+            tags: ['frankfurt', 'berlin']
+          147:
+            name: v147
+            enabled: true
+            ip_address_virtual: 10.100.47.1/24
+            tags: ['frankfurt', 'berlin']
+          148:
+            name: v148
+            enabled: true
+            ip_address_virtual: 10.100.48.1/24
+            tags: ['frankfurt', 'berlin']
+          149:
+            name: v149
+            enabled: true
+            ip_address_virtual: 10.100.49.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_5:
+        vrf_id: 30006
+        svis:
+          150:
+            name: v150
+            enabled: true
+            ip_address_virtual: 10.100.50.1/24
+            tags: ['frankfurt', 'berlin']
+          151:
+            name: v151
+            enabled: true
+            ip_address_virtual: 10.100.51.1/24
+            tags: ['frankfurt', 'berlin']
+          152:
+            name: v152
+            enabled: true
+            ip_address_virtual: 10.100.52.1/24
+            tags: ['frankfurt', 'berlin']
+          153:
+            name: v153
+            enabled: true
+            ip_address_virtual: 10.100.53.1/24
+            tags: ['frankfurt', 'berlin']
+          154:
+            name: v154
+            enabled: true
+            ip_address_virtual: 10.100.54.1/24
+            tags: ['frankfurt', 'berlin']
+          155:
+            name: v155
+            enabled: true
+            ip_address_virtual: 10.100.55.1/24
+            tags: ['frankfurt', 'berlin']
+          156:
+            name: v156
+            enabled: true
+            ip_address_virtual: 10.100.56.1/24
+            tags: ['frankfurt', 'berlin']
+          157:
+            name: v157
+            enabled: true
+            ip_address_virtual: 10.100.57.1/24
+            tags: ['frankfurt', 'berlin']
+          158:
+            name: v158
+            enabled: true
+            ip_address_virtual: 10.100.58.1/24
+            tags: ['frankfurt', 'berlin']
+          159:
+            name: v159
+            enabled: true
+            ip_address_virtual: 10.100.59.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_6:
+        vrf_id: 30007
+        svis:
+          160:
+            name: v160
+            enabled: true
+            ip_address_virtual: 10.100.60.1/24
+            tags: ['frankfurt', 'berlin']
+          161:
+            name: v161
+            enabled: true
+            ip_address_virtual: 10.100.61.1/24
+            tags: ['frankfurt', 'berlin']
+          162:
+            name: v162
+            enabled: true
+            ip_address_virtual: 10.100.62.1/24
+            tags: ['frankfurt', 'berlin']
+          163:
+            name: v163
+            enabled: true
+            ip_address_virtual: 10.100.63.1/24
+            tags: ['frankfurt', 'berlin']
+          164:
+            name: v164
+            enabled: true
+            ip_address_virtual: 10.100.64.1/24
+            tags: ['frankfurt', 'berlin']
+          165:
+            name: v165
+            enabled: true
+            ip_address_virtual: 10.100.65.1/24
+            tags: ['frankfurt', 'berlin']
+          166:
+            name: v166
+            enabled: true
+            ip_address_virtual: 10.100.66.1/24
+            tags: ['frankfurt', 'berlin']
+          167:
+            name: v167
+            enabled: true
+            ip_address_virtual: 10.100.67.1/24
+            tags: ['frankfurt', 'berlin']
+          168:
+            name: v168
+            enabled: true
+            ip_address_virtual: 10.100.68.1/24
+            tags: ['frankfurt', 'berlin']
+          169:
+            name: v169
+            enabled: true
+            ip_address_virtual: 10.100.69.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_7:
+        vrf_id: 30008
+        svis:
+          170:
+            name: v170
+            enabled: true
+            ip_address_virtual: 10.100.70.1/24
+            tags: ['frankfurt', 'berlin']
+          171:
+            name: v171
+            enabled: true
+            ip_address_virtual: 10.100.71.1/24
+            tags: ['frankfurt', 'berlin']
+          172:
+            name: v172
+            enabled: true
+            ip_address_virtual: 10.100.72.1/24
+            tags: ['frankfurt', 'berlin']
+          173:
+            name: v173
+            enabled: true
+            ip_address_virtual: 10.100.73.1/24
+            tags: ['frankfurt', 'berlin']
+          174:
+            name: v174
+            enabled: true
+            ip_address_virtual: 10.100.74.1/24
+            tags: ['frankfurt', 'berlin']
+          175:
+            name: v175
+            enabled: true
+            ip_address_virtual: 10.100.75.1/24
+            tags: ['frankfurt', 'berlin']
+          176:
+            name: v176
+            enabled: true
+            ip_address_virtual: 10.100.76.1/24
+            tags: ['frankfurt', 'berlin']
+          177:
+            name: v177
+            enabled: true
+            ip_address_virtual: 10.100.77.1/24
+            tags: ['frankfurt', 'berlin']
+          178:
+            name: v178
+            enabled: true
+            ip_address_virtual: 10.100.78.1/24
+            tags: ['frankfurt', 'berlin']
+          179:
+            name: v179
+            enabled: true
+            ip_address_virtual: 10.100.79.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_8:
+        vrf_id: 30009
+        svis:
+          180:
+            name: v180
+            enabled: true
+            ip_address_virtual: 10.100.80.1/24
+            tags: ['frankfurt', 'berlin']
+          181:
+            name: v181
+            enabled: true
+            ip_address_virtual: 10.100.81.1/24
+            tags: ['frankfurt', 'berlin']
+          182:
+            name: v182
+            enabled: true
+            ip_address_virtual: 10.100.82.1/24
+            tags: ['frankfurt', 'berlin']
+          183:
+            name: v183
+            enabled: true
+            ip_address_virtual: 10.100.83.1/24
+            tags: ['frankfurt', 'berlin']
+          184:
+            name: v184
+            enabled: true
+            ip_address_virtual: 10.100.84.1/24
+            tags: ['frankfurt', 'berlin']
+          185:
+            name: v185
+            enabled: true
+            ip_address_virtual: 10.100.85.1/24
+            tags: ['frankfurt', 'berlin']
+          186:
+            name: v186
+            enabled: true
+            ip_address_virtual: 10.100.86.1/24
+            tags: ['frankfurt', 'berlin']
+          187:
+            name: v187
+            enabled: true
+            ip_address_virtual: 10.100.87.1/24
+            tags: ['frankfurt', 'berlin']
+          188:
+            name: v188
+            enabled: true
+            ip_address_virtual: 10.100.88.1/24
+            tags: ['frankfurt', 'berlin']
+          189:
+            name: v189
+            enabled: true
+            ip_address_virtual: 10.100.89.1/24
+            tags: ['frankfurt', 'berlin']
+      P2MP_TENANT_A_9:
+        vrf_id: 30010
+        svis:
+          190:
+            name: v190
+            enabled: true
+            ip_address_virtual: 10.100.90.1/24
+            tags: ['frankfurt', 'berlin']
+          191:
+            name: v191
+            enabled: true
+            ip_address_virtual: 10.100.91.1/24
+            tags: ['frankfurt', 'berlin']
+          192:
+            name: v192
+            enabled: true
+            ip_address_virtual: 10.100.92.1/24
+            tags: ['frankfurt', 'berlin']
+          193:
+            name: v193
+            enabled: true
+            ip_address_virtual: 10.100.93.1/24
+            tags: ['frankfurt', 'berlin']
+          194:
+            name: v194
+            enabled: true
+            ip_address_virtual: 10.100.94.1/24
+            tags: ['frankfurt', 'berlin']
+          195:
+            name: v195
+            enabled: true
+            ip_address_virtual: 10.100.95.1/24
+            tags: ['frankfurt', 'berlin']
+          196:
+            name: v196
+            enabled: true
+            ip_address_virtual: 10.100.96.1/24
+            tags: ['frankfurt', 'berlin']
+          197:
+            name: v197
+            enabled: true
+            ip_address_virtual: 10.100.97.1/24
+            tags: ['frankfurt', 'berlin']
+          198:
+            name: v198
+            enabled: true
+            ip_address_virtual: 10.100.98.1/24
+            tags: ['frankfurt', 'berlin']
+          199:
+            name: v199
+            enabled: true
+            ip_address_virtual: 10.100.99.1/24
+            tags: ['frankfurt', 'berlin']
     l2vlans:
       10:
         name: TENANT_A_L2_SERVICE
@@ -246,6 +779,8 @@ tenants:
   TENANT_B:
     pseudowire_rt_base: 2000
     mac_vrf_rt_base: 20000
+    mac_vrf_vni_base: 50000
+    vlan_aware_bundle_number_base: 50000
     vrfs:
       INTERNET:
         vrf_id: 20000
@@ -259,9 +794,6 @@ tenants:
           - type: export
             address_family: evpn
             route_target: "65000:20002"
-          - type: export
-            address_family: evpn
-            route_target: route-map TAG-DEFAULT-ONLY-RM
         address_families:
           - evpn
         l3_interfaces:
@@ -276,12 +808,6 @@ tenants:
             nodes:
             - smm153
             - smm311
-        static_routes:
-          - destination_address_prefix: 0.0.0.0/0
-            gateway: Null0
-            tag: 50000
-            nodes:
-              - smm153
         bgp_peers:
           172.16.3.1:
             maximum_routes: 0

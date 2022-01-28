@@ -1,0 +1,15 @@
+tenants:
+  TENANT_C:
+    mac_vrf_rt_base: 10000
+    pseudowire_rt_base: 1000
+    vrfs:
+      P2MP-1:
+        vrf_id: 30000
+        svis:
+          100:
+            name: v100_vlan1
+            enabled: true
+            ip_address_virtual: 10.100.0.1/24
+            tags:
+              - frankfurt
+              - berlin
