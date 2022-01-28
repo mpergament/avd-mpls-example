@@ -1,0 +1,39 @@
+cpes:
+  ENDPOINTS:
+    adapters:
+{%  for endpoint in endpoints  %}
+{%    for adapter in endpoint.adapters  %}
+{%      set total_count = namespace(value=0) %}
+{%      set vlan_count = namespace(value=0) %}
+{%      set parentif_id = namespace(value=1) %}
+{%      set parentif_id_offset = namespace(value=0) %}
+{%      set subif_id = namespace(value=1) %}
+{%      for if_id in endpoint.if_count  %}
+{%        if total_count.value%4 > 0 %}
+{%          set subif_id.value = total_count.value%4 + 1  %}
+{%        else %}
+{%      set subif_id = namespace(value=1) %}
+{%        endif %}
+{%        if ((total_count.value / 4) | round(0, 'floor') | int ) > parentif_id_offset.value %}
+{%          set parentif_id.value = parentif_id.value + 2 %}
+{%          set parentif_id_offset.value = parentif_id_offset.value  + 1 %}
+{%        endif %}
+    - endpoint_ports: [ "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}" , "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}"]
+      switch_ports: [ "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}" , "{{ "Ethernet" ~ parentif_id.value ~ "/" ~ subif_id.value }}"]
+      switches: {{ adapter.switches }}
+{%          if adapter.short_esi is arista.avd.defined %}
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: {{ adapter.short_esi ~ ":" ~ '%04x' % total_count.value }}
+        subinterfaces:
+{%            for subif in endpoint.subif_count  %}
+          - number: {{ adapter.start_id + loop.index }}
+            vlan_id: {{ endpoint.vlan_base + vlan_count.value }}
+{%              set vlan_count.value = vlan_count.value  + 1 %}
+{%            endfor %}
+{%          endif %}
+{%          set total_count.value = total_count.value  + 1 %}
+{%      endfor %}
+{%     endfor %}
+{%  endfor %}

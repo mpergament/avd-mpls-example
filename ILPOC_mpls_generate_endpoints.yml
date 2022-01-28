@@ -1,0 +1,29 @@
+---
+- name: Build Tenant configuration
+  hosts: MPLS_FABRIC
+  connection: local
+  gather_facts: false
+  collections:
+    - arista.avd
+    - arista.cvp
+
+  tasks:
+    - name: Generate POC Endpoints
+      # tags: [poc, never]
+      template:
+        src: custom_template/endpoint_template.j2
+        dest: group_vars/MPLS_ENDPOINT_CONNECTIONS.yml
+      vars:
+        endpoints:
+          - name: ENDPOINTS
+            if_count: "{{ range(0, 10) }}"
+            subif_count: "{{ range(1000, 1010) }}"
+            vlan_base: 100
+            adapters:
+              - start_id: 2000
+                switches: ["smm153", "smm154"]
+                short_esi: 0101:0202
+              - start_id: 2000
+                switches: ["smm311", "smm312"]
+                short_esi: 0202:0202
+      delegate_to: localhost
