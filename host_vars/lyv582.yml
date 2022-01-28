@@ -3,3 +3,5 @@ il_port_specific_hardware:
   speed_groups:
     11:
       serdes: 25g
+    12:
+      serdes: 10g

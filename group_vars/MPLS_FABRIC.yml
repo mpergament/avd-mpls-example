@@ -329,7 +329,7 @@ pe:
           mgmt_ip: 172.28.135.183/20
     amsterdam:
       filter:
-        tenants: [ TENANT_A ]
+        tenants: [ TENANT_A, TENANT_B ]
         tags: [ amsterdam, common ]
       nodes:
         smm313:

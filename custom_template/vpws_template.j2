@@ -92,12 +92,15 @@ tenants:
             interfaces:
             - Ethernet21/1
             - Ethernet21/1
+            - Ethernet21/1
             ip_addresses:
             - 172.16.3.0/31
-            - 172.16.4.0/31
+            - 172.16.3.2/31
+            - 172.16.3.4/31
             nodes:
             - smm153
-            - smm311
+            - smm154
+            - smm313
         bgp_peers:
           172.16.3.1:
             maximum_routes: 0
@@ -105,6 +108,20 @@ tenants:
             # ebgp_multihop: 1
             nodes:
             - smm153
+            remote_as: "65501"
+          172.16.3.3:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm154
+            remote_as: "65501"
+          172.16.3.5:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm313
             remote_as: "65501"
       PREMIUM1:
         vrf_id: 20001
@@ -124,7 +141,7 @@ tenants:
             - 172.16.4.0/31
             nodes:
             - smm153
-            - smm311
+            - smm313
     l2vlans:
       20:
         name: TENANT_B_L2_SERVICE
