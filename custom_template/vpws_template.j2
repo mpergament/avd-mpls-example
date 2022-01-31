@@ -93,13 +93,16 @@ tenants:
             - Ethernet21/1
             - Ethernet21/1
             - Ethernet21/1
+            - Ethernet2/1
             ip_addresses:
             - 172.16.3.0/31
             - 172.16.3.2/31
             - 172.16.3.4/31
+            - 172.16.3.6/31
             nodes:
             - smm153
             - smm154
+            - smm313
             - smm313
         bgp_peers:
           172.16.3.1:
@@ -117,6 +120,13 @@ tenants:
             - smm154
             remote_as: "65501"
           172.16.3.5:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm313
+            remote_as: "65501"
+          172.16.3.7:
             maximum_routes: 0
             description: TENANT_B_CPE_SITE3
             # ebgp_multihop: 1
