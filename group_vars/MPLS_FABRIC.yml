@@ -162,7 +162,7 @@ platform_settings:
 p:
   platform: 7280R3
   defaults:
-    loopback_ipv4_pool: 100.70.0.0/24
+    loopback_ipv4_pool: 192.168.0.0/24
     loopback_ipv6_pool: "2000:1234:ffff:ffff::/64"
     # is_type: level-1-2
     node_sid_base: 300
@@ -301,7 +301,7 @@ p:
         tags: [ amsterdam ]
       nodes:
         lyv582:
-          id: 7
+          id: 14
           mgmt_ip: 172.28.136.27/20
           raw_eos_cli: |
             router isis MPLS_UNDERLAY
