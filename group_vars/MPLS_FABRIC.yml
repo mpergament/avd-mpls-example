@@ -178,6 +178,7 @@ p:
         segment-routing mpls
           no shutdown
           flex-algo latency advertised
+          adjacency-segment allocation sr-peers backup-eligible
       !
       router traffic-engineering
         flex-algo
@@ -194,6 +195,20 @@ p:
           id: 3
           mgmt_ip: 172.28.129.36/20
           raw_eos_cli: |
+            router isis MPLS_UNDERLAY
+              metric profile backbone
+                    metric ratio 400 gbps
+              !
+              segment-routing mpls
+                no shutdown
+                flex-algo latency advertised
+                adjacency-segment allocation sr-peers backup-eligible
+            !
+            router traffic-engineering
+              flex-algo
+                  flex-algo 128 latency
+                    metric min-delay
+                    color 100
             interface Ethernet11/1
               description P2P_LINK_TO_up735_Ethernet11/1
               no shutdown
@@ -232,6 +247,20 @@ p:
           id: 4
           mgmt_ip: 172.28.135.18/20
           raw_eos_cli: |
+            router isis MPLS_UNDERLAY
+              metric profile backbone
+                    metric ratio 400 gbps
+              !
+              segment-routing mpls
+                no shutdown
+                flex-algo latency advertised
+                adjacency-segment allocation sr-peers backup-eligible
+            !
+            router traffic-engineering
+              flex-algo
+                  flex-algo 128 latency
+                    metric min-delay
+                    color 100
             interface Ethernet11/1
               description P2P_LINK_TO_up735_Ethernet12/1
               no shutdown
@@ -275,6 +304,20 @@ p:
           id: 7
           mgmt_ip: 172.28.136.27/20
           raw_eos_cli: |
+            router isis MPLS_UNDERLAY
+              metric profile backbone
+                    metric ratio 400 gbps
+              !
+              segment-routing mpls
+                no shutdown
+                flex-algo latency advertised
+                adjacency-segment allocation sr-peers backup-eligible
+            !
+            router traffic-engineering
+              flex-algo
+                  flex-algo 128 latency
+                    metric min-delay
+                    color 100
             interface Ethernet11/1
               description P2P_LINK_TO_up735_Ethernet13/1
               no shutdown
@@ -332,6 +375,7 @@ pe:
         segment-routing mpls
           no shutdown
           flex-algo latency advertised
+          adjacency-segment allocation sr-peers backup-eligible
       !
       router traffic-engineering
         flex-algo
@@ -608,4 +652,8 @@ backbone_interfaces:
     - nodes: [ smm312, lyv582 ]
       id: 15
       interfaces: [ Ethernet16/1, Ethernet4/1 ]
+      profile: default_bb_profile
+    - nodes: [ lyv558, smm153 ]
+      id: 16
+      interfaces: [ Ethernet3/1, Ethernet33/1 ]
       profile: default_bb_profile
