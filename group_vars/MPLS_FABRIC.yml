@@ -30,12 +30,12 @@ bgp_as: 65000
 # If meshing PEs, client-to-client reflection can be turned off using rr bgp defaults.
 # bgp_mesh_pes: true
 
-# bgp peer groups passwords
+# bgp peer groups passwords (password is 'arista123!')
 bgp_peer_groups:
   MPLS_OVERLAY_PEERS:
-    password: $1c$U4tL2vQP9QwZlxIV1K3/pw==
+    password: $1c$Y75aK88d2dd0YmGcibt/1w==
   RR_OVERLAY_PEERS:
-    password: $1c$U4tL2vQP9QwZlxIV1K3/pw==
+    password: $1c$Y75aK88d2dd0YmGcibt/1w==
 
 internal_vlan_order:
   allocation: ascending
@@ -217,6 +217,17 @@ p:
               isis network point-to-point
               isis authentication mode md5
               isis authentication key 7 $1c$sTNAlR6rKSw=
+            interface Ethernet12/1
+              description P2P_LINK_TO_ixia16_5
+              speed 40g
+              mtu 9214
+              no switchport
+              ip address 172.16.0.2/31
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis metric profile backbone
+              isis network point-to-point
+
         lyv559:
           id: 4
           mgmt_ip: 172.28.135.18/20
@@ -244,6 +255,17 @@ p:
               isis network point-to-point
               isis authentication mode md5
               isis authentication key 7 $1c$sTNAlR6rKSw=
+            interface Ethernet12/1
+              description P2P_LINK_TO_ixia16_5
+              speed 40g
+              mtu 9214
+              no switchport
+              ip address 172.16.0.0/31
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis metric profile backbone
+              isis network point-to-point
+
     amsterdam:
       filter:
         tenants: [  ]
@@ -287,7 +309,7 @@ pe:
       - 'distance bgp 20 200 200'
       - 'graceful-restart restart-time 300'
       - 'graceful-restart'
-    mpls_route_reflectors: [ rr7, rr8 ]
+    mpls_route_reflectors: [ cloudeos001, cloudeos002 ]
     raw_eos_cli: |
       vrf selection policy
         policy p1
@@ -316,6 +338,18 @@ pe:
             flex-algo 128 latency
               metric min-delay
               color 100
+      management tech-support
+        policy show tech-support
+            exclude command show platform fap ip route
+            exclude command show platform fap ipv6 route
+            exclude command show ip bgp vrf all
+            exclude command show ipv6 bgp vrf all
+            exclude command show kernel ip route vrf all
+            exclude command show kernel ipv6 route vrf all
+            exclude command show ip route vrf all detail
+            exclude command show ipv6 route vrf all detail
+        !
+      !
   node_groups:
     frankfurt:
       filter:
@@ -385,16 +419,115 @@ rr:
       management security
          password encryption-key common
   node_groups:
-    rr7-8:
+    cloudeos001-003:
       bgp_cluster_id: 7.7.7.7
       # evpn_gw:
       nodes:
-        rr7:
+        cloudeos001:
           id: 7
-          mgmt_ip: 10.30.30.107/24
-        rr8:
+          mgmt_ip: 172.28.137.38/20
+          raw_eos_cli: |
+            interface Ethernet1
+              no shutdown
+              mtu 9000
+              no switchport
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+              !
+            interface Ethernet2
+              no shutdown
+              mtu 9000
+              no switchport
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+              !
+            router bgp 65000
+              address-family evpn
+                next-hop resolution disabled
+              !
+              address-family ipv4
+                bgp skip rib-install
+                next-hop resolution disabled
+              !
+            !
+        cloudeos002:
           id: 8
-          mgmt_ip: 10.30.30.108/24
+          mgmt_ip: 172.28.137.39/20
+          raw_eos_cli: |
+            interface Ethernet1
+              no shutdown
+              mtu 9000
+              no switchport
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+              !
+            interface Ethernet2
+              no shutdown
+              mtu 9000
+              no switchport
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+              !
+            router bgp 65000
+              address-family evpn
+                next-hop resolution disabled
+              !
+              address-family ipv4
+                bgp skip rib-install
+                next-hop resolution disabled
+              !
+            !
+        cloudeos003:
+          id: 13
+          mgmt_ip: 172.28.137.40/20
+          raw_eos_cli: |
+            interface Ethernet1
+              no shutdown
+              mtu 9000
+              no switchport
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+              !
+            interface Ethernet2
+              no shutdown
+              mtu 9000
+              no switchport
+              ip address unnumbered loopback0
+              isis enable MPLS_UNDERLAY
+              isis circuit-type level-2
+              isis network point-to-point
+              isis authentication mode md5
+              isis authentication key 7 $1c$sTNAlR6rKSw=
+              !
+            router bgp 65000
+              address-family evpn
+                next-hop resolution disabled
+              !
+              address-family ipv4
+                bgp skip rib-install
+                next-hop resolution disabled
+              !
+            !
 
 connected_endpoints_keys:
   routers:

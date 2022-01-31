@@ -31,6 +31,7 @@ cpes:
           - number: {{ adapter.start_id + loop.index }}
             vlan_id: {{ endpoint.vlan_base + vlan_count.value }}
 {%              set vlan_count.value = vlan_count.value  + 1 %}
+            short_esi: {{ adapter.short_subif_esi ~ ":" ~ '%04x' % vlan_count.value }}
 {%            endfor %}
 {%          endif %}
 {%          set total_count.value = total_count.value  + 1 %}

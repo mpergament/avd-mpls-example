@@ -62,10 +62,12 @@ all:
           vars:
             type: rr
           hosts:
-            rr7:
-              ansible_host: 10.30.30.107
-            rr8:
-              ansible_host: 10.30.30.108
+            cloudeos001:
+              ansible_host: 172.28.137.38
+            cloudeos002:
+              ansible_host: 172.28.137.39
+            cloudeos003:
+              ansible_host: 172.28.137.40
 
     MPLS_TENANTS:
       children:

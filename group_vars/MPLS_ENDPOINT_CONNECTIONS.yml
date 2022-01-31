@@ -11,24 +11,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 100
+            short_esi: 0101:0303:0001
           - number: 2002
             vlan_id: 101
+            short_esi: 0101:0303:0002
           - number: 2003
             vlan_id: 102
+            short_esi: 0101:0303:0003
           - number: 2004
             vlan_id: 103
+            short_esi: 0101:0303:0004
           - number: 2005
             vlan_id: 104
+            short_esi: 0101:0303:0005
           - number: 2006
             vlan_id: 105
+            short_esi: 0101:0303:0006
           - number: 2007
             vlan_id: 106
+            short_esi: 0101:0303:0007
           - number: 2008
             vlan_id: 107
+            short_esi: 0101:0303:0008
           - number: 2009
             vlan_id: 108
+            short_esi: 0101:0303:0009
           - number: 2010
             vlan_id: 109
+            short_esi: 0101:0303:000a
     - endpoint_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switch_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switches: ['smm153', 'smm154']
@@ -39,24 +49,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 110
+            short_esi: 0101:0303:000b
           - number: 2002
             vlan_id: 111
+            short_esi: 0101:0303:000c
           - number: 2003
             vlan_id: 112
+            short_esi: 0101:0303:000d
           - number: 2004
             vlan_id: 113
+            short_esi: 0101:0303:000e
           - number: 2005
             vlan_id: 114
+            short_esi: 0101:0303:000f
           - number: 2006
             vlan_id: 115
+            short_esi: 0101:0303:0010
           - number: 2007
             vlan_id: 116
+            short_esi: 0101:0303:0011
           - number: 2008
             vlan_id: 117
+            short_esi: 0101:0303:0012
           - number: 2009
             vlan_id: 118
+            short_esi: 0101:0303:0013
           - number: 2010
             vlan_id: 119
+            short_esi: 0101:0303:0014
     - endpoint_ports: [ "Ethernet1/3" , "Ethernet1/3"]
       switch_ports: [ "Ethernet1/3" , "Ethernet1/3"]
       switches: ['smm153', 'smm154']
@@ -67,24 +87,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 120
+            short_esi: 0101:0303:0015
           - number: 2002
             vlan_id: 121
+            short_esi: 0101:0303:0016
           - number: 2003
             vlan_id: 122
+            short_esi: 0101:0303:0017
           - number: 2004
             vlan_id: 123
+            short_esi: 0101:0303:0018
           - number: 2005
             vlan_id: 124
+            short_esi: 0101:0303:0019
           - number: 2006
             vlan_id: 125
+            short_esi: 0101:0303:001a
           - number: 2007
             vlan_id: 126
+            short_esi: 0101:0303:001b
           - number: 2008
             vlan_id: 127
+            short_esi: 0101:0303:001c
           - number: 2009
             vlan_id: 128
+            short_esi: 0101:0303:001d
           - number: 2010
             vlan_id: 129
+            short_esi: 0101:0303:001e
     - endpoint_ports: [ "Ethernet1/4" , "Ethernet1/4"]
       switch_ports: [ "Ethernet1/4" , "Ethernet1/4"]
       switches: ['smm153', 'smm154']
@@ -95,24 +125,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 130
+            short_esi: 0101:0303:001f
           - number: 2002
             vlan_id: 131
+            short_esi: 0101:0303:0020
           - number: 2003
             vlan_id: 132
+            short_esi: 0101:0303:0021
           - number: 2004
             vlan_id: 133
+            short_esi: 0101:0303:0022
           - number: 2005
             vlan_id: 134
+            short_esi: 0101:0303:0023
           - number: 2006
             vlan_id: 135
+            short_esi: 0101:0303:0024
           - number: 2007
             vlan_id: 136
+            short_esi: 0101:0303:0025
           - number: 2008
             vlan_id: 137
+            short_esi: 0101:0303:0026
           - number: 2009
             vlan_id: 138
+            short_esi: 0101:0303:0027
           - number: 2010
             vlan_id: 139
+            short_esi: 0101:0303:0028
     - endpoint_ports: [ "Ethernet3/1" , "Ethernet3/1"]
       switch_ports: [ "Ethernet3/1" , "Ethernet3/1"]
       switches: ['smm153', 'smm154']
@@ -123,24 +163,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 140
+            short_esi: 0101:0303:0029
           - number: 2002
             vlan_id: 141
+            short_esi: 0101:0303:002a
           - number: 2003
             vlan_id: 142
+            short_esi: 0101:0303:002b
           - number: 2004
             vlan_id: 143
+            short_esi: 0101:0303:002c
           - number: 2005
             vlan_id: 144
+            short_esi: 0101:0303:002d
           - number: 2006
             vlan_id: 145
+            short_esi: 0101:0303:002e
           - number: 2007
             vlan_id: 146
+            short_esi: 0101:0303:002f
           - number: 2008
             vlan_id: 147
+            short_esi: 0101:0303:0030
           - number: 2009
             vlan_id: 148
+            short_esi: 0101:0303:0031
           - number: 2010
             vlan_id: 149
+            short_esi: 0101:0303:0032
     - endpoint_ports: [ "Ethernet3/2" , "Ethernet3/2"]
       switch_ports: [ "Ethernet3/2" , "Ethernet3/2"]
       switches: ['smm153', 'smm154']
@@ -151,24 +201,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 150
+            short_esi: 0101:0303:0033
           - number: 2002
             vlan_id: 151
+            short_esi: 0101:0303:0034
           - number: 2003
             vlan_id: 152
+            short_esi: 0101:0303:0035
           - number: 2004
             vlan_id: 153
+            short_esi: 0101:0303:0036
           - number: 2005
             vlan_id: 154
+            short_esi: 0101:0303:0037
           - number: 2006
             vlan_id: 155
+            short_esi: 0101:0303:0038
           - number: 2007
             vlan_id: 156
+            short_esi: 0101:0303:0039
           - number: 2008
             vlan_id: 157
+            short_esi: 0101:0303:003a
           - number: 2009
             vlan_id: 158
+            short_esi: 0101:0303:003b
           - number: 2010
             vlan_id: 159
+            short_esi: 0101:0303:003c
     - endpoint_ports: [ "Ethernet3/3" , "Ethernet3/3"]
       switch_ports: [ "Ethernet3/3" , "Ethernet3/3"]
       switches: ['smm153', 'smm154']
@@ -179,24 +239,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 160
+            short_esi: 0101:0303:003d
           - number: 2002
             vlan_id: 161
+            short_esi: 0101:0303:003e
           - number: 2003
             vlan_id: 162
+            short_esi: 0101:0303:003f
           - number: 2004
             vlan_id: 163
+            short_esi: 0101:0303:0040
           - number: 2005
             vlan_id: 164
+            short_esi: 0101:0303:0041
           - number: 2006
             vlan_id: 165
+            short_esi: 0101:0303:0042
           - number: 2007
             vlan_id: 166
+            short_esi: 0101:0303:0043
           - number: 2008
             vlan_id: 167
+            short_esi: 0101:0303:0044
           - number: 2009
             vlan_id: 168
+            short_esi: 0101:0303:0045
           - number: 2010
             vlan_id: 169
+            short_esi: 0101:0303:0046
     - endpoint_ports: [ "Ethernet3/4" , "Ethernet3/4"]
       switch_ports: [ "Ethernet3/4" , "Ethernet3/4"]
       switches: ['smm153', 'smm154']
@@ -207,24 +277,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 170
+            short_esi: 0101:0303:0047
           - number: 2002
             vlan_id: 171
+            short_esi: 0101:0303:0048
           - number: 2003
             vlan_id: 172
+            short_esi: 0101:0303:0049
           - number: 2004
             vlan_id: 173
+            short_esi: 0101:0303:004a
           - number: 2005
             vlan_id: 174
+            short_esi: 0101:0303:004b
           - number: 2006
             vlan_id: 175
+            short_esi: 0101:0303:004c
           - number: 2007
             vlan_id: 176
+            short_esi: 0101:0303:004d
           - number: 2008
             vlan_id: 177
+            short_esi: 0101:0303:004e
           - number: 2009
             vlan_id: 178
+            short_esi: 0101:0303:004f
           - number: 2010
             vlan_id: 179
+            short_esi: 0101:0303:0050
     - endpoint_ports: [ "Ethernet5/1" , "Ethernet5/1"]
       switch_ports: [ "Ethernet5/1" , "Ethernet5/1"]
       switches: ['smm153', 'smm154']
@@ -235,24 +315,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 180
+            short_esi: 0101:0303:0051
           - number: 2002
             vlan_id: 181
+            short_esi: 0101:0303:0052
           - number: 2003
             vlan_id: 182
+            short_esi: 0101:0303:0053
           - number: 2004
             vlan_id: 183
+            short_esi: 0101:0303:0054
           - number: 2005
             vlan_id: 184
+            short_esi: 0101:0303:0055
           - number: 2006
             vlan_id: 185
+            short_esi: 0101:0303:0056
           - number: 2007
             vlan_id: 186
+            short_esi: 0101:0303:0057
           - number: 2008
             vlan_id: 187
+            short_esi: 0101:0303:0058
           - number: 2009
             vlan_id: 188
+            short_esi: 0101:0303:0059
           - number: 2010
             vlan_id: 189
+            short_esi: 0101:0303:005a
     - endpoint_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switch_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switches: ['smm153', 'smm154']
@@ -263,24 +353,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 190
+            short_esi: 0101:0303:005b
           - number: 2002
             vlan_id: 191
+            short_esi: 0101:0303:005c
           - number: 2003
             vlan_id: 192
+            short_esi: 0101:0303:005d
           - number: 2004
             vlan_id: 193
+            short_esi: 0101:0303:005e
           - number: 2005
             vlan_id: 194
+            short_esi: 0101:0303:005f
           - number: 2006
             vlan_id: 195
+            short_esi: 0101:0303:0060
           - number: 2007
             vlan_id: 196
+            short_esi: 0101:0303:0061
           - number: 2008
             vlan_id: 197
+            short_esi: 0101:0303:0062
           - number: 2009
             vlan_id: 198
+            short_esi: 0101:0303:0063
           - number: 2010
             vlan_id: 199
+            short_esi: 0101:0303:0064
     - endpoint_ports: [ "Ethernet1/1" , "Ethernet1/1"]
       switch_ports: [ "Ethernet1/1" , "Ethernet1/1"]
       switches: ['smm311', 'smm312']
@@ -291,24 +391,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 100
+            short_esi: 0101:0404:0001
           - number: 2002
             vlan_id: 101
+            short_esi: 0101:0404:0002
           - number: 2003
             vlan_id: 102
+            short_esi: 0101:0404:0003
           - number: 2004
             vlan_id: 103
+            short_esi: 0101:0404:0004
           - number: 2005
             vlan_id: 104
+            short_esi: 0101:0404:0005
           - number: 2006
             vlan_id: 105
+            short_esi: 0101:0404:0006
           - number: 2007
             vlan_id: 106
+            short_esi: 0101:0404:0007
           - number: 2008
             vlan_id: 107
+            short_esi: 0101:0404:0008
           - number: 2009
             vlan_id: 108
+            short_esi: 0101:0404:0009
           - number: 2010
             vlan_id: 109
+            short_esi: 0101:0404:000a
     - endpoint_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switch_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switches: ['smm311', 'smm312']
@@ -319,24 +429,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 110
+            short_esi: 0101:0404:000b
           - number: 2002
             vlan_id: 111
+            short_esi: 0101:0404:000c
           - number: 2003
             vlan_id: 112
+            short_esi: 0101:0404:000d
           - number: 2004
             vlan_id: 113
+            short_esi: 0101:0404:000e
           - number: 2005
             vlan_id: 114
+            short_esi: 0101:0404:000f
           - number: 2006
             vlan_id: 115
+            short_esi: 0101:0404:0010
           - number: 2007
             vlan_id: 116
+            short_esi: 0101:0404:0011
           - number: 2008
             vlan_id: 117
+            short_esi: 0101:0404:0012
           - number: 2009
             vlan_id: 118
+            short_esi: 0101:0404:0013
           - number: 2010
             vlan_id: 119
+            short_esi: 0101:0404:0014
     - endpoint_ports: [ "Ethernet1/3" , "Ethernet1/3"]
       switch_ports: [ "Ethernet1/3" , "Ethernet1/3"]
       switches: ['smm311', 'smm312']
@@ -347,24 +467,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 120
+            short_esi: 0101:0404:0015
           - number: 2002
             vlan_id: 121
+            short_esi: 0101:0404:0016
           - number: 2003
             vlan_id: 122
+            short_esi: 0101:0404:0017
           - number: 2004
             vlan_id: 123
+            short_esi: 0101:0404:0018
           - number: 2005
             vlan_id: 124
+            short_esi: 0101:0404:0019
           - number: 2006
             vlan_id: 125
+            short_esi: 0101:0404:001a
           - number: 2007
             vlan_id: 126
+            short_esi: 0101:0404:001b
           - number: 2008
             vlan_id: 127
+            short_esi: 0101:0404:001c
           - number: 2009
             vlan_id: 128
+            short_esi: 0101:0404:001d
           - number: 2010
             vlan_id: 129
+            short_esi: 0101:0404:001e
     - endpoint_ports: [ "Ethernet1/4" , "Ethernet1/4"]
       switch_ports: [ "Ethernet1/4" , "Ethernet1/4"]
       switches: ['smm311', 'smm312']
@@ -375,24 +505,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 130
+            short_esi: 0101:0404:001f
           - number: 2002
             vlan_id: 131
+            short_esi: 0101:0404:0020
           - number: 2003
             vlan_id: 132
+            short_esi: 0101:0404:0021
           - number: 2004
             vlan_id: 133
+            short_esi: 0101:0404:0022
           - number: 2005
             vlan_id: 134
+            short_esi: 0101:0404:0023
           - number: 2006
             vlan_id: 135
+            short_esi: 0101:0404:0024
           - number: 2007
             vlan_id: 136
+            short_esi: 0101:0404:0025
           - number: 2008
             vlan_id: 137
+            short_esi: 0101:0404:0026
           - number: 2009
             vlan_id: 138
+            short_esi: 0101:0404:0027
           - number: 2010
             vlan_id: 139
+            short_esi: 0101:0404:0028
     - endpoint_ports: [ "Ethernet3/1" , "Ethernet3/1"]
       switch_ports: [ "Ethernet3/1" , "Ethernet3/1"]
       switches: ['smm311', 'smm312']
@@ -403,24 +543,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 140
+            short_esi: 0101:0404:0029
           - number: 2002
             vlan_id: 141
+            short_esi: 0101:0404:002a
           - number: 2003
             vlan_id: 142
+            short_esi: 0101:0404:002b
           - number: 2004
             vlan_id: 143
+            short_esi: 0101:0404:002c
           - number: 2005
             vlan_id: 144
+            short_esi: 0101:0404:002d
           - number: 2006
             vlan_id: 145
+            short_esi: 0101:0404:002e
           - number: 2007
             vlan_id: 146
+            short_esi: 0101:0404:002f
           - number: 2008
             vlan_id: 147
+            short_esi: 0101:0404:0030
           - number: 2009
             vlan_id: 148
+            short_esi: 0101:0404:0031
           - number: 2010
             vlan_id: 149
+            short_esi: 0101:0404:0032
     - endpoint_ports: [ "Ethernet3/2" , "Ethernet3/2"]
       switch_ports: [ "Ethernet3/2" , "Ethernet3/2"]
       switches: ['smm311', 'smm312']
@@ -431,24 +581,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 150
+            short_esi: 0101:0404:0033
           - number: 2002
             vlan_id: 151
+            short_esi: 0101:0404:0034
           - number: 2003
             vlan_id: 152
+            short_esi: 0101:0404:0035
           - number: 2004
             vlan_id: 153
+            short_esi: 0101:0404:0036
           - number: 2005
             vlan_id: 154
+            short_esi: 0101:0404:0037
           - number: 2006
             vlan_id: 155
+            short_esi: 0101:0404:0038
           - number: 2007
             vlan_id: 156
+            short_esi: 0101:0404:0039
           - number: 2008
             vlan_id: 157
+            short_esi: 0101:0404:003a
           - number: 2009
             vlan_id: 158
+            short_esi: 0101:0404:003b
           - number: 2010
             vlan_id: 159
+            short_esi: 0101:0404:003c
     - endpoint_ports: [ "Ethernet3/3" , "Ethernet3/3"]
       switch_ports: [ "Ethernet3/3" , "Ethernet3/3"]
       switches: ['smm311', 'smm312']
@@ -459,24 +619,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 160
+            short_esi: 0101:0404:003d
           - number: 2002
             vlan_id: 161
+            short_esi: 0101:0404:003e
           - number: 2003
             vlan_id: 162
+            short_esi: 0101:0404:003f
           - number: 2004
             vlan_id: 163
+            short_esi: 0101:0404:0040
           - number: 2005
             vlan_id: 164
+            short_esi: 0101:0404:0041
           - number: 2006
             vlan_id: 165
+            short_esi: 0101:0404:0042
           - number: 2007
             vlan_id: 166
+            short_esi: 0101:0404:0043
           - number: 2008
             vlan_id: 167
+            short_esi: 0101:0404:0044
           - number: 2009
             vlan_id: 168
+            short_esi: 0101:0404:0045
           - number: 2010
             vlan_id: 169
+            short_esi: 0101:0404:0046
     - endpoint_ports: [ "Ethernet3/4" , "Ethernet3/4"]
       switch_ports: [ "Ethernet3/4" , "Ethernet3/4"]
       switches: ['smm311', 'smm312']
@@ -487,24 +657,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 170
+            short_esi: 0101:0404:0047
           - number: 2002
             vlan_id: 171
+            short_esi: 0101:0404:0048
           - number: 2003
             vlan_id: 172
+            short_esi: 0101:0404:0049
           - number: 2004
             vlan_id: 173
+            short_esi: 0101:0404:004a
           - number: 2005
             vlan_id: 174
+            short_esi: 0101:0404:004b
           - number: 2006
             vlan_id: 175
+            short_esi: 0101:0404:004c
           - number: 2007
             vlan_id: 176
+            short_esi: 0101:0404:004d
           - number: 2008
             vlan_id: 177
+            short_esi: 0101:0404:004e
           - number: 2009
             vlan_id: 178
+            short_esi: 0101:0404:004f
           - number: 2010
             vlan_id: 179
+            short_esi: 0101:0404:0050
     - endpoint_ports: [ "Ethernet5/1" , "Ethernet5/1"]
       switch_ports: [ "Ethernet5/1" , "Ethernet5/1"]
       switches: ['smm311', 'smm312']
@@ -515,24 +695,34 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 180
+            short_esi: 0101:0404:0051
           - number: 2002
             vlan_id: 181
+            short_esi: 0101:0404:0052
           - number: 2003
             vlan_id: 182
+            short_esi: 0101:0404:0053
           - number: 2004
             vlan_id: 183
+            short_esi: 0101:0404:0054
           - number: 2005
             vlan_id: 184
+            short_esi: 0101:0404:0055
           - number: 2006
             vlan_id: 185
+            short_esi: 0101:0404:0056
           - number: 2007
             vlan_id: 186
+            short_esi: 0101:0404:0057
           - number: 2008
             vlan_id: 187
+            short_esi: 0101:0404:0058
           - number: 2009
             vlan_id: 188
+            short_esi: 0101:0404:0059
           - number: 2010
             vlan_id: 189
+            short_esi: 0101:0404:005a
     - endpoint_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switch_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switches: ['smm311', 'smm312']
@@ -543,21 +733,31 @@ cpes:
         subinterfaces:
           - number: 2001
             vlan_id: 190
+            short_esi: 0101:0404:005b
           - number: 2002
             vlan_id: 191
+            short_esi: 0101:0404:005c
           - number: 2003
             vlan_id: 192
+            short_esi: 0101:0404:005d
           - number: 2004
             vlan_id: 193
+            short_esi: 0101:0404:005e
           - number: 2005
             vlan_id: 194
+            short_esi: 0101:0404:005f
           - number: 2006
             vlan_id: 195
+            short_esi: 0101:0404:0060
           - number: 2007
             vlan_id: 196
+            short_esi: 0101:0404:0061
           - number: 2008
             vlan_id: 197
+            short_esi: 0101:0404:0062
           - number: 2009
             vlan_id: 198
+            short_esi: 0101:0404:0063
           - number: 2010
             vlan_id: 199
+            short_esi: 0101:0404:0064

@@ -23,7 +23,9 @@
               - start_id: 2000
                 switches: ["smm153", "smm154"]
                 short_esi: 0101:0202
+                short_subif_esi: 0101:0303
               - start_id: 2000
                 switches: ["smm311", "smm312"]
                 short_esi: 0202:0202
+                short_subif_esi: 0101:0404
       delegate_to: localhost
