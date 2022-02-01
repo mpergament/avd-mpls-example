@@ -87,16 +87,12 @@ il_mgmt_aaa_authorization:
 # Banners 
 il_mgmt_banners:
   login: |
-    This device is being used for the Inter.Link POC.
-    Please contact the rightful owner(s) before making changes:
+    This device is being used for the Inter.link POC
+    Please contact the rightful owner(s) before making any changes:
 
-      Michael Pergament <mp@arista.com> - Systems Engineer
-      Florian Hibler <florian@arista.com> - Systems Engineer
+      Michael Pergament - <mp@arista.com>
+      Florian Hibler - <florian@arista.com>
 
-    EOF
-  motd: |
-    This device is currently in use. If you need to access this device,
-    you must contact its current owner.
     EOF
 
 local_users:
@@ -427,7 +423,7 @@ pe:
           mgmt_ip: 172.28.135.184/20
     nuremburg:
       filter:
-        tenants: [ TENANT_A ]
+        tenants: [ TENANT_A, TENANT_B ]
         tags: [ nuremburg, common ]
       nodes:
         smm310:

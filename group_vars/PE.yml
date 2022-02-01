@@ -4,12 +4,6 @@ il_common_tcam_profile:
   profiles:
     traffic_policy: "{{lookup('file', '{{ root_dir }}/TCAM_TRAFFIC_POLICY.conf')}}"
 
-il_common_prefix_lists:
-  DEFAULT-PL:
-    sequence_numbers:
-      10:
-        action: permit 0.0.0.0/0
-
 il_common_ip_extcommunity_lists:
   INTERNET-DEFAULT-COMM:
     - type: permit 
@@ -46,18 +40,13 @@ il_common_route_maps:
     sequence_numbers:
       10:
         type: permit
-        match:
-          - "ip address prefix-list DEFAULT-PL"
         set:
           - "extcommunity rt 65000:65000 additive"
-      20:
-        type: permit
+
   LOCAL_DEFAULT_LEAK_RM:
     sequence_numbers:
       10:
         type: permit
-        match:
-          - "ip address prefix-list DEFAULT-PL"
         set: 
           - "tag 50000"
 
