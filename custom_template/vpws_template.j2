@@ -97,6 +97,10 @@ tenants:
             - Ethernet11/4.3000
             - Ethernet11/4.3001
             - Ethernet33/1.3000
+{%  set bgp_session_count = namespace(value=500) %}
+{%  for count in range(0, bgp_session_count.value)  %}
+            - Ethernet11/4.{{ 3010 + count }}
+{%  endfor %}
             ip_addresses:
             - 172.16.3.0/31
             - 172.16.3.2/31
@@ -105,6 +109,16 @@ tenants:
             - 172.16.3.8/31
             - 172.16.3.10/31
             - 172.16.3.12/31
+{%  set ip_count = namespace(value=0) %}
+{%  set octet3 = namespace(value=5) %}
+{%  for count in range(0, bgp_session_count.value)  %}
+            - 172.16.{{ octet3.value }}.{{ ip_count.value }}/31
+{%    set ip_count.value = ip_count.value  + 2 %}
+{%    if ip_count.value > 255 %}
+{%      set octet3.value = octet3.value  + 1 %}
+{%      set ip_count.value = 0 %}
+{%    endif %}
+{%  endfor %}
             nodes:
             - smm153
             - smm154
@@ -113,6 +127,9 @@ tenants:
             - smm153
             - smm154
             - smm310
+{%  for count in range(0, bgp_session_count.value)  %}
+            - smm153
+{%  endfor %}
         bgp_peers:
           172.16.3.1:
             maximum_routes: 0
@@ -156,6 +173,26 @@ tenants:
             nodes:
             - smm154
             remote_as: "65502"
+{%  set ip_count = namespace(value=0) %}
+{%  set octet3 = namespace(value=5) %}
+{%  for count in range(0, bgp_session_count.value)  %}
+          172.16.{{ octet3.value }}.{{ ip_count.value + 1 }}:
+            maximum_routes: 0
+            bfd: true
+            default_originate:
+              always: true
+            route_map_out: DENY-ALL-RM
+            description: IXIA_SCALE
+            # ebgp_multihop: 1
+            nodes:
+            - smm153
+            remote_as: {{ count + 64000 }}
+{%    set ip_count.value = ip_count.value  + 2 %}
+{%    if ip_count.value > 255 %}
+{%      set octet3.value = octet3.value  + 1 %}
+{%      set ip_count.value = 0 %}
+{%    endif %}
+{%  endfor %}
       PREMIUM1:
         vrf_id: 20001
         vtep_diagnostic:

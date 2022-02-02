@@ -40,8 +40,8 @@ bgp_peer_groups:
 internal_vlan_order:
   allocation: ascending
   range:
-    beginning: 3700
-    ending: 3900
+    beginning: 3000
+    ending: 4000
 
 # Update p2p mtu
 p2p_uplinks_mtu: 9214

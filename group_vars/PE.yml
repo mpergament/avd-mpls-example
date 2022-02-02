@@ -49,6 +49,10 @@ il_common_route_maps:
         type: permit
         set: 
           - "tag 50000"
+  DENY-ALL-RM:
+    sequence_numbers:
+      10:
+        type: deny
 
 il_common_router_bgp:
   peer_groups:
