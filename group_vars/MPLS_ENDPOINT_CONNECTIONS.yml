@@ -39,6 +39,36 @@ cpes:
           - number: 2010
             vlan_id: 109
             short_esi: 0101:0303:000a
+          - number: 2011
+            vlan_id: 110
+            short_esi: 0101:0303:000b
+          - number: 2012
+            vlan_id: 111
+            short_esi: 0101:0303:000c
+          - number: 2013
+            vlan_id: 112
+            short_esi: 0101:0303:000d
+          - number: 2014
+            vlan_id: 113
+            short_esi: 0101:0303:000e
+          - number: 2015
+            vlan_id: 114
+            short_esi: 0101:0303:000f
+          - number: 2016
+            vlan_id: 115
+            short_esi: 0101:0303:0010
+          - number: 2017
+            vlan_id: 116
+            short_esi: 0101:0303:0011
+          - number: 2018
+            vlan_id: 117
+            short_esi: 0101:0303:0012
+          - number: 2019
+            vlan_id: 118
+            short_esi: 0101:0303:0013
+          - number: 2020
+            vlan_id: 119
+            short_esi: 0101:0303:0014
     - endpoint_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switch_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switches: ['smm153', 'smm154']
@@ -46,44 +76,6 @@ cpes:
         description: EVPN-A-A-PortChannel
         mode: active
         short_esi: 0101:0202:0001
-        subinterfaces:
-          - number: 2001
-            vlan_id: 110
-            short_esi: 0101:0303:000b
-          - number: 2002
-            vlan_id: 111
-            short_esi: 0101:0303:000c
-          - number: 2003
-            vlan_id: 112
-            short_esi: 0101:0303:000d
-          - number: 2004
-            vlan_id: 113
-            short_esi: 0101:0303:000e
-          - number: 2005
-            vlan_id: 114
-            short_esi: 0101:0303:000f
-          - number: 2006
-            vlan_id: 115
-            short_esi: 0101:0303:0010
-          - number: 2007
-            vlan_id: 116
-            short_esi: 0101:0303:0011
-          - number: 2008
-            vlan_id: 117
-            short_esi: 0101:0303:0012
-          - number: 2009
-            vlan_id: 118
-            short_esi: 0101:0303:0013
-          - number: 2010
-            vlan_id: 119
-            short_esi: 0101:0303:0014
-    - endpoint_ports: [ "Ethernet1/3" , "Ethernet1/3"]
-      switch_ports: [ "Ethernet1/3" , "Ethernet1/3"]
-      switches: ['smm153', 'smm154']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0101:0202:0002
         subinterfaces:
           - number: 2001
             vlan_id: 120
@@ -115,51 +107,43 @@ cpes:
           - number: 2010
             vlan_id: 129
             short_esi: 0101:0303:001e
-    - endpoint_ports: [ "Ethernet1/4" , "Ethernet1/4"]
-      switch_ports: [ "Ethernet1/4" , "Ethernet1/4"]
-      switches: ['smm153', 'smm154']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0101:0202:0003
-        subinterfaces:
-          - number: 2001
+          - number: 2011
             vlan_id: 130
             short_esi: 0101:0303:001f
-          - number: 2002
+          - number: 2012
             vlan_id: 131
             short_esi: 0101:0303:0020
-          - number: 2003
+          - number: 2013
             vlan_id: 132
             short_esi: 0101:0303:0021
-          - number: 2004
+          - number: 2014
             vlan_id: 133
             short_esi: 0101:0303:0022
-          - number: 2005
+          - number: 2015
             vlan_id: 134
             short_esi: 0101:0303:0023
-          - number: 2006
+          - number: 2016
             vlan_id: 135
             short_esi: 0101:0303:0024
-          - number: 2007
+          - number: 2017
             vlan_id: 136
             short_esi: 0101:0303:0025
-          - number: 2008
+          - number: 2018
             vlan_id: 137
             short_esi: 0101:0303:0026
-          - number: 2009
+          - number: 2019
             vlan_id: 138
             short_esi: 0101:0303:0027
-          - number: 2010
+          - number: 2020
             vlan_id: 139
             short_esi: 0101:0303:0028
-    - endpoint_ports: [ "Ethernet3/1" , "Ethernet3/1"]
-      switch_ports: [ "Ethernet3/1" , "Ethernet3/1"]
+    - endpoint_ports: [ "Ethernet1/3" , "Ethernet1/3"]
+      switch_ports: [ "Ethernet1/3" , "Ethernet1/3"]
       switches: ['smm153', 'smm154']
       port_channel:
         description: EVPN-A-A-PortChannel
         mode: active
-        short_esi: 0101:0202:0004
+        short_esi: 0101:0202:0002
         subinterfaces:
           - number: 2001
             vlan_id: 140
@@ -191,51 +175,43 @@ cpes:
           - number: 2010
             vlan_id: 149
             short_esi: 0101:0303:0032
-    - endpoint_ports: [ "Ethernet3/2" , "Ethernet3/2"]
-      switch_ports: [ "Ethernet3/2" , "Ethernet3/2"]
-      switches: ['smm153', 'smm154']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0101:0202:0005
-        subinterfaces:
-          - number: 2001
+          - number: 2011
             vlan_id: 150
             short_esi: 0101:0303:0033
-          - number: 2002
+          - number: 2012
             vlan_id: 151
             short_esi: 0101:0303:0034
-          - number: 2003
+          - number: 2013
             vlan_id: 152
             short_esi: 0101:0303:0035
-          - number: 2004
+          - number: 2014
             vlan_id: 153
             short_esi: 0101:0303:0036
-          - number: 2005
+          - number: 2015
             vlan_id: 154
             short_esi: 0101:0303:0037
-          - number: 2006
+          - number: 2016
             vlan_id: 155
             short_esi: 0101:0303:0038
-          - number: 2007
+          - number: 2017
             vlan_id: 156
             short_esi: 0101:0303:0039
-          - number: 2008
+          - number: 2018
             vlan_id: 157
             short_esi: 0101:0303:003a
-          - number: 2009
+          - number: 2019
             vlan_id: 158
             short_esi: 0101:0303:003b
-          - number: 2010
+          - number: 2020
             vlan_id: 159
             short_esi: 0101:0303:003c
-    - endpoint_ports: [ "Ethernet3/3" , "Ethernet3/3"]
-      switch_ports: [ "Ethernet3/3" , "Ethernet3/3"]
+    - endpoint_ports: [ "Ethernet1/4" , "Ethernet1/4"]
+      switch_ports: [ "Ethernet1/4" , "Ethernet1/4"]
       switches: ['smm153', 'smm154']
       port_channel:
         description: EVPN-A-A-PortChannel
         mode: active
-        short_esi: 0101:0202:0006
+        short_esi: 0101:0202:0003
         subinterfaces:
           - number: 2001
             vlan_id: 160
@@ -267,51 +243,43 @@ cpes:
           - number: 2010
             vlan_id: 169
             short_esi: 0101:0303:0046
-    - endpoint_ports: [ "Ethernet3/4" , "Ethernet3/4"]
-      switch_ports: [ "Ethernet3/4" , "Ethernet3/4"]
-      switches: ['smm153', 'smm154']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0101:0202:0007
-        subinterfaces:
-          - number: 2001
+          - number: 2011
             vlan_id: 170
             short_esi: 0101:0303:0047
-          - number: 2002
+          - number: 2012
             vlan_id: 171
             short_esi: 0101:0303:0048
-          - number: 2003
+          - number: 2013
             vlan_id: 172
             short_esi: 0101:0303:0049
-          - number: 2004
+          - number: 2014
             vlan_id: 173
             short_esi: 0101:0303:004a
-          - number: 2005
+          - number: 2015
             vlan_id: 174
             short_esi: 0101:0303:004b
-          - number: 2006
+          - number: 2016
             vlan_id: 175
             short_esi: 0101:0303:004c
-          - number: 2007
+          - number: 2017
             vlan_id: 176
             short_esi: 0101:0303:004d
-          - number: 2008
+          - number: 2018
             vlan_id: 177
             short_esi: 0101:0303:004e
-          - number: 2009
+          - number: 2019
             vlan_id: 178
             short_esi: 0101:0303:004f
-          - number: 2010
+          - number: 2020
             vlan_id: 179
             short_esi: 0101:0303:0050
-    - endpoint_ports: [ "Ethernet5/1" , "Ethernet5/1"]
-      switch_ports: [ "Ethernet5/1" , "Ethernet5/1"]
+    - endpoint_ports: [ "Ethernet3/1" , "Ethernet3/1"]
+      switch_ports: [ "Ethernet3/1" , "Ethernet3/1"]
       switches: ['smm153', 'smm154']
       port_channel:
         description: EVPN-A-A-PortChannel
         mode: active
-        short_esi: 0101:0202:0008
+        short_esi: 0101:0202:0004
         subinterfaces:
           - number: 2001
             vlan_id: 180
@@ -343,6 +311,308 @@ cpes:
           - number: 2010
             vlan_id: 189
             short_esi: 0101:0303:005a
+          - number: 2011
+            vlan_id: 190
+            short_esi: 0101:0303:005b
+          - number: 2012
+            vlan_id: 191
+            short_esi: 0101:0303:005c
+          - number: 2013
+            vlan_id: 192
+            short_esi: 0101:0303:005d
+          - number: 2014
+            vlan_id: 193
+            short_esi: 0101:0303:005e
+          - number: 2015
+            vlan_id: 194
+            short_esi: 0101:0303:005f
+          - number: 2016
+            vlan_id: 195
+            short_esi: 0101:0303:0060
+          - number: 2017
+            vlan_id: 196
+            short_esi: 0101:0303:0061
+          - number: 2018
+            vlan_id: 197
+            short_esi: 0101:0303:0062
+          - number: 2019
+            vlan_id: 198
+            short_esi: 0101:0303:0063
+          - number: 2020
+            vlan_id: 199
+            short_esi: 0101:0303:0064
+    - endpoint_ports: [ "Ethernet3/2" , "Ethernet3/2"]
+      switch_ports: [ "Ethernet3/2" , "Ethernet3/2"]
+      switches: ['smm153', 'smm154']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0101:0202:0005
+        subinterfaces:
+          - number: 2001
+            vlan_id: 200
+            short_esi: 0101:0303:0065
+          - number: 2002
+            vlan_id: 201
+            short_esi: 0101:0303:0066
+          - number: 2003
+            vlan_id: 202
+            short_esi: 0101:0303:0067
+          - number: 2004
+            vlan_id: 203
+            short_esi: 0101:0303:0068
+          - number: 2005
+            vlan_id: 204
+            short_esi: 0101:0303:0069
+          - number: 2006
+            vlan_id: 205
+            short_esi: 0101:0303:006a
+          - number: 2007
+            vlan_id: 206
+            short_esi: 0101:0303:006b
+          - number: 2008
+            vlan_id: 207
+            short_esi: 0101:0303:006c
+          - number: 2009
+            vlan_id: 208
+            short_esi: 0101:0303:006d
+          - number: 2010
+            vlan_id: 209
+            short_esi: 0101:0303:006e
+          - number: 2011
+            vlan_id: 210
+            short_esi: 0101:0303:006f
+          - number: 2012
+            vlan_id: 211
+            short_esi: 0101:0303:0070
+          - number: 2013
+            vlan_id: 212
+            short_esi: 0101:0303:0071
+          - number: 2014
+            vlan_id: 213
+            short_esi: 0101:0303:0072
+          - number: 2015
+            vlan_id: 214
+            short_esi: 0101:0303:0073
+          - number: 2016
+            vlan_id: 215
+            short_esi: 0101:0303:0074
+          - number: 2017
+            vlan_id: 216
+            short_esi: 0101:0303:0075
+          - number: 2018
+            vlan_id: 217
+            short_esi: 0101:0303:0076
+          - number: 2019
+            vlan_id: 218
+            short_esi: 0101:0303:0077
+          - number: 2020
+            vlan_id: 219
+            short_esi: 0101:0303:0078
+    - endpoint_ports: [ "Ethernet3/3" , "Ethernet3/3"]
+      switch_ports: [ "Ethernet3/3" , "Ethernet3/3"]
+      switches: ['smm153', 'smm154']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0101:0202:0006
+        subinterfaces:
+          - number: 2001
+            vlan_id: 220
+            short_esi: 0101:0303:0079
+          - number: 2002
+            vlan_id: 221
+            short_esi: 0101:0303:007a
+          - number: 2003
+            vlan_id: 222
+            short_esi: 0101:0303:007b
+          - number: 2004
+            vlan_id: 223
+            short_esi: 0101:0303:007c
+          - number: 2005
+            vlan_id: 224
+            short_esi: 0101:0303:007d
+          - number: 2006
+            vlan_id: 225
+            short_esi: 0101:0303:007e
+          - number: 2007
+            vlan_id: 226
+            short_esi: 0101:0303:007f
+          - number: 2008
+            vlan_id: 227
+            short_esi: 0101:0303:0080
+          - number: 2009
+            vlan_id: 228
+            short_esi: 0101:0303:0081
+          - number: 2010
+            vlan_id: 229
+            short_esi: 0101:0303:0082
+          - number: 2011
+            vlan_id: 230
+            short_esi: 0101:0303:0083
+          - number: 2012
+            vlan_id: 231
+            short_esi: 0101:0303:0084
+          - number: 2013
+            vlan_id: 232
+            short_esi: 0101:0303:0085
+          - number: 2014
+            vlan_id: 233
+            short_esi: 0101:0303:0086
+          - number: 2015
+            vlan_id: 234
+            short_esi: 0101:0303:0087
+          - number: 2016
+            vlan_id: 235
+            short_esi: 0101:0303:0088
+          - number: 2017
+            vlan_id: 236
+            short_esi: 0101:0303:0089
+          - number: 2018
+            vlan_id: 237
+            short_esi: 0101:0303:008a
+          - number: 2019
+            vlan_id: 238
+            short_esi: 0101:0303:008b
+          - number: 2020
+            vlan_id: 239
+            short_esi: 0101:0303:008c
+    - endpoint_ports: [ "Ethernet3/4" , "Ethernet3/4"]
+      switch_ports: [ "Ethernet3/4" , "Ethernet3/4"]
+      switches: ['smm153', 'smm154']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0101:0202:0007
+        subinterfaces:
+          - number: 2001
+            vlan_id: 240
+            short_esi: 0101:0303:008d
+          - number: 2002
+            vlan_id: 241
+            short_esi: 0101:0303:008e
+          - number: 2003
+            vlan_id: 242
+            short_esi: 0101:0303:008f
+          - number: 2004
+            vlan_id: 243
+            short_esi: 0101:0303:0090
+          - number: 2005
+            vlan_id: 244
+            short_esi: 0101:0303:0091
+          - number: 2006
+            vlan_id: 245
+            short_esi: 0101:0303:0092
+          - number: 2007
+            vlan_id: 246
+            short_esi: 0101:0303:0093
+          - number: 2008
+            vlan_id: 247
+            short_esi: 0101:0303:0094
+          - number: 2009
+            vlan_id: 248
+            short_esi: 0101:0303:0095
+          - number: 2010
+            vlan_id: 249
+            short_esi: 0101:0303:0096
+          - number: 2011
+            vlan_id: 250
+            short_esi: 0101:0303:0097
+          - number: 2012
+            vlan_id: 251
+            short_esi: 0101:0303:0098
+          - number: 2013
+            vlan_id: 252
+            short_esi: 0101:0303:0099
+          - number: 2014
+            vlan_id: 253
+            short_esi: 0101:0303:009a
+          - number: 2015
+            vlan_id: 254
+            short_esi: 0101:0303:009b
+          - number: 2016
+            vlan_id: 255
+            short_esi: 0101:0303:009c
+          - number: 2017
+            vlan_id: 256
+            short_esi: 0101:0303:009d
+          - number: 2018
+            vlan_id: 257
+            short_esi: 0101:0303:009e
+          - number: 2019
+            vlan_id: 258
+            short_esi: 0101:0303:009f
+          - number: 2020
+            vlan_id: 259
+            short_esi: 0101:0303:00a0
+    - endpoint_ports: [ "Ethernet5/1" , "Ethernet5/1"]
+      switch_ports: [ "Ethernet5/1" , "Ethernet5/1"]
+      switches: ['smm153', 'smm154']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0101:0202:0008
+        subinterfaces:
+          - number: 2001
+            vlan_id: 260
+            short_esi: 0101:0303:00a1
+          - number: 2002
+            vlan_id: 261
+            short_esi: 0101:0303:00a2
+          - number: 2003
+            vlan_id: 262
+            short_esi: 0101:0303:00a3
+          - number: 2004
+            vlan_id: 263
+            short_esi: 0101:0303:00a4
+          - number: 2005
+            vlan_id: 264
+            short_esi: 0101:0303:00a5
+          - number: 2006
+            vlan_id: 265
+            short_esi: 0101:0303:00a6
+          - number: 2007
+            vlan_id: 266
+            short_esi: 0101:0303:00a7
+          - number: 2008
+            vlan_id: 267
+            short_esi: 0101:0303:00a8
+          - number: 2009
+            vlan_id: 268
+            short_esi: 0101:0303:00a9
+          - number: 2010
+            vlan_id: 269
+            short_esi: 0101:0303:00aa
+          - number: 2011
+            vlan_id: 270
+            short_esi: 0101:0303:00ab
+          - number: 2012
+            vlan_id: 271
+            short_esi: 0101:0303:00ac
+          - number: 2013
+            vlan_id: 272
+            short_esi: 0101:0303:00ad
+          - number: 2014
+            vlan_id: 273
+            short_esi: 0101:0303:00ae
+          - number: 2015
+            vlan_id: 274
+            short_esi: 0101:0303:00af
+          - number: 2016
+            vlan_id: 275
+            short_esi: 0101:0303:00b0
+          - number: 2017
+            vlan_id: 276
+            short_esi: 0101:0303:00b1
+          - number: 2018
+            vlan_id: 277
+            short_esi: 0101:0303:00b2
+          - number: 2019
+            vlan_id: 278
+            short_esi: 0101:0303:00b3
+          - number: 2020
+            vlan_id: 279
+            short_esi: 0101:0303:00b4
     - endpoint_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switch_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switches: ['smm153', 'smm154']
@@ -352,35 +622,65 @@ cpes:
         short_esi: 0101:0202:0009
         subinterfaces:
           - number: 2001
-            vlan_id: 190
-            short_esi: 0101:0303:005b
+            vlan_id: 280
+            short_esi: 0101:0303:00b5
           - number: 2002
-            vlan_id: 191
-            short_esi: 0101:0303:005c
+            vlan_id: 281
+            short_esi: 0101:0303:00b6
           - number: 2003
-            vlan_id: 192
-            short_esi: 0101:0303:005d
+            vlan_id: 282
+            short_esi: 0101:0303:00b7
           - number: 2004
-            vlan_id: 193
-            short_esi: 0101:0303:005e
+            vlan_id: 283
+            short_esi: 0101:0303:00b8
           - number: 2005
-            vlan_id: 194
-            short_esi: 0101:0303:005f
+            vlan_id: 284
+            short_esi: 0101:0303:00b9
           - number: 2006
-            vlan_id: 195
-            short_esi: 0101:0303:0060
+            vlan_id: 285
+            short_esi: 0101:0303:00ba
           - number: 2007
-            vlan_id: 196
-            short_esi: 0101:0303:0061
+            vlan_id: 286
+            short_esi: 0101:0303:00bb
           - number: 2008
-            vlan_id: 197
-            short_esi: 0101:0303:0062
+            vlan_id: 287
+            short_esi: 0101:0303:00bc
           - number: 2009
-            vlan_id: 198
-            short_esi: 0101:0303:0063
+            vlan_id: 288
+            short_esi: 0101:0303:00bd
           - number: 2010
-            vlan_id: 199
-            short_esi: 0101:0303:0064
+            vlan_id: 289
+            short_esi: 0101:0303:00be
+          - number: 2011
+            vlan_id: 290
+            short_esi: 0101:0303:00bf
+          - number: 2012
+            vlan_id: 291
+            short_esi: 0101:0303:00c0
+          - number: 2013
+            vlan_id: 292
+            short_esi: 0101:0303:00c1
+          - number: 2014
+            vlan_id: 293
+            short_esi: 0101:0303:00c2
+          - number: 2015
+            vlan_id: 294
+            short_esi: 0101:0303:00c3
+          - number: 2016
+            vlan_id: 295
+            short_esi: 0101:0303:00c4
+          - number: 2017
+            vlan_id: 296
+            short_esi: 0101:0303:00c5
+          - number: 2018
+            vlan_id: 297
+            short_esi: 0101:0303:00c6
+          - number: 2019
+            vlan_id: 298
+            short_esi: 0101:0303:00c7
+          - number: 2020
+            vlan_id: 299
+            short_esi: 0101:0303:00c8
     - endpoint_ports: [ "Ethernet1/1" , "Ethernet1/1"]
       switch_ports: [ "Ethernet1/1" , "Ethernet1/1"]
       switches: ['smm311', 'smm312']
@@ -419,6 +719,36 @@ cpes:
           - number: 2010
             vlan_id: 109
             short_esi: 0101:0404:000a
+          - number: 2011
+            vlan_id: 110
+            short_esi: 0101:0404:000b
+          - number: 2012
+            vlan_id: 111
+            short_esi: 0101:0404:000c
+          - number: 2013
+            vlan_id: 112
+            short_esi: 0101:0404:000d
+          - number: 2014
+            vlan_id: 113
+            short_esi: 0101:0404:000e
+          - number: 2015
+            vlan_id: 114
+            short_esi: 0101:0404:000f
+          - number: 2016
+            vlan_id: 115
+            short_esi: 0101:0404:0010
+          - number: 2017
+            vlan_id: 116
+            short_esi: 0101:0404:0011
+          - number: 2018
+            vlan_id: 117
+            short_esi: 0101:0404:0012
+          - number: 2019
+            vlan_id: 118
+            short_esi: 0101:0404:0013
+          - number: 2020
+            vlan_id: 119
+            short_esi: 0101:0404:0014
     - endpoint_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switch_ports: [ "Ethernet1/2" , "Ethernet1/2"]
       switches: ['smm311', 'smm312']
@@ -426,44 +756,6 @@ cpes:
         description: EVPN-A-A-PortChannel
         mode: active
         short_esi: 0202:0202:0001
-        subinterfaces:
-          - number: 2001
-            vlan_id: 110
-            short_esi: 0101:0404:000b
-          - number: 2002
-            vlan_id: 111
-            short_esi: 0101:0404:000c
-          - number: 2003
-            vlan_id: 112
-            short_esi: 0101:0404:000d
-          - number: 2004
-            vlan_id: 113
-            short_esi: 0101:0404:000e
-          - number: 2005
-            vlan_id: 114
-            short_esi: 0101:0404:000f
-          - number: 2006
-            vlan_id: 115
-            short_esi: 0101:0404:0010
-          - number: 2007
-            vlan_id: 116
-            short_esi: 0101:0404:0011
-          - number: 2008
-            vlan_id: 117
-            short_esi: 0101:0404:0012
-          - number: 2009
-            vlan_id: 118
-            short_esi: 0101:0404:0013
-          - number: 2010
-            vlan_id: 119
-            short_esi: 0101:0404:0014
-    - endpoint_ports: [ "Ethernet1/3" , "Ethernet1/3"]
-      switch_ports: [ "Ethernet1/3" , "Ethernet1/3"]
-      switches: ['smm311', 'smm312']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0202:0202:0002
         subinterfaces:
           - number: 2001
             vlan_id: 120
@@ -495,51 +787,43 @@ cpes:
           - number: 2010
             vlan_id: 129
             short_esi: 0101:0404:001e
-    - endpoint_ports: [ "Ethernet1/4" , "Ethernet1/4"]
-      switch_ports: [ "Ethernet1/4" , "Ethernet1/4"]
-      switches: ['smm311', 'smm312']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0202:0202:0003
-        subinterfaces:
-          - number: 2001
+          - number: 2011
             vlan_id: 130
             short_esi: 0101:0404:001f
-          - number: 2002
+          - number: 2012
             vlan_id: 131
             short_esi: 0101:0404:0020
-          - number: 2003
+          - number: 2013
             vlan_id: 132
             short_esi: 0101:0404:0021
-          - number: 2004
+          - number: 2014
             vlan_id: 133
             short_esi: 0101:0404:0022
-          - number: 2005
+          - number: 2015
             vlan_id: 134
             short_esi: 0101:0404:0023
-          - number: 2006
+          - number: 2016
             vlan_id: 135
             short_esi: 0101:0404:0024
-          - number: 2007
+          - number: 2017
             vlan_id: 136
             short_esi: 0101:0404:0025
-          - number: 2008
+          - number: 2018
             vlan_id: 137
             short_esi: 0101:0404:0026
-          - number: 2009
+          - number: 2019
             vlan_id: 138
             short_esi: 0101:0404:0027
-          - number: 2010
+          - number: 2020
             vlan_id: 139
             short_esi: 0101:0404:0028
-    - endpoint_ports: [ "Ethernet3/1" , "Ethernet3/1"]
-      switch_ports: [ "Ethernet3/1" , "Ethernet3/1"]
+    - endpoint_ports: [ "Ethernet1/3" , "Ethernet1/3"]
+      switch_ports: [ "Ethernet1/3" , "Ethernet1/3"]
       switches: ['smm311', 'smm312']
       port_channel:
         description: EVPN-A-A-PortChannel
         mode: active
-        short_esi: 0202:0202:0004
+        short_esi: 0202:0202:0002
         subinterfaces:
           - number: 2001
             vlan_id: 140
@@ -571,51 +855,43 @@ cpes:
           - number: 2010
             vlan_id: 149
             short_esi: 0101:0404:0032
-    - endpoint_ports: [ "Ethernet3/2" , "Ethernet3/2"]
-      switch_ports: [ "Ethernet3/2" , "Ethernet3/2"]
-      switches: ['smm311', 'smm312']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0202:0202:0005
-        subinterfaces:
-          - number: 2001
+          - number: 2011
             vlan_id: 150
             short_esi: 0101:0404:0033
-          - number: 2002
+          - number: 2012
             vlan_id: 151
             short_esi: 0101:0404:0034
-          - number: 2003
+          - number: 2013
             vlan_id: 152
             short_esi: 0101:0404:0035
-          - number: 2004
+          - number: 2014
             vlan_id: 153
             short_esi: 0101:0404:0036
-          - number: 2005
+          - number: 2015
             vlan_id: 154
             short_esi: 0101:0404:0037
-          - number: 2006
+          - number: 2016
             vlan_id: 155
             short_esi: 0101:0404:0038
-          - number: 2007
+          - number: 2017
             vlan_id: 156
             short_esi: 0101:0404:0039
-          - number: 2008
+          - number: 2018
             vlan_id: 157
             short_esi: 0101:0404:003a
-          - number: 2009
+          - number: 2019
             vlan_id: 158
             short_esi: 0101:0404:003b
-          - number: 2010
+          - number: 2020
             vlan_id: 159
             short_esi: 0101:0404:003c
-    - endpoint_ports: [ "Ethernet3/3" , "Ethernet3/3"]
-      switch_ports: [ "Ethernet3/3" , "Ethernet3/3"]
+    - endpoint_ports: [ "Ethernet1/4" , "Ethernet1/4"]
+      switch_ports: [ "Ethernet1/4" , "Ethernet1/4"]
       switches: ['smm311', 'smm312']
       port_channel:
         description: EVPN-A-A-PortChannel
         mode: active
-        short_esi: 0202:0202:0006
+        short_esi: 0202:0202:0003
         subinterfaces:
           - number: 2001
             vlan_id: 160
@@ -647,51 +923,43 @@ cpes:
           - number: 2010
             vlan_id: 169
             short_esi: 0101:0404:0046
-    - endpoint_ports: [ "Ethernet3/4" , "Ethernet3/4"]
-      switch_ports: [ "Ethernet3/4" , "Ethernet3/4"]
-      switches: ['smm311', 'smm312']
-      port_channel:
-        description: EVPN-A-A-PortChannel
-        mode: active
-        short_esi: 0202:0202:0007
-        subinterfaces:
-          - number: 2001
+          - number: 2011
             vlan_id: 170
             short_esi: 0101:0404:0047
-          - number: 2002
+          - number: 2012
             vlan_id: 171
             short_esi: 0101:0404:0048
-          - number: 2003
+          - number: 2013
             vlan_id: 172
             short_esi: 0101:0404:0049
-          - number: 2004
+          - number: 2014
             vlan_id: 173
             short_esi: 0101:0404:004a
-          - number: 2005
+          - number: 2015
             vlan_id: 174
             short_esi: 0101:0404:004b
-          - number: 2006
+          - number: 2016
             vlan_id: 175
             short_esi: 0101:0404:004c
-          - number: 2007
+          - number: 2017
             vlan_id: 176
             short_esi: 0101:0404:004d
-          - number: 2008
+          - number: 2018
             vlan_id: 177
             short_esi: 0101:0404:004e
-          - number: 2009
+          - number: 2019
             vlan_id: 178
             short_esi: 0101:0404:004f
-          - number: 2010
+          - number: 2020
             vlan_id: 179
             short_esi: 0101:0404:0050
-    - endpoint_ports: [ "Ethernet5/1" , "Ethernet5/1"]
-      switch_ports: [ "Ethernet5/1" , "Ethernet5/1"]
+    - endpoint_ports: [ "Ethernet3/1" , "Ethernet3/1"]
+      switch_ports: [ "Ethernet3/1" , "Ethernet3/1"]
       switches: ['smm311', 'smm312']
       port_channel:
         description: EVPN-A-A-PortChannel
         mode: active
-        short_esi: 0202:0202:0008
+        short_esi: 0202:0202:0004
         subinterfaces:
           - number: 2001
             vlan_id: 180
@@ -723,6 +991,308 @@ cpes:
           - number: 2010
             vlan_id: 189
             short_esi: 0101:0404:005a
+          - number: 2011
+            vlan_id: 190
+            short_esi: 0101:0404:005b
+          - number: 2012
+            vlan_id: 191
+            short_esi: 0101:0404:005c
+          - number: 2013
+            vlan_id: 192
+            short_esi: 0101:0404:005d
+          - number: 2014
+            vlan_id: 193
+            short_esi: 0101:0404:005e
+          - number: 2015
+            vlan_id: 194
+            short_esi: 0101:0404:005f
+          - number: 2016
+            vlan_id: 195
+            short_esi: 0101:0404:0060
+          - number: 2017
+            vlan_id: 196
+            short_esi: 0101:0404:0061
+          - number: 2018
+            vlan_id: 197
+            short_esi: 0101:0404:0062
+          - number: 2019
+            vlan_id: 198
+            short_esi: 0101:0404:0063
+          - number: 2020
+            vlan_id: 199
+            short_esi: 0101:0404:0064
+    - endpoint_ports: [ "Ethernet3/2" , "Ethernet3/2"]
+      switch_ports: [ "Ethernet3/2" , "Ethernet3/2"]
+      switches: ['smm311', 'smm312']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0202:0202:0005
+        subinterfaces:
+          - number: 2001
+            vlan_id: 200
+            short_esi: 0101:0404:0065
+          - number: 2002
+            vlan_id: 201
+            short_esi: 0101:0404:0066
+          - number: 2003
+            vlan_id: 202
+            short_esi: 0101:0404:0067
+          - number: 2004
+            vlan_id: 203
+            short_esi: 0101:0404:0068
+          - number: 2005
+            vlan_id: 204
+            short_esi: 0101:0404:0069
+          - number: 2006
+            vlan_id: 205
+            short_esi: 0101:0404:006a
+          - number: 2007
+            vlan_id: 206
+            short_esi: 0101:0404:006b
+          - number: 2008
+            vlan_id: 207
+            short_esi: 0101:0404:006c
+          - number: 2009
+            vlan_id: 208
+            short_esi: 0101:0404:006d
+          - number: 2010
+            vlan_id: 209
+            short_esi: 0101:0404:006e
+          - number: 2011
+            vlan_id: 210
+            short_esi: 0101:0404:006f
+          - number: 2012
+            vlan_id: 211
+            short_esi: 0101:0404:0070
+          - number: 2013
+            vlan_id: 212
+            short_esi: 0101:0404:0071
+          - number: 2014
+            vlan_id: 213
+            short_esi: 0101:0404:0072
+          - number: 2015
+            vlan_id: 214
+            short_esi: 0101:0404:0073
+          - number: 2016
+            vlan_id: 215
+            short_esi: 0101:0404:0074
+          - number: 2017
+            vlan_id: 216
+            short_esi: 0101:0404:0075
+          - number: 2018
+            vlan_id: 217
+            short_esi: 0101:0404:0076
+          - number: 2019
+            vlan_id: 218
+            short_esi: 0101:0404:0077
+          - number: 2020
+            vlan_id: 219
+            short_esi: 0101:0404:0078
+    - endpoint_ports: [ "Ethernet3/3" , "Ethernet3/3"]
+      switch_ports: [ "Ethernet3/3" , "Ethernet3/3"]
+      switches: ['smm311', 'smm312']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0202:0202:0006
+        subinterfaces:
+          - number: 2001
+            vlan_id: 220
+            short_esi: 0101:0404:0079
+          - number: 2002
+            vlan_id: 221
+            short_esi: 0101:0404:007a
+          - number: 2003
+            vlan_id: 222
+            short_esi: 0101:0404:007b
+          - number: 2004
+            vlan_id: 223
+            short_esi: 0101:0404:007c
+          - number: 2005
+            vlan_id: 224
+            short_esi: 0101:0404:007d
+          - number: 2006
+            vlan_id: 225
+            short_esi: 0101:0404:007e
+          - number: 2007
+            vlan_id: 226
+            short_esi: 0101:0404:007f
+          - number: 2008
+            vlan_id: 227
+            short_esi: 0101:0404:0080
+          - number: 2009
+            vlan_id: 228
+            short_esi: 0101:0404:0081
+          - number: 2010
+            vlan_id: 229
+            short_esi: 0101:0404:0082
+          - number: 2011
+            vlan_id: 230
+            short_esi: 0101:0404:0083
+          - number: 2012
+            vlan_id: 231
+            short_esi: 0101:0404:0084
+          - number: 2013
+            vlan_id: 232
+            short_esi: 0101:0404:0085
+          - number: 2014
+            vlan_id: 233
+            short_esi: 0101:0404:0086
+          - number: 2015
+            vlan_id: 234
+            short_esi: 0101:0404:0087
+          - number: 2016
+            vlan_id: 235
+            short_esi: 0101:0404:0088
+          - number: 2017
+            vlan_id: 236
+            short_esi: 0101:0404:0089
+          - number: 2018
+            vlan_id: 237
+            short_esi: 0101:0404:008a
+          - number: 2019
+            vlan_id: 238
+            short_esi: 0101:0404:008b
+          - number: 2020
+            vlan_id: 239
+            short_esi: 0101:0404:008c
+    - endpoint_ports: [ "Ethernet3/4" , "Ethernet3/4"]
+      switch_ports: [ "Ethernet3/4" , "Ethernet3/4"]
+      switches: ['smm311', 'smm312']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0202:0202:0007
+        subinterfaces:
+          - number: 2001
+            vlan_id: 240
+            short_esi: 0101:0404:008d
+          - number: 2002
+            vlan_id: 241
+            short_esi: 0101:0404:008e
+          - number: 2003
+            vlan_id: 242
+            short_esi: 0101:0404:008f
+          - number: 2004
+            vlan_id: 243
+            short_esi: 0101:0404:0090
+          - number: 2005
+            vlan_id: 244
+            short_esi: 0101:0404:0091
+          - number: 2006
+            vlan_id: 245
+            short_esi: 0101:0404:0092
+          - number: 2007
+            vlan_id: 246
+            short_esi: 0101:0404:0093
+          - number: 2008
+            vlan_id: 247
+            short_esi: 0101:0404:0094
+          - number: 2009
+            vlan_id: 248
+            short_esi: 0101:0404:0095
+          - number: 2010
+            vlan_id: 249
+            short_esi: 0101:0404:0096
+          - number: 2011
+            vlan_id: 250
+            short_esi: 0101:0404:0097
+          - number: 2012
+            vlan_id: 251
+            short_esi: 0101:0404:0098
+          - number: 2013
+            vlan_id: 252
+            short_esi: 0101:0404:0099
+          - number: 2014
+            vlan_id: 253
+            short_esi: 0101:0404:009a
+          - number: 2015
+            vlan_id: 254
+            short_esi: 0101:0404:009b
+          - number: 2016
+            vlan_id: 255
+            short_esi: 0101:0404:009c
+          - number: 2017
+            vlan_id: 256
+            short_esi: 0101:0404:009d
+          - number: 2018
+            vlan_id: 257
+            short_esi: 0101:0404:009e
+          - number: 2019
+            vlan_id: 258
+            short_esi: 0101:0404:009f
+          - number: 2020
+            vlan_id: 259
+            short_esi: 0101:0404:00a0
+    - endpoint_ports: [ "Ethernet5/1" , "Ethernet5/1"]
+      switch_ports: [ "Ethernet5/1" , "Ethernet5/1"]
+      switches: ['smm311', 'smm312']
+      port_channel:
+        description: EVPN-A-A-PortChannel
+        mode: active
+        short_esi: 0202:0202:0008
+        subinterfaces:
+          - number: 2001
+            vlan_id: 260
+            short_esi: 0101:0404:00a1
+          - number: 2002
+            vlan_id: 261
+            short_esi: 0101:0404:00a2
+          - number: 2003
+            vlan_id: 262
+            short_esi: 0101:0404:00a3
+          - number: 2004
+            vlan_id: 263
+            short_esi: 0101:0404:00a4
+          - number: 2005
+            vlan_id: 264
+            short_esi: 0101:0404:00a5
+          - number: 2006
+            vlan_id: 265
+            short_esi: 0101:0404:00a6
+          - number: 2007
+            vlan_id: 266
+            short_esi: 0101:0404:00a7
+          - number: 2008
+            vlan_id: 267
+            short_esi: 0101:0404:00a8
+          - number: 2009
+            vlan_id: 268
+            short_esi: 0101:0404:00a9
+          - number: 2010
+            vlan_id: 269
+            short_esi: 0101:0404:00aa
+          - number: 2011
+            vlan_id: 270
+            short_esi: 0101:0404:00ab
+          - number: 2012
+            vlan_id: 271
+            short_esi: 0101:0404:00ac
+          - number: 2013
+            vlan_id: 272
+            short_esi: 0101:0404:00ad
+          - number: 2014
+            vlan_id: 273
+            short_esi: 0101:0404:00ae
+          - number: 2015
+            vlan_id: 274
+            short_esi: 0101:0404:00af
+          - number: 2016
+            vlan_id: 275
+            short_esi: 0101:0404:00b0
+          - number: 2017
+            vlan_id: 276
+            short_esi: 0101:0404:00b1
+          - number: 2018
+            vlan_id: 277
+            short_esi: 0101:0404:00b2
+          - number: 2019
+            vlan_id: 278
+            short_esi: 0101:0404:00b3
+          - number: 2020
+            vlan_id: 279
+            short_esi: 0101:0404:00b4
     - endpoint_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switch_ports: [ "Ethernet5/2" , "Ethernet5/2"]
       switches: ['smm311', 'smm312']
@@ -732,32 +1302,62 @@ cpes:
         short_esi: 0202:0202:0009
         subinterfaces:
           - number: 2001
-            vlan_id: 190
-            short_esi: 0101:0404:005b
+            vlan_id: 280
+            short_esi: 0101:0404:00b5
           - number: 2002
-            vlan_id: 191
-            short_esi: 0101:0404:005c
+            vlan_id: 281
+            short_esi: 0101:0404:00b6
           - number: 2003
-            vlan_id: 192
-            short_esi: 0101:0404:005d
+            vlan_id: 282
+            short_esi: 0101:0404:00b7
           - number: 2004
-            vlan_id: 193
-            short_esi: 0101:0404:005e
+            vlan_id: 283
+            short_esi: 0101:0404:00b8
           - number: 2005
-            vlan_id: 194
-            short_esi: 0101:0404:005f
+            vlan_id: 284
+            short_esi: 0101:0404:00b9
           - number: 2006
-            vlan_id: 195
-            short_esi: 0101:0404:0060
+            vlan_id: 285
+            short_esi: 0101:0404:00ba
           - number: 2007
-            vlan_id: 196
-            short_esi: 0101:0404:0061
+            vlan_id: 286
+            short_esi: 0101:0404:00bb
           - number: 2008
-            vlan_id: 197
-            short_esi: 0101:0404:0062
+            vlan_id: 287
+            short_esi: 0101:0404:00bc
           - number: 2009
-            vlan_id: 198
-            short_esi: 0101:0404:0063
+            vlan_id: 288
+            short_esi: 0101:0404:00bd
           - number: 2010
-            vlan_id: 199
-            short_esi: 0101:0404:0064
+            vlan_id: 289
+            short_esi: 0101:0404:00be
+          - number: 2011
+            vlan_id: 290
+            short_esi: 0101:0404:00bf
+          - number: 2012
+            vlan_id: 291
+            short_esi: 0101:0404:00c0
+          - number: 2013
+            vlan_id: 292
+            short_esi: 0101:0404:00c1
+          - number: 2014
+            vlan_id: 293
+            short_esi: 0101:0404:00c2
+          - number: 2015
+            vlan_id: 294
+            short_esi: 0101:0404:00c3
+          - number: 2016
+            vlan_id: 295
+            short_esi: 0101:0404:00c4
+          - number: 2017
+            vlan_id: 296
+            short_esi: 0101:0404:00c5
+          - number: 2018
+            vlan_id: 297
+            short_esi: 0101:0404:00c6
+          - number: 2019
+            vlan_id: 298
+            short_esi: 0101:0404:00c7
+          - number: 2020
+            vlan_id: 299
+            short_esi: 0101:0404:00c8

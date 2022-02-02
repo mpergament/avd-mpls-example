@@ -253,6 +253,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.1.1/24
             tags: ['common']
+      P2MP_TENANT_A_1:
+        vrf_id: 30002
+        svis:
           102:
             name: v102
             enabled: true
@@ -263,6 +266,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.3.1/24
             tags: ['common']
+      P2MP_TENANT_A_2:
+        vrf_id: 30003
+        svis:
           104:
             name: v104
             enabled: true
@@ -273,6 +279,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.5.1/24
             tags: ['common']
+      P2MP_TENANT_A_3:
+        vrf_id: 30004
+        svis:
           106:
             name: v106
             enabled: true
@@ -283,6 +292,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.7.1/24
             tags: ['common']
+      P2MP_TENANT_A_4:
+        vrf_id: 30005
+        svis:
           108:
             name: v108
             enabled: true
@@ -293,8 +305,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.9.1/24
             tags: ['common']
-      P2MP_TENANT_A_1:
-        vrf_id: 30002
+      P2MP_TENANT_A_5:
+        vrf_id: 30006
         svis:
           110:
             name: v110
@@ -306,6 +318,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.11.1/24
             tags: ['common']
+      P2MP_TENANT_A_6:
+        vrf_id: 30007
+        svis:
           112:
             name: v112
             enabled: true
@@ -316,6 +331,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.13.1/24
             tags: ['common']
+      P2MP_TENANT_A_7:
+        vrf_id: 30008
+        svis:
           114:
             name: v114
             enabled: true
@@ -326,6 +344,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.15.1/24
             tags: ['common']
+      P2MP_TENANT_A_8:
+        vrf_id: 30009
+        svis:
           116:
             name: v116
             enabled: true
@@ -336,6 +357,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.17.1/24
             tags: ['common']
+      P2MP_TENANT_A_9:
+        vrf_id: 30010
+        svis:
           118:
             name: v118
             enabled: true
@@ -346,8 +370,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.19.1/24
             tags: ['common']
-      P2MP_TENANT_A_2:
-        vrf_id: 30003
+      P2MP_TENANT_A_10:
+        vrf_id: 30011
         svis:
           120:
             name: v120
@@ -359,6 +383,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.21.1/24
             tags: ['common']
+      P2MP_TENANT_A_11:
+        vrf_id: 30012
+        svis:
           122:
             name: v122
             enabled: true
@@ -369,6 +396,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.23.1/24
             tags: ['common']
+      P2MP_TENANT_A_12:
+        vrf_id: 30013
+        svis:
           124:
             name: v124
             enabled: true
@@ -379,6 +409,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.25.1/24
             tags: ['common']
+      P2MP_TENANT_A_13:
+        vrf_id: 30014
+        svis:
           126:
             name: v126
             enabled: true
@@ -389,6 +422,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.27.1/24
             tags: ['common']
+      P2MP_TENANT_A_14:
+        vrf_id: 30015
+        svis:
           128:
             name: v128
             enabled: true
@@ -399,8 +435,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.29.1/24
             tags: ['common']
-      P2MP_TENANT_A_3:
-        vrf_id: 30004
+      P2MP_TENANT_A_15:
+        vrf_id: 30016
         svis:
           130:
             name: v130
@@ -412,6 +448,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.31.1/24
             tags: ['common']
+      P2MP_TENANT_A_16:
+        vrf_id: 30017
+        svis:
           132:
             name: v132
             enabled: true
@@ -422,6 +461,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.33.1/24
             tags: ['common']
+      P2MP_TENANT_A_17:
+        vrf_id: 30018
+        svis:
           134:
             name: v134
             enabled: true
@@ -432,6 +474,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.35.1/24
             tags: ['common']
+      P2MP_TENANT_A_18:
+        vrf_id: 30019
+        svis:
           136:
             name: v136
             enabled: true
@@ -442,6 +487,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.37.1/24
             tags: ['common']
+      P2MP_TENANT_A_19:
+        vrf_id: 30020
+        svis:
           138:
             name: v138
             enabled: true
@@ -452,8 +500,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.39.1/24
             tags: ['common']
-      P2MP_TENANT_A_4:
-        vrf_id: 30005
+      P2MP_TENANT_A_20:
+        vrf_id: 30021
         svis:
           140:
             name: v140
@@ -465,6 +513,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.41.1/24
             tags: ['common']
+      P2MP_TENANT_A_21:
+        vrf_id: 30022
+        svis:
           142:
             name: v142
             enabled: true
@@ -475,6 +526,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.43.1/24
             tags: ['common']
+      P2MP_TENANT_A_22:
+        vrf_id: 30023
+        svis:
           144:
             name: v144
             enabled: true
@@ -485,6 +539,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.45.1/24
             tags: ['common']
+      P2MP_TENANT_A_23:
+        vrf_id: 30024
+        svis:
           146:
             name: v146
             enabled: true
@@ -495,6 +552,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.47.1/24
             tags: ['common']
+      P2MP_TENANT_A_24:
+        vrf_id: 30025
+        svis:
           148:
             name: v148
             enabled: true
@@ -505,8 +565,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.49.1/24
             tags: ['common']
-      P2MP_TENANT_A_5:
-        vrf_id: 30006
+      P2MP_TENANT_A_25:
+        vrf_id: 30026
         svis:
           150:
             name: v150
@@ -518,6 +578,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.51.1/24
             tags: ['common']
+      P2MP_TENANT_A_26:
+        vrf_id: 30027
+        svis:
           152:
             name: v152
             enabled: true
@@ -528,6 +591,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.53.1/24
             tags: ['common']
+      P2MP_TENANT_A_27:
+        vrf_id: 30028
+        svis:
           154:
             name: v154
             enabled: true
@@ -538,6 +604,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.55.1/24
             tags: ['common']
+      P2MP_TENANT_A_28:
+        vrf_id: 30029
+        svis:
           156:
             name: v156
             enabled: true
@@ -548,6 +617,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.57.1/24
             tags: ['common']
+      P2MP_TENANT_A_29:
+        vrf_id: 30030
+        svis:
           158:
             name: v158
             enabled: true
@@ -558,8 +630,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.59.1/24
             tags: ['common']
-      P2MP_TENANT_A_6:
-        vrf_id: 30007
+      P2MP_TENANT_A_30:
+        vrf_id: 30031
         svis:
           160:
             name: v160
@@ -571,6 +643,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.61.1/24
             tags: ['common']
+      P2MP_TENANT_A_31:
+        vrf_id: 30032
+        svis:
           162:
             name: v162
             enabled: true
@@ -581,6 +656,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.63.1/24
             tags: ['common']
+      P2MP_TENANT_A_32:
+        vrf_id: 30033
+        svis:
           164:
             name: v164
             enabled: true
@@ -591,6 +669,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.65.1/24
             tags: ['common']
+      P2MP_TENANT_A_33:
+        vrf_id: 30034
+        svis:
           166:
             name: v166
             enabled: true
@@ -601,6 +682,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.67.1/24
             tags: ['common']
+      P2MP_TENANT_A_34:
+        vrf_id: 30035
+        svis:
           168:
             name: v168
             enabled: true
@@ -611,8 +695,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.69.1/24
             tags: ['common']
-      P2MP_TENANT_A_7:
-        vrf_id: 30008
+      P2MP_TENANT_A_35:
+        vrf_id: 30036
         svis:
           170:
             name: v170
@@ -624,6 +708,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.71.1/24
             tags: ['common']
+      P2MP_TENANT_A_36:
+        vrf_id: 30037
+        svis:
           172:
             name: v172
             enabled: true
@@ -634,6 +721,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.73.1/24
             tags: ['common']
+      P2MP_TENANT_A_37:
+        vrf_id: 30038
+        svis:
           174:
             name: v174
             enabled: true
@@ -644,6 +734,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.75.1/24
             tags: ['common']
+      P2MP_TENANT_A_38:
+        vrf_id: 30039
+        svis:
           176:
             name: v176
             enabled: true
@@ -654,6 +747,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.77.1/24
             tags: ['common']
+      P2MP_TENANT_A_39:
+        vrf_id: 30040
+        svis:
           178:
             name: v178
             enabled: true
@@ -664,8 +760,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.79.1/24
             tags: ['common']
-      P2MP_TENANT_A_8:
-        vrf_id: 30009
+      P2MP_TENANT_A_40:
+        vrf_id: 30041
         svis:
           180:
             name: v180
@@ -677,6 +773,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.81.1/24
             tags: ['common']
+      P2MP_TENANT_A_41:
+        vrf_id: 30042
+        svis:
           182:
             name: v182
             enabled: true
@@ -687,6 +786,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.83.1/24
             tags: ['common']
+      P2MP_TENANT_A_42:
+        vrf_id: 30043
+        svis:
           184:
             name: v184
             enabled: true
@@ -697,6 +799,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.85.1/24
             tags: ['common']
+      P2MP_TENANT_A_43:
+        vrf_id: 30044
+        svis:
           186:
             name: v186
             enabled: true
@@ -707,6 +812,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.87.1/24
             tags: ['common']
+      P2MP_TENANT_A_44:
+        vrf_id: 30045
+        svis:
           188:
             name: v188
             enabled: true
@@ -717,8 +825,8 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.89.1/24
             tags: ['common']
-      P2MP_TENANT_A_9:
-        vrf_id: 30010
+      P2MP_TENANT_A_45:
+        vrf_id: 30046
         svis:
           190:
             name: v190
@@ -730,6 +838,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.91.1/24
             tags: ['common']
+      P2MP_TENANT_A_46:
+        vrf_id: 30047
+        svis:
           192:
             name: v192
             enabled: true
@@ -740,6 +851,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.93.1/24
             tags: ['common']
+      P2MP_TENANT_A_47:
+        vrf_id: 30048
+        svis:
           194:
             name: v194
             enabled: true
@@ -750,6 +864,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.95.1/24
             tags: ['common']
+      P2MP_TENANT_A_48:
+        vrf_id: 30049
+        svis:
           196:
             name: v196
             enabled: true
@@ -760,6 +877,9 @@ tenants:
             enabled: true
             ip_address_virtual: 10.100.97.1/24
             tags: ['common']
+      P2MP_TENANT_A_49:
+        vrf_id: 30050
+        svis:
           198:
             name: v198
             enabled: true
@@ -769,6 +889,656 @@ tenants:
             name: v199
             enabled: true
             ip_address_virtual: 10.100.99.1/24
+            tags: ['common']
+      P2MP_TENANT_A_50:
+        vrf_id: 30051
+        svis:
+          200:
+            name: v200
+            enabled: true
+            ip_address_virtual: 10.100.100.1/24
+            tags: ['common']
+          201:
+            name: v201
+            enabled: true
+            ip_address_virtual: 10.100.101.1/24
+            tags: ['common']
+      P2MP_TENANT_A_51:
+        vrf_id: 30052
+        svis:
+          202:
+            name: v202
+            enabled: true
+            ip_address_virtual: 10.100.102.1/24
+            tags: ['common']
+          203:
+            name: v203
+            enabled: true
+            ip_address_virtual: 10.100.103.1/24
+            tags: ['common']
+      P2MP_TENANT_A_52:
+        vrf_id: 30053
+        svis:
+          204:
+            name: v204
+            enabled: true
+            ip_address_virtual: 10.100.104.1/24
+            tags: ['common']
+          205:
+            name: v205
+            enabled: true
+            ip_address_virtual: 10.100.105.1/24
+            tags: ['common']
+      P2MP_TENANT_A_53:
+        vrf_id: 30054
+        svis:
+          206:
+            name: v206
+            enabled: true
+            ip_address_virtual: 10.100.106.1/24
+            tags: ['common']
+          207:
+            name: v207
+            enabled: true
+            ip_address_virtual: 10.100.107.1/24
+            tags: ['common']
+      P2MP_TENANT_A_54:
+        vrf_id: 30055
+        svis:
+          208:
+            name: v208
+            enabled: true
+            ip_address_virtual: 10.100.108.1/24
+            tags: ['common']
+          209:
+            name: v209
+            enabled: true
+            ip_address_virtual: 10.100.109.1/24
+            tags: ['common']
+      P2MP_TENANT_A_55:
+        vrf_id: 30056
+        svis:
+          210:
+            name: v210
+            enabled: true
+            ip_address_virtual: 10.100.110.1/24
+            tags: ['common']
+          211:
+            name: v211
+            enabled: true
+            ip_address_virtual: 10.100.111.1/24
+            tags: ['common']
+      P2MP_TENANT_A_56:
+        vrf_id: 30057
+        svis:
+          212:
+            name: v212
+            enabled: true
+            ip_address_virtual: 10.100.112.1/24
+            tags: ['common']
+          213:
+            name: v213
+            enabled: true
+            ip_address_virtual: 10.100.113.1/24
+            tags: ['common']
+      P2MP_TENANT_A_57:
+        vrf_id: 30058
+        svis:
+          214:
+            name: v214
+            enabled: true
+            ip_address_virtual: 10.100.114.1/24
+            tags: ['common']
+          215:
+            name: v215
+            enabled: true
+            ip_address_virtual: 10.100.115.1/24
+            tags: ['common']
+      P2MP_TENANT_A_58:
+        vrf_id: 30059
+        svis:
+          216:
+            name: v216
+            enabled: true
+            ip_address_virtual: 10.100.116.1/24
+            tags: ['common']
+          217:
+            name: v217
+            enabled: true
+            ip_address_virtual: 10.100.117.1/24
+            tags: ['common']
+      P2MP_TENANT_A_59:
+        vrf_id: 30060
+        svis:
+          218:
+            name: v218
+            enabled: true
+            ip_address_virtual: 10.100.118.1/24
+            tags: ['common']
+          219:
+            name: v219
+            enabled: true
+            ip_address_virtual: 10.100.119.1/24
+            tags: ['common']
+      P2MP_TENANT_A_60:
+        vrf_id: 30061
+        svis:
+          220:
+            name: v220
+            enabled: true
+            ip_address_virtual: 10.100.120.1/24
+            tags: ['common']
+          221:
+            name: v221
+            enabled: true
+            ip_address_virtual: 10.100.121.1/24
+            tags: ['common']
+      P2MP_TENANT_A_61:
+        vrf_id: 30062
+        svis:
+          222:
+            name: v222
+            enabled: true
+            ip_address_virtual: 10.100.122.1/24
+            tags: ['common']
+          223:
+            name: v223
+            enabled: true
+            ip_address_virtual: 10.100.123.1/24
+            tags: ['common']
+      P2MP_TENANT_A_62:
+        vrf_id: 30063
+        svis:
+          224:
+            name: v224
+            enabled: true
+            ip_address_virtual: 10.100.124.1/24
+            tags: ['common']
+          225:
+            name: v225
+            enabled: true
+            ip_address_virtual: 10.100.125.1/24
+            tags: ['common']
+      P2MP_TENANT_A_63:
+        vrf_id: 30064
+        svis:
+          226:
+            name: v226
+            enabled: true
+            ip_address_virtual: 10.100.126.1/24
+            tags: ['common']
+          227:
+            name: v227
+            enabled: true
+            ip_address_virtual: 10.100.127.1/24
+            tags: ['common']
+      P2MP_TENANT_A_64:
+        vrf_id: 30065
+        svis:
+          228:
+            name: v228
+            enabled: true
+            ip_address_virtual: 10.100.128.1/24
+            tags: ['common']
+          229:
+            name: v229
+            enabled: true
+            ip_address_virtual: 10.100.129.1/24
+            tags: ['common']
+      P2MP_TENANT_A_65:
+        vrf_id: 30066
+        svis:
+          230:
+            name: v230
+            enabled: true
+            ip_address_virtual: 10.100.130.1/24
+            tags: ['common']
+          231:
+            name: v231
+            enabled: true
+            ip_address_virtual: 10.100.131.1/24
+            tags: ['common']
+      P2MP_TENANT_A_66:
+        vrf_id: 30067
+        svis:
+          232:
+            name: v232
+            enabled: true
+            ip_address_virtual: 10.100.132.1/24
+            tags: ['common']
+          233:
+            name: v233
+            enabled: true
+            ip_address_virtual: 10.100.133.1/24
+            tags: ['common']
+      P2MP_TENANT_A_67:
+        vrf_id: 30068
+        svis:
+          234:
+            name: v234
+            enabled: true
+            ip_address_virtual: 10.100.134.1/24
+            tags: ['common']
+          235:
+            name: v235
+            enabled: true
+            ip_address_virtual: 10.100.135.1/24
+            tags: ['common']
+      P2MP_TENANT_A_68:
+        vrf_id: 30069
+        svis:
+          236:
+            name: v236
+            enabled: true
+            ip_address_virtual: 10.100.136.1/24
+            tags: ['common']
+          237:
+            name: v237
+            enabled: true
+            ip_address_virtual: 10.100.137.1/24
+            tags: ['common']
+      P2MP_TENANT_A_69:
+        vrf_id: 30070
+        svis:
+          238:
+            name: v238
+            enabled: true
+            ip_address_virtual: 10.100.138.1/24
+            tags: ['common']
+          239:
+            name: v239
+            enabled: true
+            ip_address_virtual: 10.100.139.1/24
+            tags: ['common']
+      P2MP_TENANT_A_70:
+        vrf_id: 30071
+        svis:
+          240:
+            name: v240
+            enabled: true
+            ip_address_virtual: 10.100.140.1/24
+            tags: ['common']
+          241:
+            name: v241
+            enabled: true
+            ip_address_virtual: 10.100.141.1/24
+            tags: ['common']
+      P2MP_TENANT_A_71:
+        vrf_id: 30072
+        svis:
+          242:
+            name: v242
+            enabled: true
+            ip_address_virtual: 10.100.142.1/24
+            tags: ['common']
+          243:
+            name: v243
+            enabled: true
+            ip_address_virtual: 10.100.143.1/24
+            tags: ['common']
+      P2MP_TENANT_A_72:
+        vrf_id: 30073
+        svis:
+          244:
+            name: v244
+            enabled: true
+            ip_address_virtual: 10.100.144.1/24
+            tags: ['common']
+          245:
+            name: v245
+            enabled: true
+            ip_address_virtual: 10.100.145.1/24
+            tags: ['common']
+      P2MP_TENANT_A_73:
+        vrf_id: 30074
+        svis:
+          246:
+            name: v246
+            enabled: true
+            ip_address_virtual: 10.100.146.1/24
+            tags: ['common']
+          247:
+            name: v247
+            enabled: true
+            ip_address_virtual: 10.100.147.1/24
+            tags: ['common']
+      P2MP_TENANT_A_74:
+        vrf_id: 30075
+        svis:
+          248:
+            name: v248
+            enabled: true
+            ip_address_virtual: 10.100.148.1/24
+            tags: ['common']
+          249:
+            name: v249
+            enabled: true
+            ip_address_virtual: 10.100.149.1/24
+            tags: ['common']
+      P2MP_TENANT_A_75:
+        vrf_id: 30076
+        svis:
+          250:
+            name: v250
+            enabled: true
+            ip_address_virtual: 10.100.150.1/24
+            tags: ['common']
+          251:
+            name: v251
+            enabled: true
+            ip_address_virtual: 10.100.151.1/24
+            tags: ['common']
+      P2MP_TENANT_A_76:
+        vrf_id: 30077
+        svis:
+          252:
+            name: v252
+            enabled: true
+            ip_address_virtual: 10.100.152.1/24
+            tags: ['common']
+          253:
+            name: v253
+            enabled: true
+            ip_address_virtual: 10.100.153.1/24
+            tags: ['common']
+      P2MP_TENANT_A_77:
+        vrf_id: 30078
+        svis:
+          254:
+            name: v254
+            enabled: true
+            ip_address_virtual: 10.100.154.1/24
+            tags: ['common']
+          255:
+            name: v255
+            enabled: true
+            ip_address_virtual: 10.100.155.1/24
+            tags: ['common']
+      P2MP_TENANT_A_78:
+        vrf_id: 30079
+        svis:
+          256:
+            name: v256
+            enabled: true
+            ip_address_virtual: 10.100.156.1/24
+            tags: ['common']
+          257:
+            name: v257
+            enabled: true
+            ip_address_virtual: 10.100.157.1/24
+            tags: ['common']
+      P2MP_TENANT_A_79:
+        vrf_id: 30080
+        svis:
+          258:
+            name: v258
+            enabled: true
+            ip_address_virtual: 10.100.158.1/24
+            tags: ['common']
+          259:
+            name: v259
+            enabled: true
+            ip_address_virtual: 10.100.159.1/24
+            tags: ['common']
+      P2MP_TENANT_A_80:
+        vrf_id: 30081
+        svis:
+          260:
+            name: v260
+            enabled: true
+            ip_address_virtual: 10.100.160.1/24
+            tags: ['common']
+          261:
+            name: v261
+            enabled: true
+            ip_address_virtual: 10.100.161.1/24
+            tags: ['common']
+      P2MP_TENANT_A_81:
+        vrf_id: 30082
+        svis:
+          262:
+            name: v262
+            enabled: true
+            ip_address_virtual: 10.100.162.1/24
+            tags: ['common']
+          263:
+            name: v263
+            enabled: true
+            ip_address_virtual: 10.100.163.1/24
+            tags: ['common']
+      P2MP_TENANT_A_82:
+        vrf_id: 30083
+        svis:
+          264:
+            name: v264
+            enabled: true
+            ip_address_virtual: 10.100.164.1/24
+            tags: ['common']
+          265:
+            name: v265
+            enabled: true
+            ip_address_virtual: 10.100.165.1/24
+            tags: ['common']
+      P2MP_TENANT_A_83:
+        vrf_id: 30084
+        svis:
+          266:
+            name: v266
+            enabled: true
+            ip_address_virtual: 10.100.166.1/24
+            tags: ['common']
+          267:
+            name: v267
+            enabled: true
+            ip_address_virtual: 10.100.167.1/24
+            tags: ['common']
+      P2MP_TENANT_A_84:
+        vrf_id: 30085
+        svis:
+          268:
+            name: v268
+            enabled: true
+            ip_address_virtual: 10.100.168.1/24
+            tags: ['common']
+          269:
+            name: v269
+            enabled: true
+            ip_address_virtual: 10.100.169.1/24
+            tags: ['common']
+      P2MP_TENANT_A_85:
+        vrf_id: 30086
+        svis:
+          270:
+            name: v270
+            enabled: true
+            ip_address_virtual: 10.100.170.1/24
+            tags: ['common']
+          271:
+            name: v271
+            enabled: true
+            ip_address_virtual: 10.100.171.1/24
+            tags: ['common']
+      P2MP_TENANT_A_86:
+        vrf_id: 30087
+        svis:
+          272:
+            name: v272
+            enabled: true
+            ip_address_virtual: 10.100.172.1/24
+            tags: ['common']
+          273:
+            name: v273
+            enabled: true
+            ip_address_virtual: 10.100.173.1/24
+            tags: ['common']
+      P2MP_TENANT_A_87:
+        vrf_id: 30088
+        svis:
+          274:
+            name: v274
+            enabled: true
+            ip_address_virtual: 10.100.174.1/24
+            tags: ['common']
+          275:
+            name: v275
+            enabled: true
+            ip_address_virtual: 10.100.175.1/24
+            tags: ['common']
+      P2MP_TENANT_A_88:
+        vrf_id: 30089
+        svis:
+          276:
+            name: v276
+            enabled: true
+            ip_address_virtual: 10.100.176.1/24
+            tags: ['common']
+          277:
+            name: v277
+            enabled: true
+            ip_address_virtual: 10.100.177.1/24
+            tags: ['common']
+      P2MP_TENANT_A_89:
+        vrf_id: 30090
+        svis:
+          278:
+            name: v278
+            enabled: true
+            ip_address_virtual: 10.100.178.1/24
+            tags: ['common']
+          279:
+            name: v279
+            enabled: true
+            ip_address_virtual: 10.100.179.1/24
+            tags: ['common']
+      P2MP_TENANT_A_90:
+        vrf_id: 30091
+        svis:
+          280:
+            name: v280
+            enabled: true
+            ip_address_virtual: 10.100.180.1/24
+            tags: ['common']
+          281:
+            name: v281
+            enabled: true
+            ip_address_virtual: 10.100.181.1/24
+            tags: ['common']
+      P2MP_TENANT_A_91:
+        vrf_id: 30092
+        svis:
+          282:
+            name: v282
+            enabled: true
+            ip_address_virtual: 10.100.182.1/24
+            tags: ['common']
+          283:
+            name: v283
+            enabled: true
+            ip_address_virtual: 10.100.183.1/24
+            tags: ['common']
+      P2MP_TENANT_A_92:
+        vrf_id: 30093
+        svis:
+          284:
+            name: v284
+            enabled: true
+            ip_address_virtual: 10.100.184.1/24
+            tags: ['common']
+          285:
+            name: v285
+            enabled: true
+            ip_address_virtual: 10.100.185.1/24
+            tags: ['common']
+      P2MP_TENANT_A_93:
+        vrf_id: 30094
+        svis:
+          286:
+            name: v286
+            enabled: true
+            ip_address_virtual: 10.100.186.1/24
+            tags: ['common']
+          287:
+            name: v287
+            enabled: true
+            ip_address_virtual: 10.100.187.1/24
+            tags: ['common']
+      P2MP_TENANT_A_94:
+        vrf_id: 30095
+        svis:
+          288:
+            name: v288
+            enabled: true
+            ip_address_virtual: 10.100.188.1/24
+            tags: ['common']
+          289:
+            name: v289
+            enabled: true
+            ip_address_virtual: 10.100.189.1/24
+            tags: ['common']
+      P2MP_TENANT_A_95:
+        vrf_id: 30096
+        svis:
+          290:
+            name: v290
+            enabled: true
+            ip_address_virtual: 10.100.190.1/24
+            tags: ['common']
+          291:
+            name: v291
+            enabled: true
+            ip_address_virtual: 10.100.191.1/24
+            tags: ['common']
+      P2MP_TENANT_A_96:
+        vrf_id: 30097
+        svis:
+          292:
+            name: v292
+            enabled: true
+            ip_address_virtual: 10.100.192.1/24
+            tags: ['common']
+          293:
+            name: v293
+            enabled: true
+            ip_address_virtual: 10.100.193.1/24
+            tags: ['common']
+      P2MP_TENANT_A_97:
+        vrf_id: 30098
+        svis:
+          294:
+            name: v294
+            enabled: true
+            ip_address_virtual: 10.100.194.1/24
+            tags: ['common']
+          295:
+            name: v295
+            enabled: true
+            ip_address_virtual: 10.100.195.1/24
+            tags: ['common']
+      P2MP_TENANT_A_98:
+        vrf_id: 30099
+        svis:
+          296:
+            name: v296
+            enabled: true
+            ip_address_virtual: 10.100.196.1/24
+            tags: ['common']
+          297:
+            name: v297
+            enabled: true
+            ip_address_virtual: 10.100.197.1/24
+            tags: ['common']
+      P2MP_TENANT_A_99:
+        vrf_id: 30100
+        svis:
+          298:
+            name: v298
+            enabled: true
+            ip_address_virtual: 10.100.198.1/24
+            tags: ['common']
+          299:
+            name: v299
+            enabled: true
+            ip_address_virtual: 10.100.199.1/24
             tags: ['common']
     l2vlans:
       10:

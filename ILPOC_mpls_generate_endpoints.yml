@@ -17,7 +17,7 @@
         endpoints:
           - name: ENDPOINTS
             if_count: "{{ range(0, 10) }}"
-            subif_count: "{{ range(1000, 1010) }}"
+            subif_count: "{{ range(1000, 1020) }}"
             vlan_base: 100
             adapters:
               - start_id: 2000
