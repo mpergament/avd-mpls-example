@@ -234,6 +234,14 @@ tenants:
             nodes:
             - smm153
             remote_as: "65503"
+          172.16.4.7:
+            maximum_routes: 0
+            route_map_in: LOCAL_DEFAULT_LEAK_RM
+            description: IXIA_PREMIUM
+            # ebgp_multihop: 1
+            nodes:
+            - smm154
+            remote_as: "65503"
     l2vlans:
       20:
         name: TENANT_B_L2_SERVICE
