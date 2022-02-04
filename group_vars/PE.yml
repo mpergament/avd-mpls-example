@@ -1,12 +1,12 @@
 ---
 il_common_tcam_profile:
-  system: florian-interlink-v1
+  system: florian-interlink-v4
   profiles:
     traffic_policy: "{{lookup('file', '{{ root_dir }}/TCAM_TRAFFIC_POLICY.conf')}}"
 
 il_common_ip_extcommunity_lists:
   INTERNET-DEFAULT-COMM:
-    - type: permit 
+    - type: permit
       extcommunities: "rt 65000:65000"
 
 il_common_route_maps:
@@ -47,7 +47,7 @@ il_common_route_maps:
     sequence_numbers:
       10:
         type: permit
-        set: 
+        set:
           - "tag 50000"
   DENY-ALL-RM:
     sequence_numbers:
