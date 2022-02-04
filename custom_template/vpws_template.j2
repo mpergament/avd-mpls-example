@@ -99,10 +99,8 @@ tenants:
             - Ethernet11/4.3000
             - Ethernet11/4.3001
             - Ethernet33/1.3000
-{%  set bgp_session_count = namespace(value=500) %}
-{%  for count in range(0, bgp_session_count.value)  %}
-            - Ethernet11/4.{{ 3010 + count }}
-{%  endfor %}
+
+
             ip_addresses:
             - 172.16.3.0/31
             - 172.16.3.2/31
@@ -113,16 +111,7 @@ tenants:
             - 172.16.3.14/31
             - 172.16.3.16/31
             - 172.16.3.12/31
-{%  set ip_count = namespace(value=0) %}
-{%  set octet3 = namespace(value=5) %}
-{%  for count in range(0, bgp_session_count.value)  %}
-            - 172.16.{{ octet3.value }}.{{ ip_count.value }}/31
-{%    set ip_count.value = ip_count.value  + 2 %}
-{%    if ip_count.value > 255 %}
-{%      set octet3.value = octet3.value  + 1 %}
-{%      set ip_count.value = 0 %}
-{%    endif %}
-{%  endfor %}
+
             nodes:
             - smm153
             - smm154
@@ -133,9 +122,17 @@ tenants:
             - smm311
             - smm312
             - smm310
-{%  for count in range(0, bgp_session_count.value)  %}
-            - smm153
-{%  endfor %}
+{% set bgp_session_count = namespace(value=500) %}
+{% set base_ip = namespace(value="172.16.0.0/20") %}
+{% for count in range(0, bgp_session_count.value) %}
+          - description: TENANT_B_SITE_3_INTRA_L3VPN
+            enabled: true
+            interfaces: [Ethernet11/4.{{ 3010 + count }}]
+            ip_addresses: [{{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640) }}]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
+            nodes: [smm153]
+{% endfor %}
         bgp_peers:
           172.16.3.1:
             maximum_routes: 0

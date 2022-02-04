@@ -84,7 +84,7 @@ il_mgmt_aaa_authorization:
   exec:
     default: local
 
-# Banners 
+# Banners
 il_mgmt_banners:
   login: |
     This device is being used for the Inter.link POC
@@ -119,7 +119,7 @@ mgmt_gateway: 172.28.128.1
 # First NTP server will be preferred
 # Sourced from Managment VRF
 il_mgmt_ntp:
-  local_interface: 
+  local_interface:
     name: Management1
     vrf: MGMT
   servers:
@@ -390,6 +390,9 @@ pe:
             exclude command show ipv6 route vrf all detail
         !
       !
+      {% if inventory_hostname == "smm153" %}
+      {% include "custom_template/traffic_policies.j2" %}
+      {% endif %}
   node_groups:
     frankfurt:
       filter:

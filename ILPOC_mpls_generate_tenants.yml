@@ -2,6 +2,7 @@
 - name: Build Tenant configuration
   hosts: MPLS_FABRIC
   connection: local
+  run_once: true
   gather_facts: false
   collections:
     - arista.avd
