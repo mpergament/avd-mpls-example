@@ -1,6 +1,6 @@
 ---
 il_common_tcam_profile:
-  system: mpls-evpn-vrfselection
+  system: florian-interlink-v1
   profiles:
     traffic_policy: "{{lookup('file', '{{ root_dir }}/TCAM_TRAFFIC_POLICY.conf')}}"
 
