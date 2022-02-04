@@ -143,8 +143,8 @@ overlay_prevent_readvertise_to_server: true
 
 # Adjust default bfd values if desired.
 bfd_multihop:
-  interval: 5000
-  min_rx: 5000
+  interval: 300
+  min_rx: 300
   multiplier: 3
 
 # Add TCAM Profile to 7280R3

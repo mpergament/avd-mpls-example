@@ -90,10 +90,12 @@ tenants:
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces:
-            - Ethernet21/1
+            - Ethernet21/1.2000
             - Ethernet21/1
             - Ethernet21/1
             - Ethernet2/1.3000
+            - Ethernet11/4.3000
+            - Ethernet11/4.3001
             - Ethernet11/4.3000
             - Ethernet11/4.3001
             - Ethernet33/1.3000
@@ -108,6 +110,8 @@ tenants:
             - 172.16.3.6/31
             - 172.16.3.8/31
             - 172.16.3.10/31
+            - 172.16.3.14/31
+            - 172.16.3.16/31
             - 172.16.3.12/31
 {%  set ip_count = namespace(value=0) %}
 {%  set octet3 = namespace(value=5) %}
@@ -126,6 +130,8 @@ tenants:
             - smm313
             - smm153
             - smm154
+            - smm311
+            - smm312
             - smm310
 {%  for count in range(0, bgp_session_count.value)  %}
             - smm153
@@ -213,18 +219,24 @@ tenants:
             - Ethernet33/1.3001
             - Ethernet11/4.3002
             - Ethernet11/4.3003
+            - Ethernet11/4.3002
+            - Ethernet11/4.3003
             ip_addresses:
             - 172.16.3.0/31
             - 172.16.4.0/31
             - 172.16.4.2/31
             - 172.16.4.4/31
             - 172.16.4.6/31
+            - 172.16.4.8/31
+            - 172.16.4.10/31
             nodes:
             - smm153
             - smm313
             - smm310
             - smm153
             - smm154
+            - smm311
+            - smm312
         bgp_peers:
           172.16.4.5:
             maximum_routes: 0
