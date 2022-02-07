@@ -22529,3 +22529,48 @@ traffic-policies
          actions
             police rate 100 mbps burst-size 100000 bytes
    !
+   traffic-policy EDGE-PROTECTION-CUST-IN-3510
+      match BOGONS-DISCARD ipv4
+         source prefix field-set BOGONS
+         !
+         actions
+            drop
+      !
+      match UDP_CHARGEN ipv4
+         protocol udp source port field-set UDP_CHARGEN
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match UDP_NTP ipv4
+         protocol udp source port field-set UDP_NTP
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match UDP_LDAP ipv4
+         protocol udp source port field-set UDP_LDAP
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match UDP_HTTPS ipv4
+         protocol udp source port field-set UDP_HTTPS
+         !
+         actions
+            police rate 10000 kbps burst-size 10000 bytes
+      !
+      match UDP_SSDP ipv4
+         protocol udp source port field-set UDP_SSDP
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match ipv4-all-default ipv4
+         actions
+            police rate 100 mbps burst-size 100000 bytes
+      !
+      match ipv6-all-default ipv6
+         actions
+            police rate 100 mbps burst-size 100000 bytes
+   !

@@ -1,6 +1,6 @@
 ---
 il_common_tcam_profile:
-  system: florian-interlink-v4
+  system: florian-interlink-v5
   profiles:
     traffic_policy: "{{lookup('file', '{{ root_dir }}/TCAM_TRAFFIC_POLICY.conf')}}"
 

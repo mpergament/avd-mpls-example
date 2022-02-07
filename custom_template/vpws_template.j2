@@ -122,9 +122,20 @@ tenants:
             - smm311
             - smm312
             - smm310
-{% set bgp_session_count = namespace(value=500) %}
+{% set bgp_session_count = namespace(value=250) %}
 {% set base_ip = namespace(value="172.16.0.0/20") %}
 {% for count in range(0, bgp_session_count.value) %}
+          - description: TENANT_B_SITE_3_INTRA_L3VPN
+            enabled: true
+            interfaces: [Ethernet11/4.{{ 3010 + count }}]
+            ip_addresses: [{{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640) }}]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
+            nodes: [smm153]
+{% endfor %}
+{% set bgp_session_count = namespace(value=500) %}
+{% set base_ip = namespace(value="172.16.0.0/20") %}
+{% for count in range(250, bgp_session_count.value) %}
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.{{ 3010 + count }}]
