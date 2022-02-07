@@ -390,7 +390,7 @@ pe:
             exclude command show ipv6 route vrf all detail
         !
       !
-      {% if inventory_hostname == "smm153" %}
+      {% if inventory_hostname == "smm154" %}
       {% include "custom_template/traffic_policies.j2" %}
       {% endif %}
   node_groups:
