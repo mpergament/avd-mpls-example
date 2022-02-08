@@ -1,0 +1,134 @@
+function AS25291_v4() {
+    return prefix match prefix_list_v4 PL_4_AS25291;
+}
+
+function FILTER_BOGON_ASNS() {
+    return as_path match as_path_list BOGON_AS_PATHS;
+}
+
+function DELETE_SYS11_COMMUNITIES() {
+    community remove community_list SYS11_ANNOUNCE_ALL;
+}
+
+function BLACKHOLE_REWRITE() {
+    if community match community_list SYS11_BLACKHOLE_GLOBAL  {
+        community add community_list SYS11_BLACKHOLE;
+    }
+}
+
+function BLACKHOLE() {
+    if community match community_list SYS11_BLACKHOLE {
+        if prefix match prefix_list_v4 PL_4_AS_CUSTOMER_ASET {
+            med = 50;
+            local_preference = 150;
+            community add community_list SYS11_ANNOUNCE_TO_INTERNAL;
+            # Dummy ip routed to null0
+            next_hop = 99.99.99.99;
+        }
+    }
+}
+
+function FILTER_TIER1_IN_PATH() {
+    return as_path match as_path_list TIER1_AS_PATHS;
+}
+
+function FILTER_PREFIX_LENGTH() {
+    return prefix match prefix_list_v4 PL_LENGTH;
+}
+
+function CUSTOMER_UPSTREAM() {
+    if as_path match as_path_list ASP_AS_CUSTOMER_ASET {
+        if prefix match prefix_list_v4 PL_4_AS_CUSTOMER_ASET {
+            med = 50;
+            local_preference = 150;
+            community add community_list SYS11_ANNOUNCE_TO_INTERNAL;
+            community add community_list SYS11_ANNOUNCE_TO_CUSTOMER;
+            community add community_list SYS11_ANNOUNCE_TO_PEER;
+            community add community_list SYS11_ANNOUNCE_TO_UPSTREAM;
+            community add community_list SYS11_ORIGIN_TYPE_CUSTOMER;
+            community add community_list SYS11_ORIGIN_REGION_EUROPE;
+            community add community_list SYS11_ORIGIN_COUNTRY_DE;
+            community add community_list SYS11_ORIGIN_CITY_FRA;
+            community add community_list DTAG_ROUTEPRIO;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        return false;
+    }
+}
+function FILTER_NO_ADV_EXP_COMMUNITIES() {
+    if community has_any {NO_ADVERTISE, NO_EXPORT} {
+        return true;
+    }
+}
+
+function DOWNSTREAM_CUSTOMER_IN_v4() {
+    if AS25291_v4() {
+        return false;
+    }
+    if FILTER_BOGON_ASNS() {
+        return false;
+    }
+    DELETE_SYS11_COMMUNITIES();
+    BLACKHOLE_REWRITE();
+    BLACKHOLE();
+    if FILTER_TIER1_IN_PATH() {
+        return false;
+    }
+    if FILTER_PREFIX_LENGTH() {
+        return false;
+    }
+    if CUSTOMER_UPSTREAM() {
+        return true;
+    }
+    return false;
+}
+
+{% for count in range(0,500) %}
+function CUSTOMER_{{ 64000 + count }}_NO_ADV_COMMUNITY() {
+    if community has_any {{ "{" ~ (64000 + count)|string }}:65282} {
+        return true;
+    }
+}
+
+function CUSTOMER_{{ 64000 + count }}_PREPEND() {
+    if community has_any {{ "{" ~ (64000 + count)|string }}:101} {
+        as_path prepend 25291;
+    }
+    if community has_any {{ "{" ~  (64000 + count)|string }}:102} {
+        as_path prepend 25291 25291;
+    }
+}
+
+function CUSTOMER_{{ 64000 + count }}_ANNOUNCE() {
+    if community match community_list SYS11_ANNOUNCE_TO_CUSTOMER {
+        DELETE_SYS11_COMMUNITIES();
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function DOWNSTREAM_CUSTOMER_{{ 64000 + count }}_OUT_v4() {
+    if FILTER_PREFIX_LENGTH() {
+        return false;
+    }
+    if FILTER_NO_ADV_EXP_COMMUNITIES() {
+        return false;
+    }
+    if CUSTOMER_{{ 64000 + count }}_NO_ADV_COMMUNITY() {
+        return false;
+    }
+    CUSTOMER_{{ 64000 + count }}_PREPEND();
+    if CUSTOMER_{{ 64000 + count }}_ANNOUNCE() {
+        return true;
+    }
+}
+
+{% endfor %}
+EOF

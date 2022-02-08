@@ -1,0 +1,36 @@
+ip as-path regex-mode asn
+ip as-path access-list BOGON_AS_PATHS permit _0_ any
+ip as-path access-list BOGON_AS_PATHS permit _23456_ any
+ip as-path access-list BOGON_AS_PATHS permit _[64496-64511]_ any
+ip as-path access-list BOGON_AS_PATHS permit _[65536-65551]_ any
+! Removed for testing
+! ip as-path access-list BOGON_AS_PATHS permit _[64512-65534]_ any
+ip as-path access-list BOGON_AS_PATHS permit _[4200000000-4294967294]_ any
+ip as-path access-list BOGON_AS_PATHS permit _65535_ any
+ip as-path access-list BOGON_AS_PATHS permit _4294967295_ any
+ip as-path access-list BOGON_AS_PATHS permit _[65552-131071]_ any
+!
+ip as-path access-list TIER1_AS_PATHS permit _[1234-5678]_ any
+ip as-path access-list ASP_AS_CUSTOMER_ASET permit 65000 any
+!
+ip prefix-list PL_4_AS25291 seq 10 permit 192.168.10.0/24 ge 24
+ip prefix-list PL_4_AS25291 seq 20 permit 192.168.20.0/24 ge 24
+ip prefix-list PL_4_AS_CUSTOMER_ASET seq 10 permit 192.168.32.0/21 ge 24
+ip prefix-list PL_LENGTH seq 10 permit 0.0.0.0/0 ge 25
+!
+ip community-list SYS11_BLACKHOLE_GLOBAL permit 25291:666
+ip community-list SYS11_BLACKHOLE permit 25291:555
+!
+ip community-list SYS11_ANNOUNCE_ALL permit 25291:411 25291:422 25291:433 25291:444
+ip community-list SYS11_ANNOUNCE_TO_INTERNAL permit 25291:444
+ip community-list SYS11_ANNOUNCE_TO_CUSTOMER permit 25291:411
+ip community-list SYS11_ANNOUNCE_TO_PEER permit 25291:422
+ip community-list SYS11_ANNOUNCE_TO_UPSTREAM permit 25291:433
+!
+ip community-list SYS11_ORIGIN_TYPE_CUSTOMER permit 25291:301
+ip community-list SYS11_ORIGIN_REGION_EUROPE permit 25291:311
+ip community-list SYS11_ORIGIN_COUNTRY_DE permit 25291:321
+ip community-list SYS11_ORIGIN_CITY_FRA permit 25291:331
+ip community-list DTAG_ROUTEPRIO permit 25291:222
+!
+ip route vrf INTERNET 99.99.99.99/32 null0

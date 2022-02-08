@@ -1,0 +1,16 @@
+---
+- name: Build RCFs
+  hosts: smm153
+  connection: local
+  run_once: true
+  gather_facts: false
+  collections:
+    - arista.avd
+    - arista.cvp
+
+  tasks:
+    - name: Generate RCFs
+      template:
+        src: custom_template/rcf_template.j2
+        dest: smm153_rcfs.txt
+      delegate_to: localhost

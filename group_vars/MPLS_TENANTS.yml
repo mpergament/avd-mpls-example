@@ -1570,9 +1570,6 @@ tenants:
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces:
-            - Ethernet21/1.2000
-            - Ethernet21/1
-            - Ethernet21/1
             - Ethernet2/1.3000
             - Ethernet11/4.3000
             - Ethernet11/4.3001
@@ -1582,9 +1579,6 @@ tenants:
 
 
             ip_addresses:
-            - 172.16.3.0/31
-            - 172.16.3.2/31
-            - 172.16.3.4/31
             - 172.16.3.6/31
             - 172.16.3.8/31
             - 172.16.3.10/31
@@ -1593,9 +1587,6 @@ tenants:
             - 172.16.3.12/31
 
             nodes:
-            - smm153
-            - smm154
-            - smm313
             - smm313
             - smm153
             - smm154
@@ -4856,6 +4847,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3010]
             ip_addresses: [172.66.5.0/31]
+            ipv6_addresses: [fda7:66::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3010
             nodes: [smm154]
@@ -4863,6 +4855,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3011]
             ip_addresses: [172.66.5.2/31]
+            ipv6_addresses: [fda7:66:0:1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3011
             nodes: [smm154]
@@ -4870,6 +4863,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3012]
             ip_addresses: [172.66.5.4/31]
+            ipv6_addresses: [fda7:66:0:2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3012
             nodes: [smm154]
@@ -4877,6 +4871,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3013]
             ip_addresses: [172.66.5.6/31]
+            ipv6_addresses: [fda7:66:0:3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3013
             nodes: [smm154]
@@ -4884,6 +4879,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3014]
             ip_addresses: [172.66.5.8/31]
+            ipv6_addresses: [fda7:66:0:4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3014
             nodes: [smm154]
@@ -4891,6 +4887,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3015]
             ip_addresses: [172.66.5.10/31]
+            ipv6_addresses: [fda7:66:0:5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3015
             nodes: [smm154]
@@ -4898,6 +4895,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3016]
             ip_addresses: [172.66.5.12/31]
+            ipv6_addresses: [fda7:66:0:6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3016
             nodes: [smm154]
@@ -4905,6 +4903,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3017]
             ip_addresses: [172.66.5.14/31]
+            ipv6_addresses: [fda7:66:0:7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3017
             nodes: [smm154]
@@ -4912,6 +4911,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3018]
             ip_addresses: [172.66.5.16/31]
+            ipv6_addresses: [fda7:66:0:8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3018
             nodes: [smm154]
@@ -4919,6 +4919,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3019]
             ip_addresses: [172.66.5.18/31]
+            ipv6_addresses: [fda7:66:0:9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3019
             nodes: [smm154]
@@ -4926,6 +4927,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3020]
             ip_addresses: [172.66.5.20/31]
+            ipv6_addresses: [fda7:66:0:a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3020
             nodes: [smm154]
@@ -4933,6 +4935,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3021]
             ip_addresses: [172.66.5.22/31]
+            ipv6_addresses: [fda7:66:0:b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3021
             nodes: [smm154]
@@ -4940,6 +4943,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3022]
             ip_addresses: [172.66.5.24/31]
+            ipv6_addresses: [fda7:66:0:c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3022
             nodes: [smm154]
@@ -4947,6 +4951,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3023]
             ip_addresses: [172.66.5.26/31]
+            ipv6_addresses: [fda7:66:0:d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3023
             nodes: [smm154]
@@ -4954,6 +4959,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3024]
             ip_addresses: [172.66.5.28/31]
+            ipv6_addresses: [fda7:66:0:e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3024
             nodes: [smm154]
@@ -4961,6 +4967,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3025]
             ip_addresses: [172.66.5.30/31]
+            ipv6_addresses: [fda7:66:0:f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3025
             nodes: [smm154]
@@ -4968,6 +4975,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3026]
             ip_addresses: [172.66.5.32/31]
+            ipv6_addresses: [fda7:66:0:10::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3026
             nodes: [smm154]
@@ -4975,6 +4983,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3027]
             ip_addresses: [172.66.5.34/31]
+            ipv6_addresses: [fda7:66:0:11::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3027
             nodes: [smm154]
@@ -4982,6 +4991,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3028]
             ip_addresses: [172.66.5.36/31]
+            ipv6_addresses: [fda7:66:0:12::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3028
             nodes: [smm154]
@@ -4989,6 +4999,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3029]
             ip_addresses: [172.66.5.38/31]
+            ipv6_addresses: [fda7:66:0:13::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3029
             nodes: [smm154]
@@ -4996,6 +5007,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3030]
             ip_addresses: [172.66.5.40/31]
+            ipv6_addresses: [fda7:66:0:14::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3030
             nodes: [smm154]
@@ -5003,6 +5015,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3031]
             ip_addresses: [172.66.5.42/31]
+            ipv6_addresses: [fda7:66:0:15::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3031
             nodes: [smm154]
@@ -5010,6 +5023,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3032]
             ip_addresses: [172.66.5.44/31]
+            ipv6_addresses: [fda7:66:0:16::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3032
             nodes: [smm154]
@@ -5017,6 +5031,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3033]
             ip_addresses: [172.66.5.46/31]
+            ipv6_addresses: [fda7:66:0:17::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3033
             nodes: [smm154]
@@ -5024,6 +5039,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3034]
             ip_addresses: [172.66.5.48/31]
+            ipv6_addresses: [fda7:66:0:18::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3034
             nodes: [smm154]
@@ -5031,6 +5047,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3035]
             ip_addresses: [172.66.5.50/31]
+            ipv6_addresses: [fda7:66:0:19::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3035
             nodes: [smm154]
@@ -5038,6 +5055,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3036]
             ip_addresses: [172.66.5.52/31]
+            ipv6_addresses: [fda7:66:0:1a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3036
             nodes: [smm154]
@@ -5045,6 +5063,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3037]
             ip_addresses: [172.66.5.54/31]
+            ipv6_addresses: [fda7:66:0:1b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3037
             nodes: [smm154]
@@ -5052,6 +5071,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3038]
             ip_addresses: [172.66.5.56/31]
+            ipv6_addresses: [fda7:66:0:1c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3038
             nodes: [smm154]
@@ -5059,6 +5079,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3039]
             ip_addresses: [172.66.5.58/31]
+            ipv6_addresses: [fda7:66:0:1d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3039
             nodes: [smm154]
@@ -5066,6 +5087,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3040]
             ip_addresses: [172.66.5.60/31]
+            ipv6_addresses: [fda7:66:0:1e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3040
             nodes: [smm154]
@@ -5073,6 +5095,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3041]
             ip_addresses: [172.66.5.62/31]
+            ipv6_addresses: [fda7:66:0:1f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3041
             nodes: [smm154]
@@ -5080,6 +5103,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3042]
             ip_addresses: [172.66.5.64/31]
+            ipv6_addresses: [fda7:66:0:20::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3042
             nodes: [smm154]
@@ -5087,6 +5111,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3043]
             ip_addresses: [172.66.5.66/31]
+            ipv6_addresses: [fda7:66:0:21::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3043
             nodes: [smm154]
@@ -5094,6 +5119,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3044]
             ip_addresses: [172.66.5.68/31]
+            ipv6_addresses: [fda7:66:0:22::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3044
             nodes: [smm154]
@@ -5101,6 +5127,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3045]
             ip_addresses: [172.66.5.70/31]
+            ipv6_addresses: [fda7:66:0:23::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3045
             nodes: [smm154]
@@ -5108,6 +5135,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3046]
             ip_addresses: [172.66.5.72/31]
+            ipv6_addresses: [fda7:66:0:24::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3046
             nodes: [smm154]
@@ -5115,6 +5143,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3047]
             ip_addresses: [172.66.5.74/31]
+            ipv6_addresses: [fda7:66:0:25::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3047
             nodes: [smm154]
@@ -5122,6 +5151,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3048]
             ip_addresses: [172.66.5.76/31]
+            ipv6_addresses: [fda7:66:0:26::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3048
             nodes: [smm154]
@@ -5129,6 +5159,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3049]
             ip_addresses: [172.66.5.78/31]
+            ipv6_addresses: [fda7:66:0:27::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3049
             nodes: [smm154]
@@ -5136,6 +5167,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3050]
             ip_addresses: [172.66.5.80/31]
+            ipv6_addresses: [fda7:66:0:28::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3050
             nodes: [smm154]
@@ -5143,6 +5175,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3051]
             ip_addresses: [172.66.5.82/31]
+            ipv6_addresses: [fda7:66:0:29::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3051
             nodes: [smm154]
@@ -5150,6 +5183,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3052]
             ip_addresses: [172.66.5.84/31]
+            ipv6_addresses: [fda7:66:0:2a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3052
             nodes: [smm154]
@@ -5157,6 +5191,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3053]
             ip_addresses: [172.66.5.86/31]
+            ipv6_addresses: [fda7:66:0:2b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3053
             nodes: [smm154]
@@ -5164,6 +5199,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3054]
             ip_addresses: [172.66.5.88/31]
+            ipv6_addresses: [fda7:66:0:2c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3054
             nodes: [smm154]
@@ -5171,6 +5207,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3055]
             ip_addresses: [172.66.5.90/31]
+            ipv6_addresses: [fda7:66:0:2d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3055
             nodes: [smm154]
@@ -5178,6 +5215,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3056]
             ip_addresses: [172.66.5.92/31]
+            ipv6_addresses: [fda7:66:0:2e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3056
             nodes: [smm154]
@@ -5185,6 +5223,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3057]
             ip_addresses: [172.66.5.94/31]
+            ipv6_addresses: [fda7:66:0:2f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3057
             nodes: [smm154]
@@ -5192,6 +5231,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3058]
             ip_addresses: [172.66.5.96/31]
+            ipv6_addresses: [fda7:66:0:30::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3058
             nodes: [smm154]
@@ -5199,6 +5239,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3059]
             ip_addresses: [172.66.5.98/31]
+            ipv6_addresses: [fda7:66:0:31::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3059
             nodes: [smm154]
@@ -5206,6 +5247,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3060]
             ip_addresses: [172.66.5.100/31]
+            ipv6_addresses: [fda7:66:0:32::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3060
             nodes: [smm154]
@@ -5213,6 +5255,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3061]
             ip_addresses: [172.66.5.102/31]
+            ipv6_addresses: [fda7:66:0:33::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3061
             nodes: [smm154]
@@ -5220,6 +5263,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3062]
             ip_addresses: [172.66.5.104/31]
+            ipv6_addresses: [fda7:66:0:34::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3062
             nodes: [smm154]
@@ -5227,6 +5271,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3063]
             ip_addresses: [172.66.5.106/31]
+            ipv6_addresses: [fda7:66:0:35::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3063
             nodes: [smm154]
@@ -5234,6 +5279,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3064]
             ip_addresses: [172.66.5.108/31]
+            ipv6_addresses: [fda7:66:0:36::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3064
             nodes: [smm154]
@@ -5241,6 +5287,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3065]
             ip_addresses: [172.66.5.110/31]
+            ipv6_addresses: [fda7:66:0:37::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3065
             nodes: [smm154]
@@ -5248,6 +5295,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3066]
             ip_addresses: [172.66.5.112/31]
+            ipv6_addresses: [fda7:66:0:38::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3066
             nodes: [smm154]
@@ -5255,6 +5303,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3067]
             ip_addresses: [172.66.5.114/31]
+            ipv6_addresses: [fda7:66:0:39::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3067
             nodes: [smm154]
@@ -5262,6 +5311,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3068]
             ip_addresses: [172.66.5.116/31]
+            ipv6_addresses: [fda7:66:0:3a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3068
             nodes: [smm154]
@@ -5269,6 +5319,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3069]
             ip_addresses: [172.66.5.118/31]
+            ipv6_addresses: [fda7:66:0:3b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3069
             nodes: [smm154]
@@ -5276,6 +5327,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3070]
             ip_addresses: [172.66.5.120/31]
+            ipv6_addresses: [fda7:66:0:3c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3070
             nodes: [smm154]
@@ -5283,6 +5335,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3071]
             ip_addresses: [172.66.5.122/31]
+            ipv6_addresses: [fda7:66:0:3d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3071
             nodes: [smm154]
@@ -5290,6 +5343,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3072]
             ip_addresses: [172.66.5.124/31]
+            ipv6_addresses: [fda7:66:0:3e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3072
             nodes: [smm154]
@@ -5297,6 +5351,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3073]
             ip_addresses: [172.66.5.126/31]
+            ipv6_addresses: [fda7:66:0:3f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3073
             nodes: [smm154]
@@ -5304,6 +5359,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3074]
             ip_addresses: [172.66.5.128/31]
+            ipv6_addresses: [fda7:66:0:40::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3074
             nodes: [smm154]
@@ -5311,6 +5367,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3075]
             ip_addresses: [172.66.5.130/31]
+            ipv6_addresses: [fda7:66:0:41::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3075
             nodes: [smm154]
@@ -5318,6 +5375,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3076]
             ip_addresses: [172.66.5.132/31]
+            ipv6_addresses: [fda7:66:0:42::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3076
             nodes: [smm154]
@@ -5325,6 +5383,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3077]
             ip_addresses: [172.66.5.134/31]
+            ipv6_addresses: [fda7:66:0:43::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3077
             nodes: [smm154]
@@ -5332,6 +5391,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3078]
             ip_addresses: [172.66.5.136/31]
+            ipv6_addresses: [fda7:66:0:44::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3078
             nodes: [smm154]
@@ -5339,6 +5399,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3079]
             ip_addresses: [172.66.5.138/31]
+            ipv6_addresses: [fda7:66:0:45::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3079
             nodes: [smm154]
@@ -5346,6 +5407,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3080]
             ip_addresses: [172.66.5.140/31]
+            ipv6_addresses: [fda7:66:0:46::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3080
             nodes: [smm154]
@@ -5353,6 +5415,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3081]
             ip_addresses: [172.66.5.142/31]
+            ipv6_addresses: [fda7:66:0:47::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3081
             nodes: [smm154]
@@ -5360,6 +5423,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3082]
             ip_addresses: [172.66.5.144/31]
+            ipv6_addresses: [fda7:66:0:48::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3082
             nodes: [smm154]
@@ -5367,6 +5431,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3083]
             ip_addresses: [172.66.5.146/31]
+            ipv6_addresses: [fda7:66:0:49::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3083
             nodes: [smm154]
@@ -5374,6 +5439,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3084]
             ip_addresses: [172.66.5.148/31]
+            ipv6_addresses: [fda7:66:0:4a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3084
             nodes: [smm154]
@@ -5381,6 +5447,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3085]
             ip_addresses: [172.66.5.150/31]
+            ipv6_addresses: [fda7:66:0:4b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3085
             nodes: [smm154]
@@ -5388,6 +5455,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3086]
             ip_addresses: [172.66.5.152/31]
+            ipv6_addresses: [fda7:66:0:4c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3086
             nodes: [smm154]
@@ -5395,6 +5463,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3087]
             ip_addresses: [172.66.5.154/31]
+            ipv6_addresses: [fda7:66:0:4d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3087
             nodes: [smm154]
@@ -5402,6 +5471,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3088]
             ip_addresses: [172.66.5.156/31]
+            ipv6_addresses: [fda7:66:0:4e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3088
             nodes: [smm154]
@@ -5409,6 +5479,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3089]
             ip_addresses: [172.66.5.158/31]
+            ipv6_addresses: [fda7:66:0:4f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3089
             nodes: [smm154]
@@ -5416,6 +5487,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3090]
             ip_addresses: [172.66.5.160/31]
+            ipv6_addresses: [fda7:66:0:50::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3090
             nodes: [smm154]
@@ -5423,6 +5495,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3091]
             ip_addresses: [172.66.5.162/31]
+            ipv6_addresses: [fda7:66:0:51::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3091
             nodes: [smm154]
@@ -5430,6 +5503,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3092]
             ip_addresses: [172.66.5.164/31]
+            ipv6_addresses: [fda7:66:0:52::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3092
             nodes: [smm154]
@@ -5437,6 +5511,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3093]
             ip_addresses: [172.66.5.166/31]
+            ipv6_addresses: [fda7:66:0:53::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3093
             nodes: [smm154]
@@ -5444,6 +5519,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3094]
             ip_addresses: [172.66.5.168/31]
+            ipv6_addresses: [fda7:66:0:54::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3094
             nodes: [smm154]
@@ -5451,6 +5527,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3095]
             ip_addresses: [172.66.5.170/31]
+            ipv6_addresses: [fda7:66:0:55::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3095
             nodes: [smm154]
@@ -5458,6 +5535,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3096]
             ip_addresses: [172.66.5.172/31]
+            ipv6_addresses: [fda7:66:0:56::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3096
             nodes: [smm154]
@@ -5465,6 +5543,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3097]
             ip_addresses: [172.66.5.174/31]
+            ipv6_addresses: [fda7:66:0:57::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3097
             nodes: [smm154]
@@ -5472,6 +5551,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3098]
             ip_addresses: [172.66.5.176/31]
+            ipv6_addresses: [fda7:66:0:58::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3098
             nodes: [smm154]
@@ -5479,6 +5559,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3099]
             ip_addresses: [172.66.5.178/31]
+            ipv6_addresses: [fda7:66:0:59::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3099
             nodes: [smm154]
@@ -5486,6 +5567,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3100]
             ip_addresses: [172.66.5.180/31]
+            ipv6_addresses: [fda7:66:0:5a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3100
             nodes: [smm154]
@@ -5493,6 +5575,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3101]
             ip_addresses: [172.66.5.182/31]
+            ipv6_addresses: [fda7:66:0:5b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3101
             nodes: [smm154]
@@ -5500,6 +5583,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3102]
             ip_addresses: [172.66.5.184/31]
+            ipv6_addresses: [fda7:66:0:5c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3102
             nodes: [smm154]
@@ -5507,6 +5591,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3103]
             ip_addresses: [172.66.5.186/31]
+            ipv6_addresses: [fda7:66:0:5d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3103
             nodes: [smm154]
@@ -5514,6 +5599,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3104]
             ip_addresses: [172.66.5.188/31]
+            ipv6_addresses: [fda7:66:0:5e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3104
             nodes: [smm154]
@@ -5521,6 +5607,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3105]
             ip_addresses: [172.66.5.190/31]
+            ipv6_addresses: [fda7:66:0:5f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3105
             nodes: [smm154]
@@ -5528,6 +5615,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3106]
             ip_addresses: [172.66.5.192/31]
+            ipv6_addresses: [fda7:66:0:60::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3106
             nodes: [smm154]
@@ -5535,6 +5623,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3107]
             ip_addresses: [172.66.5.194/31]
+            ipv6_addresses: [fda7:66:0:61::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3107
             nodes: [smm154]
@@ -5542,6 +5631,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3108]
             ip_addresses: [172.66.5.196/31]
+            ipv6_addresses: [fda7:66:0:62::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3108
             nodes: [smm154]
@@ -5549,6 +5639,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3109]
             ip_addresses: [172.66.5.198/31]
+            ipv6_addresses: [fda7:66:0:63::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3109
             nodes: [smm154]
@@ -5556,6 +5647,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3110]
             ip_addresses: [172.66.5.200/31]
+            ipv6_addresses: [fda7:66:0:64::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3110
             nodes: [smm154]
@@ -5563,6 +5655,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3111]
             ip_addresses: [172.66.5.202/31]
+            ipv6_addresses: [fda7:66:0:65::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3111
             nodes: [smm154]
@@ -5570,6 +5663,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3112]
             ip_addresses: [172.66.5.204/31]
+            ipv6_addresses: [fda7:66:0:66::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3112
             nodes: [smm154]
@@ -5577,6 +5671,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3113]
             ip_addresses: [172.66.5.206/31]
+            ipv6_addresses: [fda7:66:0:67::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3113
             nodes: [smm154]
@@ -5584,6 +5679,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3114]
             ip_addresses: [172.66.5.208/31]
+            ipv6_addresses: [fda7:66:0:68::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3114
             nodes: [smm154]
@@ -5591,6 +5687,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3115]
             ip_addresses: [172.66.5.210/31]
+            ipv6_addresses: [fda7:66:0:69::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3115
             nodes: [smm154]
@@ -5598,6 +5695,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3116]
             ip_addresses: [172.66.5.212/31]
+            ipv6_addresses: [fda7:66:0:6a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3116
             nodes: [smm154]
@@ -5605,6 +5703,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3117]
             ip_addresses: [172.66.5.214/31]
+            ipv6_addresses: [fda7:66:0:6b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3117
             nodes: [smm154]
@@ -5612,6 +5711,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3118]
             ip_addresses: [172.66.5.216/31]
+            ipv6_addresses: [fda7:66:0:6c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3118
             nodes: [smm154]
@@ -5619,6 +5719,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3119]
             ip_addresses: [172.66.5.218/31]
+            ipv6_addresses: [fda7:66:0:6d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3119
             nodes: [smm154]
@@ -5626,6 +5727,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3120]
             ip_addresses: [172.66.5.220/31]
+            ipv6_addresses: [fda7:66:0:6e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3120
             nodes: [smm154]
@@ -5633,6 +5735,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3121]
             ip_addresses: [172.66.5.222/31]
+            ipv6_addresses: [fda7:66:0:6f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3121
             nodes: [smm154]
@@ -5640,6 +5743,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3122]
             ip_addresses: [172.66.5.224/31]
+            ipv6_addresses: [fda7:66:0:70::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3122
             nodes: [smm154]
@@ -5647,6 +5751,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3123]
             ip_addresses: [172.66.5.226/31]
+            ipv6_addresses: [fda7:66:0:71::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3123
             nodes: [smm154]
@@ -5654,6 +5759,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3124]
             ip_addresses: [172.66.5.228/31]
+            ipv6_addresses: [fda7:66:0:72::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3124
             nodes: [smm154]
@@ -5661,6 +5767,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3125]
             ip_addresses: [172.66.5.230/31]
+            ipv6_addresses: [fda7:66:0:73::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3125
             nodes: [smm154]
@@ -5668,6 +5775,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3126]
             ip_addresses: [172.66.5.232/31]
+            ipv6_addresses: [fda7:66:0:74::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3126
             nodes: [smm154]
@@ -5675,6 +5783,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3127]
             ip_addresses: [172.66.5.234/31]
+            ipv6_addresses: [fda7:66:0:75::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3127
             nodes: [smm154]
@@ -5682,6 +5791,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3128]
             ip_addresses: [172.66.5.236/31]
+            ipv6_addresses: [fda7:66:0:76::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3128
             nodes: [smm154]
@@ -5689,6 +5799,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3129]
             ip_addresses: [172.66.5.238/31]
+            ipv6_addresses: [fda7:66:0:77::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3129
             nodes: [smm154]
@@ -5696,6 +5807,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3130]
             ip_addresses: [172.66.5.240/31]
+            ipv6_addresses: [fda7:66:0:78::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3130
             nodes: [smm154]
@@ -5703,6 +5815,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3131]
             ip_addresses: [172.66.5.242/31]
+            ipv6_addresses: [fda7:66:0:79::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3131
             nodes: [smm154]
@@ -5710,6 +5823,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3132]
             ip_addresses: [172.66.5.244/31]
+            ipv6_addresses: [fda7:66:0:7a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3132
             nodes: [smm154]
@@ -5717,6 +5831,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3133]
             ip_addresses: [172.66.5.246/31]
+            ipv6_addresses: [fda7:66:0:7b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3133
             nodes: [smm154]
@@ -5724,6 +5839,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3134]
             ip_addresses: [172.66.5.248/31]
+            ipv6_addresses: [fda7:66:0:7c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3134
             nodes: [smm154]
@@ -5731,6 +5847,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3135]
             ip_addresses: [172.66.5.250/31]
+            ipv6_addresses: [fda7:66:0:7d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3135
             nodes: [smm154]
@@ -5738,6 +5855,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3136]
             ip_addresses: [172.66.5.252/31]
+            ipv6_addresses: [fda7:66:0:7e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3136
             nodes: [smm154]
@@ -5745,6 +5863,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3137]
             ip_addresses: [172.66.5.254/31]
+            ipv6_addresses: [fda7:66:0:7f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3137
             nodes: [smm154]
@@ -5752,6 +5871,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3138]
             ip_addresses: [172.66.6.0/31]
+            ipv6_addresses: [fda7:66:0:80::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3138
             nodes: [smm154]
@@ -5759,6 +5879,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3139]
             ip_addresses: [172.66.6.2/31]
+            ipv6_addresses: [fda7:66:0:81::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3139
             nodes: [smm154]
@@ -5766,6 +5887,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3140]
             ip_addresses: [172.66.6.4/31]
+            ipv6_addresses: [fda7:66:0:82::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3140
             nodes: [smm154]
@@ -5773,6 +5895,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3141]
             ip_addresses: [172.66.6.6/31]
+            ipv6_addresses: [fda7:66:0:83::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3141
             nodes: [smm154]
@@ -5780,6 +5903,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3142]
             ip_addresses: [172.66.6.8/31]
+            ipv6_addresses: [fda7:66:0:84::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3142
             nodes: [smm154]
@@ -5787,6 +5911,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3143]
             ip_addresses: [172.66.6.10/31]
+            ipv6_addresses: [fda7:66:0:85::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3143
             nodes: [smm154]
@@ -5794,6 +5919,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3144]
             ip_addresses: [172.66.6.12/31]
+            ipv6_addresses: [fda7:66:0:86::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3144
             nodes: [smm154]
@@ -5801,6 +5927,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3145]
             ip_addresses: [172.66.6.14/31]
+            ipv6_addresses: [fda7:66:0:87::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3145
             nodes: [smm154]
@@ -5808,6 +5935,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3146]
             ip_addresses: [172.66.6.16/31]
+            ipv6_addresses: [fda7:66:0:88::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3146
             nodes: [smm154]
@@ -5815,6 +5943,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3147]
             ip_addresses: [172.66.6.18/31]
+            ipv6_addresses: [fda7:66:0:89::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3147
             nodes: [smm154]
@@ -5822,6 +5951,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3148]
             ip_addresses: [172.66.6.20/31]
+            ipv6_addresses: [fda7:66:0:8a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3148
             nodes: [smm154]
@@ -5829,6 +5959,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3149]
             ip_addresses: [172.66.6.22/31]
+            ipv6_addresses: [fda7:66:0:8b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3149
             nodes: [smm154]
@@ -5836,6 +5967,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3150]
             ip_addresses: [172.66.6.24/31]
+            ipv6_addresses: [fda7:66:0:8c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3150
             nodes: [smm154]
@@ -5843,6 +5975,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3151]
             ip_addresses: [172.66.6.26/31]
+            ipv6_addresses: [fda7:66:0:8d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3151
             nodes: [smm154]
@@ -5850,6 +5983,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3152]
             ip_addresses: [172.66.6.28/31]
+            ipv6_addresses: [fda7:66:0:8e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3152
             nodes: [smm154]
@@ -5857,6 +5991,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3153]
             ip_addresses: [172.66.6.30/31]
+            ipv6_addresses: [fda7:66:0:8f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3153
             nodes: [smm154]
@@ -5864,6 +5999,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3154]
             ip_addresses: [172.66.6.32/31]
+            ipv6_addresses: [fda7:66:0:90::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3154
             nodes: [smm154]
@@ -5871,6 +6007,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3155]
             ip_addresses: [172.66.6.34/31]
+            ipv6_addresses: [fda7:66:0:91::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3155
             nodes: [smm154]
@@ -5878,6 +6015,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3156]
             ip_addresses: [172.66.6.36/31]
+            ipv6_addresses: [fda7:66:0:92::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3156
             nodes: [smm154]
@@ -5885,6 +6023,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3157]
             ip_addresses: [172.66.6.38/31]
+            ipv6_addresses: [fda7:66:0:93::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3157
             nodes: [smm154]
@@ -5892,6 +6031,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3158]
             ip_addresses: [172.66.6.40/31]
+            ipv6_addresses: [fda7:66:0:94::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3158
             nodes: [smm154]
@@ -5899,6 +6039,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3159]
             ip_addresses: [172.66.6.42/31]
+            ipv6_addresses: [fda7:66:0:95::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3159
             nodes: [smm154]
@@ -5906,6 +6047,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3160]
             ip_addresses: [172.66.6.44/31]
+            ipv6_addresses: [fda7:66:0:96::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3160
             nodes: [smm154]
@@ -5913,6 +6055,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3161]
             ip_addresses: [172.66.6.46/31]
+            ipv6_addresses: [fda7:66:0:97::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3161
             nodes: [smm154]
@@ -5920,6 +6063,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3162]
             ip_addresses: [172.66.6.48/31]
+            ipv6_addresses: [fda7:66:0:98::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3162
             nodes: [smm154]
@@ -5927,6 +6071,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3163]
             ip_addresses: [172.66.6.50/31]
+            ipv6_addresses: [fda7:66:0:99::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3163
             nodes: [smm154]
@@ -5934,6 +6079,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3164]
             ip_addresses: [172.66.6.52/31]
+            ipv6_addresses: [fda7:66:0:9a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3164
             nodes: [smm154]
@@ -5941,6 +6087,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3165]
             ip_addresses: [172.66.6.54/31]
+            ipv6_addresses: [fda7:66:0:9b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3165
             nodes: [smm154]
@@ -5948,6 +6095,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3166]
             ip_addresses: [172.66.6.56/31]
+            ipv6_addresses: [fda7:66:0:9c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3166
             nodes: [smm154]
@@ -5955,6 +6103,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3167]
             ip_addresses: [172.66.6.58/31]
+            ipv6_addresses: [fda7:66:0:9d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3167
             nodes: [smm154]
@@ -5962,6 +6111,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3168]
             ip_addresses: [172.66.6.60/31]
+            ipv6_addresses: [fda7:66:0:9e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3168
             nodes: [smm154]
@@ -5969,6 +6119,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3169]
             ip_addresses: [172.66.6.62/31]
+            ipv6_addresses: [fda7:66:0:9f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3169
             nodes: [smm154]
@@ -5976,6 +6127,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3170]
             ip_addresses: [172.66.6.64/31]
+            ipv6_addresses: [fda7:66:0:a0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3170
             nodes: [smm154]
@@ -5983,6 +6135,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3171]
             ip_addresses: [172.66.6.66/31]
+            ipv6_addresses: [fda7:66:0:a1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3171
             nodes: [smm154]
@@ -5990,6 +6143,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3172]
             ip_addresses: [172.66.6.68/31]
+            ipv6_addresses: [fda7:66:0:a2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3172
             nodes: [smm154]
@@ -5997,6 +6151,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3173]
             ip_addresses: [172.66.6.70/31]
+            ipv6_addresses: [fda7:66:0:a3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3173
             nodes: [smm154]
@@ -6004,6 +6159,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3174]
             ip_addresses: [172.66.6.72/31]
+            ipv6_addresses: [fda7:66:0:a4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3174
             nodes: [smm154]
@@ -6011,6 +6167,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3175]
             ip_addresses: [172.66.6.74/31]
+            ipv6_addresses: [fda7:66:0:a5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3175
             nodes: [smm154]
@@ -6018,6 +6175,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3176]
             ip_addresses: [172.66.6.76/31]
+            ipv6_addresses: [fda7:66:0:a6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3176
             nodes: [smm154]
@@ -6025,6 +6183,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3177]
             ip_addresses: [172.66.6.78/31]
+            ipv6_addresses: [fda7:66:0:a7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3177
             nodes: [smm154]
@@ -6032,6 +6191,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3178]
             ip_addresses: [172.66.6.80/31]
+            ipv6_addresses: [fda7:66:0:a8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3178
             nodes: [smm154]
@@ -6039,6 +6199,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3179]
             ip_addresses: [172.66.6.82/31]
+            ipv6_addresses: [fda7:66:0:a9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3179
             nodes: [smm154]
@@ -6046,6 +6207,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3180]
             ip_addresses: [172.66.6.84/31]
+            ipv6_addresses: [fda7:66:0:aa::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3180
             nodes: [smm154]
@@ -6053,6 +6215,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3181]
             ip_addresses: [172.66.6.86/31]
+            ipv6_addresses: [fda7:66:0:ab::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3181
             nodes: [smm154]
@@ -6060,6 +6223,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3182]
             ip_addresses: [172.66.6.88/31]
+            ipv6_addresses: [fda7:66:0:ac::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3182
             nodes: [smm154]
@@ -6067,6 +6231,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3183]
             ip_addresses: [172.66.6.90/31]
+            ipv6_addresses: [fda7:66:0:ad::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3183
             nodes: [smm154]
@@ -6074,6 +6239,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3184]
             ip_addresses: [172.66.6.92/31]
+            ipv6_addresses: [fda7:66:0:ae::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3184
             nodes: [smm154]
@@ -6081,6 +6247,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3185]
             ip_addresses: [172.66.6.94/31]
+            ipv6_addresses: [fda7:66:0:af::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3185
             nodes: [smm154]
@@ -6088,6 +6255,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3186]
             ip_addresses: [172.66.6.96/31]
+            ipv6_addresses: [fda7:66:0:b0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3186
             nodes: [smm154]
@@ -6095,6 +6263,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3187]
             ip_addresses: [172.66.6.98/31]
+            ipv6_addresses: [fda7:66:0:b1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3187
             nodes: [smm154]
@@ -6102,6 +6271,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3188]
             ip_addresses: [172.66.6.100/31]
+            ipv6_addresses: [fda7:66:0:b2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3188
             nodes: [smm154]
@@ -6109,6 +6279,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3189]
             ip_addresses: [172.66.6.102/31]
+            ipv6_addresses: [fda7:66:0:b3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3189
             nodes: [smm154]
@@ -6116,6 +6287,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3190]
             ip_addresses: [172.66.6.104/31]
+            ipv6_addresses: [fda7:66:0:b4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3190
             nodes: [smm154]
@@ -6123,6 +6295,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3191]
             ip_addresses: [172.66.6.106/31]
+            ipv6_addresses: [fda7:66:0:b5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3191
             nodes: [smm154]
@@ -6130,6 +6303,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3192]
             ip_addresses: [172.66.6.108/31]
+            ipv6_addresses: [fda7:66:0:b6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3192
             nodes: [smm154]
@@ -6137,6 +6311,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3193]
             ip_addresses: [172.66.6.110/31]
+            ipv6_addresses: [fda7:66:0:b7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3193
             nodes: [smm154]
@@ -6144,6 +6319,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3194]
             ip_addresses: [172.66.6.112/31]
+            ipv6_addresses: [fda7:66:0:b8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3194
             nodes: [smm154]
@@ -6151,6 +6327,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3195]
             ip_addresses: [172.66.6.114/31]
+            ipv6_addresses: [fda7:66:0:b9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3195
             nodes: [smm154]
@@ -6158,6 +6335,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3196]
             ip_addresses: [172.66.6.116/31]
+            ipv6_addresses: [fda7:66:0:ba::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3196
             nodes: [smm154]
@@ -6165,6 +6343,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3197]
             ip_addresses: [172.66.6.118/31]
+            ipv6_addresses: [fda7:66:0:bb::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3197
             nodes: [smm154]
@@ -6172,6 +6351,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3198]
             ip_addresses: [172.66.6.120/31]
+            ipv6_addresses: [fda7:66:0:bc::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3198
             nodes: [smm154]
@@ -6179,6 +6359,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3199]
             ip_addresses: [172.66.6.122/31]
+            ipv6_addresses: [fda7:66:0:bd::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3199
             nodes: [smm154]
@@ -6186,6 +6367,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3200]
             ip_addresses: [172.66.6.124/31]
+            ipv6_addresses: [fda7:66:0:be::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3200
             nodes: [smm154]
@@ -6193,6 +6375,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3201]
             ip_addresses: [172.66.6.126/31]
+            ipv6_addresses: [fda7:66:0:bf::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3201
             nodes: [smm154]
@@ -6200,6 +6383,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3202]
             ip_addresses: [172.66.6.128/31]
+            ipv6_addresses: [fda7:66:0:c0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3202
             nodes: [smm154]
@@ -6207,6 +6391,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3203]
             ip_addresses: [172.66.6.130/31]
+            ipv6_addresses: [fda7:66:0:c1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3203
             nodes: [smm154]
@@ -6214,6 +6399,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3204]
             ip_addresses: [172.66.6.132/31]
+            ipv6_addresses: [fda7:66:0:c2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3204
             nodes: [smm154]
@@ -6221,6 +6407,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3205]
             ip_addresses: [172.66.6.134/31]
+            ipv6_addresses: [fda7:66:0:c3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3205
             nodes: [smm154]
@@ -6228,6 +6415,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3206]
             ip_addresses: [172.66.6.136/31]
+            ipv6_addresses: [fda7:66:0:c4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3206
             nodes: [smm154]
@@ -6235,6 +6423,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3207]
             ip_addresses: [172.66.6.138/31]
+            ipv6_addresses: [fda7:66:0:c5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3207
             nodes: [smm154]
@@ -6242,6 +6431,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3208]
             ip_addresses: [172.66.6.140/31]
+            ipv6_addresses: [fda7:66:0:c6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3208
             nodes: [smm154]
@@ -6249,6 +6439,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3209]
             ip_addresses: [172.66.6.142/31]
+            ipv6_addresses: [fda7:66:0:c7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3209
             nodes: [smm154]
@@ -6256,6 +6447,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3210]
             ip_addresses: [172.66.6.144/31]
+            ipv6_addresses: [fda7:66:0:c8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3210
             nodes: [smm154]
@@ -6263,6 +6455,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3211]
             ip_addresses: [172.66.6.146/31]
+            ipv6_addresses: [fda7:66:0:c9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3211
             nodes: [smm154]
@@ -6270,6 +6463,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3212]
             ip_addresses: [172.66.6.148/31]
+            ipv6_addresses: [fda7:66:0:ca::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3212
             nodes: [smm154]
@@ -6277,6 +6471,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3213]
             ip_addresses: [172.66.6.150/31]
+            ipv6_addresses: [fda7:66:0:cb::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3213
             nodes: [smm154]
@@ -6284,6 +6479,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3214]
             ip_addresses: [172.66.6.152/31]
+            ipv6_addresses: [fda7:66:0:cc::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3214
             nodes: [smm154]
@@ -6291,6 +6487,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3215]
             ip_addresses: [172.66.6.154/31]
+            ipv6_addresses: [fda7:66:0:cd::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3215
             nodes: [smm154]
@@ -6298,6 +6495,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3216]
             ip_addresses: [172.66.6.156/31]
+            ipv6_addresses: [fda7:66:0:ce::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3216
             nodes: [smm154]
@@ -6305,6 +6503,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3217]
             ip_addresses: [172.66.6.158/31]
+            ipv6_addresses: [fda7:66:0:cf::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3217
             nodes: [smm154]
@@ -6312,6 +6511,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3218]
             ip_addresses: [172.66.6.160/31]
+            ipv6_addresses: [fda7:66:0:d0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3218
             nodes: [smm154]
@@ -6319,6 +6519,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3219]
             ip_addresses: [172.66.6.162/31]
+            ipv6_addresses: [fda7:66:0:d1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3219
             nodes: [smm154]
@@ -6326,6 +6527,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3220]
             ip_addresses: [172.66.6.164/31]
+            ipv6_addresses: [fda7:66:0:d2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3220
             nodes: [smm154]
@@ -6333,6 +6535,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3221]
             ip_addresses: [172.66.6.166/31]
+            ipv6_addresses: [fda7:66:0:d3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3221
             nodes: [smm154]
@@ -6340,6 +6543,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3222]
             ip_addresses: [172.66.6.168/31]
+            ipv6_addresses: [fda7:66:0:d4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3222
             nodes: [smm154]
@@ -6347,6 +6551,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3223]
             ip_addresses: [172.66.6.170/31]
+            ipv6_addresses: [fda7:66:0:d5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3223
             nodes: [smm154]
@@ -6354,6 +6559,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3224]
             ip_addresses: [172.66.6.172/31]
+            ipv6_addresses: [fda7:66:0:d6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3224
             nodes: [smm154]
@@ -6361,6 +6567,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3225]
             ip_addresses: [172.66.6.174/31]
+            ipv6_addresses: [fda7:66:0:d7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3225
             nodes: [smm154]
@@ -6368,6 +6575,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3226]
             ip_addresses: [172.66.6.176/31]
+            ipv6_addresses: [fda7:66:0:d8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3226
             nodes: [smm154]
@@ -6375,6 +6583,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3227]
             ip_addresses: [172.66.6.178/31]
+            ipv6_addresses: [fda7:66:0:d9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3227
             nodes: [smm154]
@@ -6382,6 +6591,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3228]
             ip_addresses: [172.66.6.180/31]
+            ipv6_addresses: [fda7:66:0:da::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3228
             nodes: [smm154]
@@ -6389,6 +6599,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3229]
             ip_addresses: [172.66.6.182/31]
+            ipv6_addresses: [fda7:66:0:db::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3229
             nodes: [smm154]
@@ -6396,6 +6607,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3230]
             ip_addresses: [172.66.6.184/31]
+            ipv6_addresses: [fda7:66:0:dc::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3230
             nodes: [smm154]
@@ -6403,6 +6615,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3231]
             ip_addresses: [172.66.6.186/31]
+            ipv6_addresses: [fda7:66:0:dd::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3231
             nodes: [smm154]
@@ -6410,6 +6623,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3232]
             ip_addresses: [172.66.6.188/31]
+            ipv6_addresses: [fda7:66:0:de::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3232
             nodes: [smm154]
@@ -6417,6 +6631,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3233]
             ip_addresses: [172.66.6.190/31]
+            ipv6_addresses: [fda7:66:0:df::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3233
             nodes: [smm154]
@@ -6424,6 +6639,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3234]
             ip_addresses: [172.66.6.192/31]
+            ipv6_addresses: [fda7:66:0:e0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3234
             nodes: [smm154]
@@ -6431,6 +6647,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3235]
             ip_addresses: [172.66.6.194/31]
+            ipv6_addresses: [fda7:66:0:e1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3235
             nodes: [smm154]
@@ -6438,6 +6655,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3236]
             ip_addresses: [172.66.6.196/31]
+            ipv6_addresses: [fda7:66:0:e2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3236
             nodes: [smm154]
@@ -6445,6 +6663,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3237]
             ip_addresses: [172.66.6.198/31]
+            ipv6_addresses: [fda7:66:0:e3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3237
             nodes: [smm154]
@@ -6452,6 +6671,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3238]
             ip_addresses: [172.66.6.200/31]
+            ipv6_addresses: [fda7:66:0:e4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3238
             nodes: [smm154]
@@ -6459,6 +6679,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3239]
             ip_addresses: [172.66.6.202/31]
+            ipv6_addresses: [fda7:66:0:e5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3239
             nodes: [smm154]
@@ -6466,6 +6687,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3240]
             ip_addresses: [172.66.6.204/31]
+            ipv6_addresses: [fda7:66:0:e6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3240
             nodes: [smm154]
@@ -6473,6 +6695,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3241]
             ip_addresses: [172.66.6.206/31]
+            ipv6_addresses: [fda7:66:0:e7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3241
             nodes: [smm154]
@@ -6480,6 +6703,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3242]
             ip_addresses: [172.66.6.208/31]
+            ipv6_addresses: [fda7:66:0:e8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3242
             nodes: [smm154]
@@ -6487,6 +6711,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3243]
             ip_addresses: [172.66.6.210/31]
+            ipv6_addresses: [fda7:66:0:e9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3243
             nodes: [smm154]
@@ -6494,6 +6719,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3244]
             ip_addresses: [172.66.6.212/31]
+            ipv6_addresses: [fda7:66:0:ea::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3244
             nodes: [smm154]
@@ -6501,6 +6727,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3245]
             ip_addresses: [172.66.6.214/31]
+            ipv6_addresses: [fda7:66:0:eb::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3245
             nodes: [smm154]
@@ -6508,6 +6735,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3246]
             ip_addresses: [172.66.6.216/31]
+            ipv6_addresses: [fda7:66:0:ec::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3246
             nodes: [smm154]
@@ -6515,6 +6743,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3247]
             ip_addresses: [172.66.6.218/31]
+            ipv6_addresses: [fda7:66:0:ed::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3247
             nodes: [smm154]
@@ -6522,6 +6751,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3248]
             ip_addresses: [172.66.6.220/31]
+            ipv6_addresses: [fda7:66:0:ee::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3248
             nodes: [smm154]
@@ -6529,6 +6759,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3249]
             ip_addresses: [172.66.6.222/31]
+            ipv6_addresses: [fda7:66:0:ef::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3249
             nodes: [smm154]
@@ -6536,6 +6767,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3250]
             ip_addresses: [172.66.6.224/31]
+            ipv6_addresses: [fda7:66:0:f0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3250
             nodes: [smm154]
@@ -6543,6 +6775,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3251]
             ip_addresses: [172.66.6.226/31]
+            ipv6_addresses: [fda7:66:0:f1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3251
             nodes: [smm154]
@@ -6550,6 +6783,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3252]
             ip_addresses: [172.66.6.228/31]
+            ipv6_addresses: [fda7:66:0:f2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3252
             nodes: [smm154]
@@ -6557,6 +6791,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3253]
             ip_addresses: [172.66.6.230/31]
+            ipv6_addresses: [fda7:66:0:f3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3253
             nodes: [smm154]
@@ -6564,6 +6799,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3254]
             ip_addresses: [172.66.6.232/31]
+            ipv6_addresses: [fda7:66:0:f4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3254
             nodes: [smm154]
@@ -6571,6 +6807,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3255]
             ip_addresses: [172.66.6.234/31]
+            ipv6_addresses: [fda7:66:0:f5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3255
             nodes: [smm154]
@@ -6578,6 +6815,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3256]
             ip_addresses: [172.66.6.236/31]
+            ipv6_addresses: [fda7:66:0:f6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3256
             nodes: [smm154]
@@ -6585,6 +6823,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3257]
             ip_addresses: [172.66.6.238/31]
+            ipv6_addresses: [fda7:66:0:f7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3257
             nodes: [smm154]
@@ -6592,6 +6831,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3258]
             ip_addresses: [172.66.6.240/31]
+            ipv6_addresses: [fda7:66:0:f8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3258
             nodes: [smm154]
@@ -6599,6 +6839,7 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3259]
             ip_addresses: [172.66.6.242/31]
+            ipv6_addresses: [fda7:66:0:f9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3259
             nodes: [smm154]
@@ -6606,1274 +6847,2003 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.3260]
             ip_addresses: [172.66.6.244/31]
+            ipv6_addresses: [fda7:67::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3260
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3261]
             ip_addresses: [172.66.6.246/31]
+            ipv6_addresses: [fda7:67:0:1::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3261
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3262]
             ip_addresses: [172.66.6.248/31]
+            ipv6_addresses: [fda7:67:0:2::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3262
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3263]
             ip_addresses: [172.66.6.250/31]
+            ipv6_addresses: [fda7:67:0:3::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3263
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3264]
             ip_addresses: [172.66.6.252/31]
+            ipv6_addresses: [fda7:67:0:4::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3264
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3265]
             ip_addresses: [172.66.6.254/31]
+            ipv6_addresses: [fda7:67:0:5::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3265
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3266]
             ip_addresses: [172.66.7.0/31]
+            ipv6_addresses: [fda7:67:0:6::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3266
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3267]
             ip_addresses: [172.66.7.2/31]
+            ipv6_addresses: [fda7:67:0:7::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3267
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3268]
             ip_addresses: [172.66.7.4/31]
+            ipv6_addresses: [fda7:67:0:8::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3268
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3269]
             ip_addresses: [172.66.7.6/31]
+            ipv6_addresses: [fda7:67:0:9::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3269
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3270]
             ip_addresses: [172.66.7.8/31]
+            ipv6_addresses: [fda7:67:0:a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3270
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3271]
             ip_addresses: [172.66.7.10/31]
+            ipv6_addresses: [fda7:67:0:b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3271
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3272]
             ip_addresses: [172.66.7.12/31]
+            ipv6_addresses: [fda7:67:0:c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3272
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3273]
             ip_addresses: [172.66.7.14/31]
+            ipv6_addresses: [fda7:67:0:d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3273
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3274]
             ip_addresses: [172.66.7.16/31]
+            ipv6_addresses: [fda7:67:0:e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3274
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3275]
             ip_addresses: [172.66.7.18/31]
+            ipv6_addresses: [fda7:67:0:f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3275
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3276]
             ip_addresses: [172.66.7.20/31]
+            ipv6_addresses: [fda7:67:0:10::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3276
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3277]
             ip_addresses: [172.66.7.22/31]
+            ipv6_addresses: [fda7:67:0:11::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3277
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3278]
             ip_addresses: [172.66.7.24/31]
+            ipv6_addresses: [fda7:67:0:12::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3278
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3279]
             ip_addresses: [172.66.7.26/31]
+            ipv6_addresses: [fda7:67:0:13::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3279
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3280]
             ip_addresses: [172.66.7.28/31]
+            ipv6_addresses: [fda7:67:0:14::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3280
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3281]
             ip_addresses: [172.66.7.30/31]
+            ipv6_addresses: [fda7:67:0:15::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3281
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3282]
             ip_addresses: [172.66.7.32/31]
+            ipv6_addresses: [fda7:67:0:16::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3282
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3283]
             ip_addresses: [172.66.7.34/31]
+            ipv6_addresses: [fda7:67:0:17::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3283
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3284]
             ip_addresses: [172.66.7.36/31]
+            ipv6_addresses: [fda7:67:0:18::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3284
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3285]
             ip_addresses: [172.66.7.38/31]
+            ipv6_addresses: [fda7:67:0:19::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3285
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3286]
             ip_addresses: [172.66.7.40/31]
+            ipv6_addresses: [fda7:67:0:1a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3286
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3287]
             ip_addresses: [172.66.7.42/31]
+            ipv6_addresses: [fda7:67:0:1b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3287
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3288]
             ip_addresses: [172.66.7.44/31]
+            ipv6_addresses: [fda7:67:0:1c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3288
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3289]
             ip_addresses: [172.66.7.46/31]
+            ipv6_addresses: [fda7:67:0:1d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3289
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3290]
             ip_addresses: [172.66.7.48/31]
+            ipv6_addresses: [fda7:67:0:1e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3290
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3291]
             ip_addresses: [172.66.7.50/31]
+            ipv6_addresses: [fda7:67:0:1f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3291
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3292]
             ip_addresses: [172.66.7.52/31]
+            ipv6_addresses: [fda7:67:0:20::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3292
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3293]
             ip_addresses: [172.66.7.54/31]
+            ipv6_addresses: [fda7:67:0:21::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3293
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3294]
             ip_addresses: [172.66.7.56/31]
+            ipv6_addresses: [fda7:67:0:22::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3294
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3295]
             ip_addresses: [172.66.7.58/31]
+            ipv6_addresses: [fda7:67:0:23::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3295
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3296]
             ip_addresses: [172.66.7.60/31]
+            ipv6_addresses: [fda7:67:0:24::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3296
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3297]
             ip_addresses: [172.66.7.62/31]
+            ipv6_addresses: [fda7:67:0:25::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3297
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3298]
             ip_addresses: [172.66.7.64/31]
+            ipv6_addresses: [fda7:67:0:26::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3298
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3299]
             ip_addresses: [172.66.7.66/31]
+            ipv6_addresses: [fda7:67:0:27::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3299
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3300]
             ip_addresses: [172.66.7.68/31]
+            ipv6_addresses: [fda7:67:0:28::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3300
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3301]
             ip_addresses: [172.66.7.70/31]
+            ipv6_addresses: [fda7:67:0:29::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3301
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3302]
             ip_addresses: [172.66.7.72/31]
+            ipv6_addresses: [fda7:67:0:2a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3302
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3303]
             ip_addresses: [172.66.7.74/31]
+            ipv6_addresses: [fda7:67:0:2b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3303
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3304]
             ip_addresses: [172.66.7.76/31]
+            ipv6_addresses: [fda7:67:0:2c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3304
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3305]
             ip_addresses: [172.66.7.78/31]
+            ipv6_addresses: [fda7:67:0:2d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3305
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3306]
             ip_addresses: [172.66.7.80/31]
+            ipv6_addresses: [fda7:67:0:2e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3306
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3307]
             ip_addresses: [172.66.7.82/31]
+            ipv6_addresses: [fda7:67:0:2f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3307
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3308]
             ip_addresses: [172.66.7.84/31]
+            ipv6_addresses: [fda7:67:0:30::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3308
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3309]
             ip_addresses: [172.66.7.86/31]
+            ipv6_addresses: [fda7:67:0:31::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3309
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3310]
             ip_addresses: [172.66.7.88/31]
+            ipv6_addresses: [fda7:67:0:32::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3310
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3311]
             ip_addresses: [172.66.7.90/31]
+            ipv6_addresses: [fda7:67:0:33::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3311
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3312]
             ip_addresses: [172.66.7.92/31]
+            ipv6_addresses: [fda7:67:0:34::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3312
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3313]
             ip_addresses: [172.66.7.94/31]
+            ipv6_addresses: [fda7:67:0:35::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3313
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3314]
             ip_addresses: [172.66.7.96/31]
+            ipv6_addresses: [fda7:67:0:36::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3314
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3315]
             ip_addresses: [172.66.7.98/31]
+            ipv6_addresses: [fda7:67:0:37::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3315
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3316]
             ip_addresses: [172.66.7.100/31]
+            ipv6_addresses: [fda7:67:0:38::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3316
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3317]
             ip_addresses: [172.66.7.102/31]
+            ipv6_addresses: [fda7:67:0:39::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3317
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3318]
             ip_addresses: [172.66.7.104/31]
+            ipv6_addresses: [fda7:67:0:3a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3318
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3319]
             ip_addresses: [172.66.7.106/31]
+            ipv6_addresses: [fda7:67:0:3b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3319
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3320]
             ip_addresses: [172.66.7.108/31]
+            ipv6_addresses: [fda7:67:0:3c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3320
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3321]
             ip_addresses: [172.66.7.110/31]
+            ipv6_addresses: [fda7:67:0:3d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3321
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3322]
             ip_addresses: [172.66.7.112/31]
+            ipv6_addresses: [fda7:67:0:3e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3322
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3323]
             ip_addresses: [172.66.7.114/31]
+            ipv6_addresses: [fda7:67:0:3f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3323
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3324]
             ip_addresses: [172.66.7.116/31]
+            ipv6_addresses: [fda7:67:0:40::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3324
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3325]
             ip_addresses: [172.66.7.118/31]
+            ipv6_addresses: [fda7:67:0:41::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3325
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3326]
             ip_addresses: [172.66.7.120/31]
+            ipv6_addresses: [fda7:67:0:42::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3326
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3327]
             ip_addresses: [172.66.7.122/31]
+            ipv6_addresses: [fda7:67:0:43::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3327
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3328]
             ip_addresses: [172.66.7.124/31]
+            ipv6_addresses: [fda7:67:0:44::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3328
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3329]
             ip_addresses: [172.66.7.126/31]
+            ipv6_addresses: [fda7:67:0:45::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3329
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3330]
             ip_addresses: [172.66.7.128/31]
+            ipv6_addresses: [fda7:67:0:46::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3330
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3331]
             ip_addresses: [172.66.7.130/31]
+            ipv6_addresses: [fda7:67:0:47::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3331
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3332]
             ip_addresses: [172.66.7.132/31]
+            ipv6_addresses: [fda7:67:0:48::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3332
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3333]
             ip_addresses: [172.66.7.134/31]
+            ipv6_addresses: [fda7:67:0:49::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3333
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3334]
             ip_addresses: [172.66.7.136/31]
+            ipv6_addresses: [fda7:67:0:4a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3334
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3335]
             ip_addresses: [172.66.7.138/31]
+            ipv6_addresses: [fda7:67:0:4b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3335
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3336]
             ip_addresses: [172.66.7.140/31]
+            ipv6_addresses: [fda7:67:0:4c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3336
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3337]
             ip_addresses: [172.66.7.142/31]
+            ipv6_addresses: [fda7:67:0:4d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3337
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3338]
             ip_addresses: [172.66.7.144/31]
+            ipv6_addresses: [fda7:67:0:4e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3338
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3339]
             ip_addresses: [172.66.7.146/31]
+            ipv6_addresses: [fda7:67:0:4f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3339
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3340]
             ip_addresses: [172.66.7.148/31]
+            ipv6_addresses: [fda7:67:0:50::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3340
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3341]
             ip_addresses: [172.66.7.150/31]
+            ipv6_addresses: [fda7:67:0:51::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3341
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3342]
             ip_addresses: [172.66.7.152/31]
+            ipv6_addresses: [fda7:67:0:52::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3342
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3343]
             ip_addresses: [172.66.7.154/31]
+            ipv6_addresses: [fda7:67:0:53::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3343
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3344]
             ip_addresses: [172.66.7.156/31]
+            ipv6_addresses: [fda7:67:0:54::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3344
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3345]
             ip_addresses: [172.66.7.158/31]
+            ipv6_addresses: [fda7:67:0:55::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3345
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3346]
             ip_addresses: [172.66.7.160/31]
+            ipv6_addresses: [fda7:67:0:56::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3346
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3347]
             ip_addresses: [172.66.7.162/31]
+            ipv6_addresses: [fda7:67:0:57::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3347
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3348]
             ip_addresses: [172.66.7.164/31]
+            ipv6_addresses: [fda7:67:0:58::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3348
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3349]
             ip_addresses: [172.66.7.166/31]
+            ipv6_addresses: [fda7:67:0:59::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3349
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3350]
             ip_addresses: [172.66.7.168/31]
+            ipv6_addresses: [fda7:67:0:5a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3350
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3351]
             ip_addresses: [172.66.7.170/31]
+            ipv6_addresses: [fda7:67:0:5b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3351
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3352]
             ip_addresses: [172.66.7.172/31]
+            ipv6_addresses: [fda7:67:0:5c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3352
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3353]
             ip_addresses: [172.66.7.174/31]
+            ipv6_addresses: [fda7:67:0:5d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3353
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3354]
             ip_addresses: [172.66.7.176/31]
+            ipv6_addresses: [fda7:67:0:5e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3354
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3355]
             ip_addresses: [172.66.7.178/31]
+            ipv6_addresses: [fda7:67:0:5f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3355
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3356]
             ip_addresses: [172.66.7.180/31]
+            ipv6_addresses: [fda7:67:0:60::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3356
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3357]
             ip_addresses: [172.66.7.182/31]
+            ipv6_addresses: [fda7:67:0:61::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3357
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3358]
             ip_addresses: [172.66.7.184/31]
+            ipv6_addresses: [fda7:67:0:62::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3358
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3359]
             ip_addresses: [172.66.7.186/31]
+            ipv6_addresses: [fda7:67:0:63::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3359
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3360]
             ip_addresses: [172.66.7.188/31]
+            ipv6_addresses: [fda7:67:0:64::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3360
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3361]
             ip_addresses: [172.66.7.190/31]
+            ipv6_addresses: [fda7:67:0:65::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3361
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3362]
             ip_addresses: [172.66.7.192/31]
+            ipv6_addresses: [fda7:67:0:66::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3362
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3363]
             ip_addresses: [172.66.7.194/31]
+            ipv6_addresses: [fda7:67:0:67::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3363
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3364]
             ip_addresses: [172.66.7.196/31]
+            ipv6_addresses: [fda7:67:0:68::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3364
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3365]
             ip_addresses: [172.66.7.198/31]
+            ipv6_addresses: [fda7:67:0:69::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3365
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3366]
             ip_addresses: [172.66.7.200/31]
+            ipv6_addresses: [fda7:67:0:6a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3366
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3367]
             ip_addresses: [172.66.7.202/31]
+            ipv6_addresses: [fda7:67:0:6b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3367
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3368]
             ip_addresses: [172.66.7.204/31]
+            ipv6_addresses: [fda7:67:0:6c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3368
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3369]
             ip_addresses: [172.66.7.206/31]
+            ipv6_addresses: [fda7:67:0:6d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3369
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3370]
             ip_addresses: [172.66.7.208/31]
+            ipv6_addresses: [fda7:67:0:6e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3370
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3371]
             ip_addresses: [172.66.7.210/31]
+            ipv6_addresses: [fda7:67:0:6f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3371
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3372]
             ip_addresses: [172.66.7.212/31]
+            ipv6_addresses: [fda7:67:0:70::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3372
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3373]
             ip_addresses: [172.66.7.214/31]
+            ipv6_addresses: [fda7:67:0:71::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3373
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3374]
             ip_addresses: [172.66.7.216/31]
+            ipv6_addresses: [fda7:67:0:72::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3374
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3375]
             ip_addresses: [172.66.7.218/31]
+            ipv6_addresses: [fda7:67:0:73::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3375
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3376]
             ip_addresses: [172.66.7.220/31]
+            ipv6_addresses: [fda7:67:0:74::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3376
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3377]
             ip_addresses: [172.66.7.222/31]
+            ipv6_addresses: [fda7:67:0:75::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3377
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3378]
             ip_addresses: [172.66.7.224/31]
+            ipv6_addresses: [fda7:67:0:76::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3378
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3379]
             ip_addresses: [172.66.7.226/31]
+            ipv6_addresses: [fda7:67:0:77::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3379
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3380]
             ip_addresses: [172.66.7.228/31]
+            ipv6_addresses: [fda7:67:0:78::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3380
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3381]
             ip_addresses: [172.66.7.230/31]
+            ipv6_addresses: [fda7:67:0:79::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3381
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3382]
             ip_addresses: [172.66.7.232/31]
+            ipv6_addresses: [fda7:67:0:7a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3382
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3383]
             ip_addresses: [172.66.7.234/31]
+            ipv6_addresses: [fda7:67:0:7b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3383
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3384]
             ip_addresses: [172.66.7.236/31]
+            ipv6_addresses: [fda7:67:0:7c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3384
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3385]
             ip_addresses: [172.66.7.238/31]
+            ipv6_addresses: [fda7:67:0:7d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3385
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3386]
             ip_addresses: [172.66.7.240/31]
+            ipv6_addresses: [fda7:67:0:7e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3386
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3387]
             ip_addresses: [172.66.7.242/31]
+            ipv6_addresses: [fda7:67:0:7f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3387
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3388]
             ip_addresses: [172.66.7.244/31]
+            ipv6_addresses: [fda7:67:0:80::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3388
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3389]
             ip_addresses: [172.66.7.246/31]
+            ipv6_addresses: [fda7:67:0:81::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3389
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3390]
             ip_addresses: [172.66.7.248/31]
+            ipv6_addresses: [fda7:67:0:82::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3390
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3391]
             ip_addresses: [172.66.7.250/31]
+            ipv6_addresses: [fda7:67:0:83::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3391
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3392]
             ip_addresses: [172.66.7.252/31]
+            ipv6_addresses: [fda7:67:0:84::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3392
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3393]
             ip_addresses: [172.66.7.254/31]
+            ipv6_addresses: [fda7:67:0:85::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3393
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3394]
             ip_addresses: [172.66.8.0/31]
+            ipv6_addresses: [fda7:67:0:86::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3394
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3395]
             ip_addresses: [172.66.8.2/31]
+            ipv6_addresses: [fda7:67:0:87::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3395
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3396]
             ip_addresses: [172.66.8.4/31]
+            ipv6_addresses: [fda7:67:0:88::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3396
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3397]
             ip_addresses: [172.66.8.6/31]
+            ipv6_addresses: [fda7:67:0:89::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3397
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3398]
             ip_addresses: [172.66.8.8/31]
+            ipv6_addresses: [fda7:67:0:8a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3398
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3399]
             ip_addresses: [172.66.8.10/31]
+            ipv6_addresses: [fda7:67:0:8b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3399
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3400]
             ip_addresses: [172.66.8.12/31]
+            ipv6_addresses: [fda7:67:0:8c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3400
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3401]
             ip_addresses: [172.66.8.14/31]
+            ipv6_addresses: [fda7:67:0:8d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3401
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3402]
             ip_addresses: [172.66.8.16/31]
+            ipv6_addresses: [fda7:67:0:8e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3402
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3403]
             ip_addresses: [172.66.8.18/31]
+            ipv6_addresses: [fda7:67:0:8f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3403
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3404]
             ip_addresses: [172.66.8.20/31]
+            ipv6_addresses: [fda7:67:0:90::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3404
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3405]
             ip_addresses: [172.66.8.22/31]
+            ipv6_addresses: [fda7:67:0:91::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3405
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3406]
             ip_addresses: [172.66.8.24/31]
+            ipv6_addresses: [fda7:67:0:92::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3406
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3407]
             ip_addresses: [172.66.8.26/31]
+            ipv6_addresses: [fda7:67:0:93::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3407
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3408]
             ip_addresses: [172.66.8.28/31]
+            ipv6_addresses: [fda7:67:0:94::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3408
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3409]
             ip_addresses: [172.66.8.30/31]
+            ipv6_addresses: [fda7:67:0:95::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3409
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3410]
             ip_addresses: [172.66.8.32/31]
+            ipv6_addresses: [fda7:67:0:96::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3410
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3411]
             ip_addresses: [172.66.8.34/31]
+            ipv6_addresses: [fda7:67:0:97::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3411
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3412]
             ip_addresses: [172.66.8.36/31]
+            ipv6_addresses: [fda7:67:0:98::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3412
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3413]
             ip_addresses: [172.66.8.38/31]
+            ipv6_addresses: [fda7:67:0:99::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3413
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3414]
             ip_addresses: [172.66.8.40/31]
+            ipv6_addresses: [fda7:67:0:9a::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3414
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3415]
             ip_addresses: [172.66.8.42/31]
+            ipv6_addresses: [fda7:67:0:9b::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3415
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3416]
             ip_addresses: [172.66.8.44/31]
+            ipv6_addresses: [fda7:67:0:9c::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3416
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3417]
             ip_addresses: [172.66.8.46/31]
+            ipv6_addresses: [fda7:67:0:9d::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3417
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3418]
             ip_addresses: [172.66.8.48/31]
+            ipv6_addresses: [fda7:67:0:9e::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3418
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3419]
             ip_addresses: [172.66.8.50/31]
+            ipv6_addresses: [fda7:67:0:9f::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3419
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3420]
             ip_addresses: [172.66.8.52/31]
+            ipv6_addresses: [fda7:67:0:a0::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3420
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3421]
             ip_addresses: [172.66.8.54/31]
+            ipv6_addresses: [fda7:67:0:a1::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3421
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3422]
             ip_addresses: [172.66.8.56/31]
+            ipv6_addresses: [fda7:67:0:a2::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3422
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3423]
             ip_addresses: [172.66.8.58/31]
+            ipv6_addresses: [fda7:67:0:a3::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3423
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3424]
             ip_addresses: [172.66.8.60/31]
+            ipv6_addresses: [fda7:67:0:a4::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3424
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3425]
             ip_addresses: [172.66.8.62/31]
+            ipv6_addresses: [fda7:67:0:a5::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3425
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3426]
             ip_addresses: [172.66.8.64/31]
+            ipv6_addresses: [fda7:67:0:a6::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3426
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3427]
             ip_addresses: [172.66.8.66/31]
+            ipv6_addresses: [fda7:67:0:a7::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3427
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3428]
             ip_addresses: [172.66.8.68/31]
+            ipv6_addresses: [fda7:67:0:a8::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3428
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3429]
             ip_addresses: [172.66.8.70/31]
+            ipv6_addresses: [fda7:67:0:a9::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3429
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3430]
             ip_addresses: [172.66.8.72/31]
+            ipv6_addresses: [fda7:67:0:aa::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3430
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3431]
             ip_addresses: [172.66.8.74/31]
+            ipv6_addresses: [fda7:67:0:ab::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3431
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3432]
             ip_addresses: [172.66.8.76/31]
+            ipv6_addresses: [fda7:67:0:ac::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3432
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3433]
             ip_addresses: [172.66.8.78/31]
+            ipv6_addresses: [fda7:67:0:ad::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3433
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3434]
             ip_addresses: [172.66.8.80/31]
+            ipv6_addresses: [fda7:67:0:ae::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3434
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3435]
             ip_addresses: [172.66.8.82/31]
+            ipv6_addresses: [fda7:67:0:af::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3435
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3436]
             ip_addresses: [172.66.8.84/31]
+            ipv6_addresses: [fda7:67:0:b0::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3436
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3437]
             ip_addresses: [172.66.8.86/31]
+            ipv6_addresses: [fda7:67:0:b1::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3437
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3438]
             ip_addresses: [172.66.8.88/31]
+            ipv6_addresses: [fda7:67:0:b2::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3438
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3439]
             ip_addresses: [172.66.8.90/31]
+            ipv6_addresses: [fda7:67:0:b3::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3439
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3440]
             ip_addresses: [172.66.8.92/31]
+            ipv6_addresses: [fda7:67:0:b4::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3440
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3441]
             ip_addresses: [172.66.8.94/31]
+            ipv6_addresses: [fda7:67:0:b5::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3441
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3442]
             ip_addresses: [172.66.8.96/31]
+            ipv6_addresses: [fda7:67:0:b6::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3442
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3443]
             ip_addresses: [172.66.8.98/31]
+            ipv6_addresses: [fda7:67:0:b7::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3443
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3444]
             ip_addresses: [172.66.8.100/31]
+            ipv6_addresses: [fda7:67:0:b8::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3444
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3445]
             ip_addresses: [172.66.8.102/31]
+            ipv6_addresses: [fda7:67:0:b9::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3445
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3446]
             ip_addresses: [172.66.8.104/31]
+            ipv6_addresses: [fda7:67:0:ba::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3446
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3447]
             ip_addresses: [172.66.8.106/31]
+            ipv6_addresses: [fda7:67:0:bb::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3447
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3448]
             ip_addresses: [172.66.8.108/31]
+            ipv6_addresses: [fda7:67:0:bc::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3448
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3449]
             ip_addresses: [172.66.8.110/31]
+            ipv6_addresses: [fda7:67:0:bd::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3449
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3450]
             ip_addresses: [172.66.8.112/31]
+            ipv6_addresses: [fda7:67:0:be::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3450
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3451]
             ip_addresses: [172.66.8.114/31]
+            ipv6_addresses: [fda7:67:0:bf::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3451
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3452]
             ip_addresses: [172.66.8.116/31]
+            ipv6_addresses: [fda7:67:0:c0::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3452
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3453]
             ip_addresses: [172.66.8.118/31]
+            ipv6_addresses: [fda7:67:0:c1::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3453
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3454]
             ip_addresses: [172.66.8.120/31]
+            ipv6_addresses: [fda7:67:0:c2::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3454
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3455]
             ip_addresses: [172.66.8.122/31]
+            ipv6_addresses: [fda7:67:0:c3::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3455
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3456]
             ip_addresses: [172.66.8.124/31]
+            ipv6_addresses: [fda7:67:0:c4::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3456
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3457]
             ip_addresses: [172.66.8.126/31]
+            ipv6_addresses: [fda7:67:0:c5::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3457
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3458]
             ip_addresses: [172.66.8.128/31]
+            ipv6_addresses: [fda7:67:0:c6::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3458
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3459]
             ip_addresses: [172.66.8.130/31]
+            ipv6_addresses: [fda7:67:0:c7::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3459
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3460]
             ip_addresses: [172.66.8.132/31]
+            ipv6_addresses: [fda7:67:0:c8::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3460
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3461]
             ip_addresses: [172.66.8.134/31]
+            ipv6_addresses: [fda7:67:0:c9::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3461
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3462]
             ip_addresses: [172.66.8.136/31]
+            ipv6_addresses: [fda7:67:0:ca::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3462
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3463]
             ip_addresses: [172.66.8.138/31]
+            ipv6_addresses: [fda7:67:0:cb::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3463
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3464]
             ip_addresses: [172.66.8.140/31]
+            ipv6_addresses: [fda7:67:0:cc::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3464
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3465]
             ip_addresses: [172.66.8.142/31]
+            ipv6_addresses: [fda7:67:0:cd::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3465
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3466]
             ip_addresses: [172.66.8.144/31]
+            ipv6_addresses: [fda7:67:0:ce::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3466
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3467]
             ip_addresses: [172.66.8.146/31]
+            ipv6_addresses: [fda7:67:0:cf::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3467
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3468]
             ip_addresses: [172.66.8.148/31]
+            ipv6_addresses: [fda7:67:0:d0::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3468
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3469]
             ip_addresses: [172.66.8.150/31]
+            ipv6_addresses: [fda7:67:0:d1::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3469
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3470]
             ip_addresses: [172.66.8.152/31]
+            ipv6_addresses: [fda7:67:0:d2::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3470
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3471]
             ip_addresses: [172.66.8.154/31]
+            ipv6_addresses: [fda7:67:0:d3::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3471
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3472]
             ip_addresses: [172.66.8.156/31]
+            ipv6_addresses: [fda7:67:0:d4::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3472
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3473]
             ip_addresses: [172.66.8.158/31]
+            ipv6_addresses: [fda7:67:0:d5::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3473
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3474]
             ip_addresses: [172.66.8.160/31]
+            ipv6_addresses: [fda7:67:0:d6::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3474
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3475]
             ip_addresses: [172.66.8.162/31]
+            ipv6_addresses: [fda7:67:0:d7::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3475
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3476]
             ip_addresses: [172.66.8.164/31]
+            ipv6_addresses: [fda7:67:0:d8::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3476
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3477]
             ip_addresses: [172.66.8.166/31]
+            ipv6_addresses: [fda7:67:0:d9::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3477
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3478]
             ip_addresses: [172.66.8.168/31]
+            ipv6_addresses: [fda7:67:0:da::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3478
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3479]
             ip_addresses: [172.66.8.170/31]
+            ipv6_addresses: [fda7:67:0:db::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3479
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3480]
             ip_addresses: [172.66.8.172/31]
+            ipv6_addresses: [fda7:67:0:dc::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3480
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3481]
             ip_addresses: [172.66.8.174/31]
+            ipv6_addresses: [fda7:67:0:dd::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3481
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3482]
             ip_addresses: [172.66.8.176/31]
+            ipv6_addresses: [fda7:67:0:de::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3482
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3483]
             ip_addresses: [172.66.8.178/31]
+            ipv6_addresses: [fda7:67:0:df::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3483
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3484]
             ip_addresses: [172.66.8.180/31]
+            ipv6_addresses: [fda7:67:0:e0::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3484
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3485]
             ip_addresses: [172.66.8.182/31]
+            ipv6_addresses: [fda7:67:0:e1::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3485
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3486]
             ip_addresses: [172.66.8.184/31]
+            ipv6_addresses: [fda7:67:0:e2::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3486
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3487]
             ip_addresses: [172.66.8.186/31]
+            ipv6_addresses: [fda7:67:0:e3::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3487
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3488]
             ip_addresses: [172.66.8.188/31]
+            ipv6_addresses: [fda7:67:0:e4::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3488
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3489]
             ip_addresses: [172.66.8.190/31]
+            ipv6_addresses: [fda7:67:0:e5::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3489
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3490]
             ip_addresses: [172.66.8.192/31]
+            ipv6_addresses: [fda7:67:0:e6::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3490
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3491]
             ip_addresses: [172.66.8.194/31]
+            ipv6_addresses: [fda7:67:0:e7::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3491
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3492]
             ip_addresses: [172.66.8.196/31]
+            ipv6_addresses: [fda7:67:0:e8::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3492
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3493]
             ip_addresses: [172.66.8.198/31]
+            ipv6_addresses: [fda7:67:0:e9::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3493
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3494]
             ip_addresses: [172.66.8.200/31]
+            ipv6_addresses: [fda7:67:0:ea::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3494
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3495]
             ip_addresses: [172.66.8.202/31]
+            ipv6_addresses: [fda7:67:0:eb::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3495
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3496]
             ip_addresses: [172.66.8.204/31]
+            ipv6_addresses: [fda7:67:0:ec::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3496
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3497]
             ip_addresses: [172.66.8.206/31]
+            ipv6_addresses: [fda7:67:0:ed::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3497
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3498]
             ip_addresses: [172.66.8.208/31]
+            ipv6_addresses: [fda7:67:0:ee::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3498
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3499]
             ip_addresses: [172.66.8.210/31]
+            ipv6_addresses: [fda7:67:0:ef::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3499
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3500]
             ip_addresses: [172.66.8.212/31]
+            ipv6_addresses: [fda7:67:0:f0::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3500
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3501]
             ip_addresses: [172.66.8.214/31]
+            ipv6_addresses: [fda7:67:0:f1::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3501
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3502]
             ip_addresses: [172.66.8.216/31]
+            ipv6_addresses: [fda7:67:0:f2::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3502
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3503]
             ip_addresses: [172.66.8.218/31]
+            ipv6_addresses: [fda7:67:0:f3::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3503
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3504]
             ip_addresses: [172.66.8.220/31]
+            ipv6_addresses: [fda7:67:0:f4::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3504
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3505]
             ip_addresses: [172.66.8.222/31]
+            ipv6_addresses: [fda7:67:0:f5::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3505
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3506]
             ip_addresses: [172.66.8.224/31]
+            ipv6_addresses: [fda7:67:0:f6::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3506
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3507]
             ip_addresses: [172.66.8.226/31]
+            ipv6_addresses: [fda7:67:0:f7::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3507
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3508]
             ip_addresses: [172.66.8.228/31]
+            ipv6_addresses: [fda7:67:0:f8::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3508
             nodes: [smm154]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3509]
             ip_addresses: [172.66.8.230/31]
+            ipv6_addresses: [fda7:67:0:f9::1/64]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-3509
             nodes: [smm154]
         bgp_peers:
-          172.16.3.1:
-            maximum_routes: 0
-            description: TENANT_B_CPE_SITE3
-            # ebgp_multihop: 1
-            nodes:
-            - smm153
-            remote_as: "65501"
-          172.16.3.3:
-            maximum_routes: 0
-            description: TENANT_B_CPE_SITE3
-            # ebgp_multihop: 1
-            nodes:
-            - smm154
-            remote_as: "65501"
-          172.16.3.5:
-            maximum_routes: 0
-            description: TENANT_B_CPE_SITE3
-            # ebgp_multihop: 1
-            nodes:
-            - smm313
-            remote_as: "65501"
           172.16.3.7:
             maximum_routes: 0
             description: TENANT_B_CPE_SITE3
@@ -13450,6 +14420,96 @@ tenants:
             nodes:
             - smm154
             remote_as: "65503"
+      ARIS1:
+        vrf_id: 20002
+        vtep_diagnostic:
+          loopback: 2002
+          loopback_ip_range: 10.0.0.0/24
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: ARIS1
+            enabled: true
+            interfaces:
+            - Ethernet21/1.2000
+            - Ethernet21/1.2000
+            - Ethernet21/1.2000
+            ip_addresses:
+            - 172.16.3.0/31
+            - 172.16.3.2/31
+            - 172.16.3.4/31
+            nodes:
+            - smm153
+            - smm154
+            - smm313
+        bgp_peers:
+          172.16.3.1:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm153
+            remote_as: "65501"
+      ARIS2:
+        vrf_id: 20003
+        vtep_diagnostic:
+          loopback: 2003
+          loopback_ip_range: 10.0.0.0/24
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: ARIS2
+            enabled: true
+            interfaces:
+            - Ethernet21/1.2001
+            - Ethernet21/1.2001
+            - Ethernet21/1.2001
+            ip_addresses:
+            - 172.16.3.0/31
+            - 172.16.3.2/31
+            - 172.16.3.4/31
+            nodes:
+            - smm153
+            - smm154
+            - smm313
+        bgp_peers:
+          172.16.3.3:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm154
+            remote_as: "65501"
+      ARIS3:
+        vrf_id: 20004
+        vtep_diagnostic:
+          loopback: 2004
+          loopback_ip_range: 10.0.0.0/24
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: ARIS3
+            enabled: true
+            interfaces:
+            - Ethernet21/1.2002
+            - Ethernet21/1.2002
+            - Ethernet21/1.2002
+            ip_addresses:
+            - 172.16.3.0/31
+            - 172.16.3.2/31
+            - 172.16.3.4/31
+            nodes:
+            - smm153
+            - smm154
+            - smm313
+        bgp_peers:
+          172.16.3.5:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm313
+            remote_as: "65501"
     l2vlans:
       20:
         name: TENANT_B_L2_SERVICE

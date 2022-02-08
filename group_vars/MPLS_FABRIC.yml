@@ -393,6 +393,9 @@ pe:
       {% if inventory_hostname == "smm154" %}
       {% include "custom_template/traffic_policies.j2" %}
       {% endif %}
+      {% if inventory_hostname == "smm153" %}
+      {% include "custom_template/rcf_config.j2" %}
+      {% endif %}
   node_groups:
     frankfurt:
       filter:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 start_subinterface = 3010
-count_subinterface = 250
+count_subinterface = 500
 
 with open("custom_template/traffic_policies.j2", "w") as f:
     traffic_policy_settings = """traffic-policies

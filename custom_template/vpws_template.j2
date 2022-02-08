@@ -90,9 +90,6 @@ tenants:
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces:
-            - Ethernet21/1.2000
-            - Ethernet21/1
-            - Ethernet21/1
             - Ethernet2/1.3000
             - Ethernet11/4.3000
             - Ethernet11/4.3001
@@ -102,9 +99,6 @@ tenants:
 
 
             ip_addresses:
-            - 172.16.3.0/31
-            - 172.16.3.2/31
-            - 172.16.3.4/31
             - 172.16.3.6/31
             - 172.16.3.8/31
             - 172.16.3.10/31
@@ -113,9 +107,6 @@ tenants:
             - 172.16.3.12/31
 
             nodes:
-            - smm153
-            - smm154
-            - smm313
             - smm313
             - smm153
             - smm154
@@ -146,46 +137,31 @@ tenants:
 {% endfor %}
 {% set bgp_session_count = namespace(value=250) %}
 {% set base_ip = namespace(value="172.66.0.0/20") %}
+{% set base_ipv6 = namespace(value="fda7:66::0/56") %}
 {% for count in range(0, bgp_session_count.value) %}
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.{{ 3010 + count }}]
             ip_addresses: [{{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640) }}]
+            ipv6_addresses: [{{ base_ipv6.value|ansible.netcommon.ipsubnet(64, count)|ansible.netcommon.ipaddr('1') }}]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
             nodes: [smm154]
 {% endfor %}
 {% set bgp_session_count = namespace(value=500) %}
 {% set base_ip = namespace(value="172.66.0.0/20") %}
+{% set base_ipv6 = namespace(value="fda7:67::0/56") %}
 {% for count in range(250, bgp_session_count.value) %}
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.{{ 3010 + count }}]
             ip_addresses: [{{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640) }}]
+            ipv6_addresses: [{{ base_ipv6.value|ansible.netcommon.ipsubnet(64, count-250)|ansible.netcommon.ipaddr('1') }}]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
             nodes: [smm154]
 {% endfor %}
         bgp_peers:
-          172.16.3.1:
-            maximum_routes: 0
-            description: TENANT_B_CPE_SITE3
-            # ebgp_multihop: 1
-            nodes:
-            - smm153
-            remote_as: "65501"
-          172.16.3.3:
-            maximum_routes: 0
-            description: TENANT_B_CPE_SITE3
-            # ebgp_multihop: 1
-            nodes:
-            - smm154
-            remote_as: "65501"
-          172.16.3.5:
-            maximum_routes: 0
-            description: TENANT_B_CPE_SITE3
-            # ebgp_multihop: 1
-            nodes:
-            - smm313
-            remote_as: "65501"
           172.16.3.7:
             maximum_routes: 0
             description: TENANT_B_CPE_SITE3
@@ -282,6 +258,96 @@ tenants:
             nodes:
             - smm154
             remote_as: "65503"
+      ARIS1:
+        vrf_id: 20002
+        vtep_diagnostic:
+          loopback: 2002
+          loopback_ip_range: 10.0.0.0/24
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: ARIS1
+            enabled: true
+            interfaces:
+            - Ethernet21/1.2000
+            - Ethernet21/1.2000
+            - Ethernet21/1.2000
+            ip_addresses:
+            - 172.16.3.0/31
+            - 172.16.3.2/31
+            - 172.16.3.4/31
+            nodes:
+            - smm153
+            - smm154
+            - smm313
+        bgp_peers:
+          172.16.3.1:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm153
+            remote_as: "65501"
+      ARIS2:
+        vrf_id: 20003
+        vtep_diagnostic:
+          loopback: 2003
+          loopback_ip_range: 10.0.0.0/24
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: ARIS2
+            enabled: true
+            interfaces:
+            - Ethernet21/1.2001
+            - Ethernet21/1.2001
+            - Ethernet21/1.2001
+            ip_addresses:
+            - 172.16.3.0/31
+            - 172.16.3.2/31
+            - 172.16.3.4/31
+            nodes:
+            - smm153
+            - smm154
+            - smm313
+        bgp_peers:
+          172.16.3.3:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm154
+            remote_as: "65501"
+      ARIS3:
+        vrf_id: 20004
+        vtep_diagnostic:
+          loopback: 2004
+          loopback_ip_range: 10.0.0.0/24
+        address_families:
+          - evpn
+        l3_interfaces:
+          - description: ARIS3
+            enabled: true
+            interfaces:
+            - Ethernet21/1.2002
+            - Ethernet21/1.2002
+            - Ethernet21/1.2002
+            ip_addresses:
+            - 172.16.3.0/31
+            - 172.16.3.2/31
+            - 172.16.3.4/31
+            nodes:
+            - smm153
+            - smm154
+            - smm313
+        bgp_peers:
+          172.16.3.5:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm313
+            remote_as: "65501"
     l2vlans:
       20:
         name: TENANT_B_L2_SERVICE

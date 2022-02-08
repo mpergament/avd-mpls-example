@@ -1,0 +1,320 @@
+{
+   "comment" : {
+      "pmfStage e.g. pmf3" : [
+         {
+            "database"  : "dbExampleName",
+            "action"    : "trap",
+            "strength"  : "allTraps, highTraps, or lowTraps (optional - see description)",
+            "description"       : [
+               "An optional comment, any fields named description will be ignored",
+               "",
+               "Hardware trap actions (anything that maps to forwardAct in",
+               "TcamActionMap) do not use database action priority for their ordering.",
+               "",
+               "Traps are instead ordered by this file. If a db contains multiple",
+               "trap actions, each distinct action gets an entry.",
+               "",
+               "In addition to controlling the exact FES ordering for trap actions,",
+               "one can split a trap action (must be the full trap action, no",
+               "compressed actions) into two different FES priorities based on trap",
+               "strength. This is done by specifying a strength attribute.",
+               "'strength' may be:",
+               "  'highTraps' for traps with strength >= 5,",
+               "  'lowTraps' for traps with strength <= 4, or",
+               "  'allTraps' to use one priority regardless of strength (default).",
+               "",
+               "NOTE: split-strength traps are only supported in default-width and",
+               "double-width dbs. They are not supported in half-width dbs."
+            ]
+         }
+      ]
+   },
+   "fapTypeJericho2" : {
+      "pmf3" : [
+         {
+            "database" : "dbTrafficPolicyIp6Egress",
+            "action"   : "compressed_drop",
+            "comment"  : "Highest priority"
+         },
+         {
+            "database" : "dbTrafficPolicyIp6Egress",
+            "action"   : "compressed_aegis_log"
+         },
+         {
+            "database" : "dbTrafficPolicyIp4Egress",
+            "action"   : "compressed_drop"
+         },
+         {
+            "database" : "dbTrafficPolicyIp4Egress",
+            "action"   : "compressed_aegis_log",
+            "comment"  : "Lowest priority"
+         }
+      ],
+      "pmf1" : [
+         {
+            "database" : "dbTrafficPolicyIp6",
+            "action"   : "compressed_drop",
+            "comment"  : "Highest priority"
+         },
+         {
+            "database" : "dbTrafficPolicyIp6",
+            "action"   : "compressed_aegis_log"
+         },
+         {
+            "database" : "dbTrafficPolicyIp4",
+            "action"   : "compressed_drop"
+         },
+         {
+            "database" : "dbTrafficPolicyIp4",
+            "action"   : "compressed_aegis_log"
+         },
+         {
+            "database" : "dbEvpnMplsEsiFiltering",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbL2ProtocolFwd",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbFlow",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbIpTcpMss",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbTapTunnelTermination",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbMplsPbr",
+            "action"   : "compressed_drop"
+         },
+         {
+            "database" : "dbIp6Pbr",
+            "action"   : "compressed_drop"
+         },
+         {
+            "database" : "dbIpPbr",
+            "action"   : "compressed_drop"
+         },
+         {
+            "database" : "dbTapPort",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbIpTunnelIntfAcl",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbIpPacl",
+            "action"   : "trap",
+            "comment"  : "shares db strength 21 with dbFlowspecIp6"
+         },
+         {
+            "database" : "dbFlowspecIp6",
+            "action"   : "compressed_drop",
+            "comment"  : "shares db strength 21 with dbIpPacl"
+         },
+         {
+            "database" : "dbIpRacl",
+            "action"   : "trap",
+            "strength" : "allTraps"
+         },
+         {
+            "database" : "dbIp6Pacl",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbIp6Racl",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbMacSystem",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbEvpnMplsBridging",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbTunnelTermination",
+            "action"   : "trap",
+            "comment"  : "shares db strength 11 with dbFlowspecIp"
+         },
+         {
+            "database" : "dbFlowspecIp",
+            "action"   : "compressed_drop",
+            "comment"  : "shares db strength 11 with dbTunnelTermination"
+         },
+         {
+            "database" : "dbVxlanVarp",
+            "action"   : "trap",
+            "comment"  : "shares db strength 10 with dbVxlanVarp6"
+         },
+         {
+            "database" : "dbVxlanVarp6",
+            "action"   : "trap",
+            "comment"  : "shares db strength 10 with dbVxlanVarp"
+         },
+         {
+            "database" : "dbMacPacl",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbTrafficPolicyIp6",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbTrafficPolicyIp4",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbFlow",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbTapTunnelTermination",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbIp6TapAgg",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbIpTapAgg",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbMacTapAgg",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbIp6Pbr",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbIpPbr",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbFlowspecIp6",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbFlowspecIp",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbTapPort",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbCbf",
+            "action"   : "overridingRedirectTrap",
+            "comment"  : "associated trap for system-rule overriding-action redirect"
+         },
+         {
+            "database" : "dbMplsSystem",
+            "action"   : "trap",
+            "strength" : "highTraps"
+         },
+         {
+            "database" : "dbMplsPbr",
+            "action"   : "mplsPbrDefaultTrap"
+         },
+         {
+            "database" : "dbMplsSystem",
+            "action"   : "trap",
+            "strength" : "lowTraps"
+         },
+         {
+            "database" : "dbSystem6",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbSystem",
+            "action"   : "trap"
+         },
+         {
+            "database" : "dbTrafficPolicyIp6",
+            "action"   : "defaultTrap",
+            "comment"  : "bug/565878: Traffic steering using Aegis"
+         },
+         {
+            "database" : "dbTrafficPolicyIp4",
+            "action"   : "defaultTrap",
+            "comment"  : "bug/565878: Traffic steering using Aegis"
+         },
+         {
+            "database" : "dbFlow",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbTapTunnelTermination",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbIp6TapAgg",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbIpTapAgg",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbMacTapAgg",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbIp6Pbr",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbIpPbr",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbTapPort",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbFlowspecIp6",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbCbf",
+            "action"   : "defaultTrap"
+         },
+         {
+            "database" : "dbIp6Pacl",
+            "action"   : "defaultTrap",
+            "comment"  : "included for old profiles"
+         },
+         {
+            "database" : "dbIp6Racl",
+            "action"   : "defaultTrap",
+            "comment"  : "included for old profiles"
+         },
+         {
+            "database" : "dbFlowspecIp",
+            "action"   : "defaultTrap",
+            "comment"  : "Lowest priority"
+         }
+      ]
+   }
+}
