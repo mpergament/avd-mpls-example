@@ -81,9 +81,6 @@ tenants:
           - type: export
             address_family: evpn
             route_target: "65000:20001"
-          - type: export
-            address_family: evpn
-            route_target: "65000:20002"
         address_families:
           - evpn
         l3_interfaces:
@@ -191,7 +188,7 @@ tenants:
             bfd: true
             default_originate:
               always: true
-            route_map_out: DENY-ALL-RM
+            #route_map_out: DENY-ALL-RM
             description: IXIA_SCALE
             # ebgp_multihop: 1
             nodes:
@@ -270,18 +267,21 @@ tenants:
             enabled: true
             interfaces:
             - Ethernet21/1.2000
-            - Ethernet21/1.2000
-            - Ethernet21/1.2000
             ip_addresses:
             - 172.16.3.0/31
-            - 172.16.3.2/31
-            - 172.16.3.4/31
+            ipv6_addresses:
+            - fd00:1::/127
             nodes:
             - smm153
-            - smm154
-            - smm313
         bgp_peers:
           172.16.3.1:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm153
+            remote_as: "65501"
+          fd00:1::1:
             maximum_routes: 0
             description: TENANT_B_CPE_SITE3
             # ebgp_multihop: 1
@@ -300,23 +300,26 @@ tenants:
             enabled: true
             interfaces:
             - Ethernet21/1.2001
-            - Ethernet21/1.2001
-            - Ethernet21/1.2001
             ip_addresses:
             - 172.16.3.0/31
-            - 172.16.3.2/31
-            - 172.16.3.4/31
+            ipv6_addresses:
+            - fd00:1::/127
             nodes:
             - smm153
-            - smm154
-            - smm313
         bgp_peers:
-          172.16.3.3:
+          172.16.3.1:
             maximum_routes: 0
             description: TENANT_B_CPE_SITE3
             # ebgp_multihop: 1
             nodes:
-            - smm154
+            - smm153
+            remote_as: "65501"
+          fd00:1::1:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm153
             remote_as: "65501"
       ARIS3:
         vrf_id: 20004
@@ -329,8 +332,8 @@ tenants:
           - description: ARIS3
             enabled: true
             interfaces:
-            - Ethernet21/1.2002
-            - Ethernet21/1.2002
+            - Ethernet21/1.2224
+            - Ethernet21/1.2224
             - Ethernet21/1.2002
             ip_addresses:
             - 172.16.3.0/31

@@ -34,3 +34,14 @@ ip community-list SYS11_ORIGIN_CITY_FRA permit 25291:331
 ip community-list DTAG_ROUTEPRIO permit 25291:222
 !
 ip route vrf INTERNET 99.99.99.99/32 null0
+
+{% set bgp_session_count = namespace(value=500) %}
+{% set base_ip = namespace(value="172.16.0.0/20") %}
+router bgp 65000
+   vrf INTERNET
+      address-family ipv4
+{% for count in range(0, bgp_session_count.value) %}
+
+         neighbor {{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640)|ansible.netcommon.ipaddr('peer') }} rcf in DOWNSTREAM_CUSTOMER_IN_v4()
+         neighbor {{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640)|ansible.netcommon.ipaddr('peer') }} rcf out DOWNSTREAM_CUSTOMER_{{ count + 64000 }}_OUT_v4()
+{% endfor %}

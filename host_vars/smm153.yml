@@ -87,3 +87,11 @@ il_port_specific_ethernet_interfaces:
   Ethernet11/4:
     error_correction_encoding:
       fire_code: true
+
+router_general:
+  fast_failover: true
+  control_functions:
+    file: flash://smm153_rcfs.txt
+  vrfs:
+    PREMIUM1:
+      fib_policy: FIB-FILTER-INTERNET-IN-RM

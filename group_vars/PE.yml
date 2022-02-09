@@ -62,6 +62,8 @@ il_common_router_bgp:
 
 router_general:
   fast_failover: true
+  # control_functions:
+  #   file: flash://smm153_rcfs.txt
   vrfs:
     PREMIUM1:
       fib_policy: FIB-FILTER-INTERNET-IN-RM

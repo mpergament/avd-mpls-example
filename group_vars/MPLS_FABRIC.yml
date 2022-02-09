@@ -350,6 +350,7 @@ pe:
       - 'graceful-restart'
     mpls_route_reflectors: [ cloudeos001, cloudeos002 ]
     raw_eos_cli: |
+      platform sand mdb profile l3-xxl
       vrf selection policy
         policy p1
             match ipv4-all-default ipv4
