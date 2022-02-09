@@ -350,7 +350,7 @@ pe:
       - 'graceful-restart'
     mpls_route_reflectors: [ cloudeos001, cloudeos002 ]
     raw_eos_cli: |
-      platform sand mdb profile l3-xxl
+      platform sand mdb profile l3-xxxl
       vrf selection policy
         policy p1
             match ipv4-all-default ipv4
@@ -395,7 +395,17 @@ pe:
       {% include "custom_template/traffic_policies.j2" %}
       {% endif %}
       {% if inventory_hostname == "smm153" %}
+      router bgp 65000
+        vrf INTERNET
+          neighbor 172.16.3.1 remote-as 65000
+          address-family flow-spec ipv4
+            neighbor 172.16.3.1 activate
+          address-family flow-spec ipv6
+            neighbor 172.16.3.1 activate
+        !
+      !
       {% include "custom_template/rcf_config.j2" %}
+      {% include "custom_template/traffic_policies.j2" %}
       {% endif %}
   node_groups:
     frankfurt:

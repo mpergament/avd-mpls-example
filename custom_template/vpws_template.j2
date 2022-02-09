@@ -93,6 +93,7 @@ tenants:
             - Ethernet11/4.3000
             - Ethernet11/4.3001
             - Ethernet33/1.3000
+            - Ethernet21/1.2010
 
 
             ip_addresses:
@@ -102,6 +103,7 @@ tenants:
             - 172.16.3.14/31
             - 172.16.3.16/31
             - 172.16.3.12/31
+            - 172.16.3.0/31
 
             nodes:
             - smm313
@@ -110,6 +112,7 @@ tenants:
             - smm311
             - smm312
             - smm310
+            - smm153
 {% set bgp_session_count = namespace(value=250) %}
 {% set base_ip = namespace(value="172.16.0.0/20") %}
 {% set base_ipv6 = namespace(value="fda7::0/56") %}
@@ -121,6 +124,7 @@ tenants:
             ipv6_addresses: [{{ base_ipv6.value|ansible.netcommon.ipsubnet(64, count)|ansible.netcommon.ipaddr('1') }}]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
+              shape rate 100000 kbps
             nodes: [smm153]
 {% endfor %}
 {% set bgp_session_count = namespace(value=500) %}
@@ -130,6 +134,9 @@ tenants:
             enabled: true
             interfaces: [Ethernet11/4.{{ 3010 + count }}]
             ip_addresses: [{{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640) }}]
+            raw_eos_cli: |
+              traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
+              shape rate 100000 kbps
             nodes: [smm153]
 {% endfor %}
 {% set bgp_session_count = namespace(value=250) %}
@@ -332,25 +339,42 @@ tenants:
           - description: ARIS3
             enabled: true
             interfaces:
-            - Ethernet21/1.2224
-            - Ethernet21/1.2224
             - Ethernet21/1.2002
             ip_addresses:
             - 172.16.3.0/31
-            - 172.16.3.2/31
-            - 172.16.3.4/31
             nodes:
             - smm153
-            - smm154
-            - smm313
         bgp_peers:
-          172.16.3.5:
+          172.16.3.1:
             maximum_routes: 0
             description: TENANT_B_CPE_SITE3
             # ebgp_multihop: 1
             nodes:
-            - smm313
+            - smm153
             remote_as: "65501"
+          fd00:1::1:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - smm153
+            remote_as: "65501"
+      SCRUBBER:
+        vrf_id: 666
+        address_families:
+          - vpn-ipv4
+        l3_interfaces:
+          - description: SCRUBBER
+            enabled: true
+            interfaces:
+            - Ethernet11/1
+            ip_addresses:
+            - 10.0.0.0/31
+            ipv6_addresses:
+            - fd00:123::/127
+            nodes:
+            - smm153
+        bgp_peers:
     l2vlans:
       20:
         name: TENANT_B_L2_SERVICE
