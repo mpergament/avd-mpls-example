@@ -19,6 +19,19 @@ with open("custom_template/traffic_policies.j2", "w") as f:
       224.0.0.0/4
       240.0.0.0/4
    !
+   field-set ipv6 prefix BOGONSv6
+      ::/8
+      100::/64
+      2001:2::/48
+      2001:10::/28
+      2001:db8::/32
+      2002::/16
+      3ffe::/16
+      fc00::/7
+      fe80::/10
+      fec0::/10
+      ff00::/8
+   !
    field-set l4-port UDP_CHARGEN
       19
    !
@@ -46,32 +59,68 @@ with open("custom_template/traffic_policies.j2", "w") as f:
          actions
             drop
       !
+      match BOGONS-DISCARDv6 ipv6
+         source prefix field-set BOGONSv6
+         !
+         actions
+            drop
+      !
       match UDP_CHARGEN ipv4
-         protocol udp source port field-set UDP_CHARGEN
+         protocol udp destination port field-set UDP_CHARGEN
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match UDP_CHARGENv6 ipv6
+         protocol udp destination port field-set UDP_CHARGEN
          !
          actions
             police rate 5000 kbps burst-size 10000 bytes
       !
       match UDP_NTP ipv4
-         protocol udp source port field-set UDP_NTP
+         protocol udp destination port field-set UDP_NTP
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match UDP_NTPv6 ipv6
+         protocol udp destination port field-set UDP_NTP
          !
          actions
             police rate 5000 kbps burst-size 10000 bytes
       !
       match UDP_LDAP ipv4
-         protocol udp source port field-set UDP_LDAP
+         protocol udp destination port field-set UDP_LDAP
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match UDP_LDAPv6 ipv6
+         protocol udp destination port field-set UDP_LDAP
          !
          actions
             police rate 5000 kbps burst-size 10000 bytes
       !
       match UDP_HTTPS ipv4
-         protocol udp source port field-set UDP_HTTPS
+         protocol udp destination port field-set UDP_HTTPS
+         !
+         actions
+            police rate 10000 kbps burst-size 10000 bytes
+      !
+      match UDP_HTTPSv6 ipv6
+         protocol udp destination port field-set UDP_HTTPS
          !
          actions
             police rate 10000 kbps burst-size 10000 bytes
       !
       match UDP_SSDP ipv4
-         protocol udp source port field-set UDP_SSDP
+         protocol udp destination port field-set UDP_SSDP
+         !
+         actions
+            police rate 5000 kbps burst-size 10000 bytes
+      !
+      match UDP_SSDPv6 ipv6
+         protocol udp destination port field-set UDP_SSDP
          !
          actions
             police rate 5000 kbps burst-size 10000 bytes

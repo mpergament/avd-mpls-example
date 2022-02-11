@@ -3,6 +3,8 @@
 # local users
 fabric_name: MPLS_FABRIC
 
+bgp_mesh_pes: true
+
 # Enable vlan aware bundles
 vxlan_vlan_aware_bundles: true
 vxlan_vlan_aware_bundle_global_base: 5000
@@ -168,6 +170,7 @@ p:
          password encryption-key common
       !
       router isis MPLS_UNDERLAY
+        spf-interval 5 50 200
         metric profile backbone
               metric ratio 400 gbps
         !
@@ -192,6 +195,7 @@ p:
           mgmt_ip: 172.28.129.36/20
           raw_eos_cli: |
             router isis MPLS_UNDERLAY
+              spf-interval 5 50 200
               metric profile backbone
                     metric ratio 400 gbps
               !
@@ -244,6 +248,7 @@ p:
           mgmt_ip: 172.28.135.18/20
           raw_eos_cli: |
             router isis MPLS_UNDERLAY
+              spf-interval 5 50 200
               metric profile backbone
                     metric ratio 400 gbps
               !
@@ -301,6 +306,7 @@ p:
           mgmt_ip: 172.28.136.27/20
           raw_eos_cli: |
             router isis MPLS_UNDERLAY
+              spf-interval 5 50 200
               metric profile backbone
                     metric ratio 400 gbps
               !
@@ -366,6 +372,7 @@ pe:
          password encryption-key common
       !
       router isis MPLS_UNDERLAY
+        spf-interval 5 50 200
         metric profile backbone
               metric ratio 400 gbps
         !
@@ -391,6 +398,29 @@ pe:
             exclude command show ipv6 route vrf all detail
         !
       !
+      router bgp 65000
+        rpki cache octorpki
+            host 172.28.137.42 vrf MGMT port 8282
+            !
+            transport tcp
+        rpki cache routinator
+            host 172.28.137.42 vrf MGMT port 3323
+            !
+            transport tcp
+        rpki origin-validation
+            ebgp local
+            ibgp send
+        !
+      !
+      l2-protocol
+        forwarding profile VPWS_TYPE_5
+            e-lmi forward
+            isis forward
+            lacp forward
+            lldp forward
+            macsec forward
+            pause forward
+            stp forward
       {% if inventory_hostname == "smm154" %}
       {% include "custom_template/traffic_policies.j2" %}
       {% endif %}
@@ -451,12 +481,12 @@ pe:
           mgmt_ip: 172.28.136.167/20
     hamburg:
       filter:
-        tenants: [ TENANT_A ]
+        tenants: [ TENANT_A, TENANT_B ]
         tags: [ hamburg, common ]
       nodes:
-        cdv469:
+        cdv472:
           id: 11
-          mgmt_ip: 172.28.136.166/20
+          mgmt_ip: 172.28.136.169/20
 rr:
   defaults:
     platform: vEOS-LAB
@@ -471,7 +501,7 @@ rr:
       - 'graceful-restart restart-time 300'
       - 'graceful-restart'
       - 'bgp route-reflector preserve-attributes always'
-      # - 'no bgp client-to-client reflection' # If meshing PEs, client-to-client reflection can be turned off
+      - 'no bgp client-to-client reflection' # If meshing PEs, client-to-client reflection can be turned off
     raw_eos_cli: |
       management security
          password encryption-key common
@@ -665,12 +695,12 @@ backbone_interfaces:
       interfaces: [ Ethernet1/1, Ethernet49/1 ]
       te_delay: 1
       profile: default_bb_profile
-    - nodes: [ smm312, cdv469 ]
+    - nodes: [ smm312, cdv472 ]
       id: 13
       interfaces: [ Ethernet21/1, Ethernet50/1 ]
       te_delay: 4
       profile: default_bb_profile
-    - nodes: [ lyv582, cdv469 ]
+    - nodes: [ lyv582, cdv472 ]
       id: 14
       interfaces: [ Ethernet2/1, Ethernet49/1 ]
       te_delay: 4

@@ -56,8 +56,8 @@ all:
                   ansible_host: 172.28.135.184
             HAMBURG:
               hosts:
-                cdv469:
-                  ansible_host: 172.28.136.166
+                cdv472:
+                  ansible_host: 172.28.136.169
         RR:
           vars:
             type: rr

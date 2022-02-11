@@ -1574,7 +1574,7 @@ tenants:
             - Ethernet11/4.3001
             - Ethernet33/1.3000
             - Ethernet21/1.2010
-
+            - Ethernet51/1.3000
 
             ip_addresses:
             - 172.16.3.6/31
@@ -1584,6 +1584,7 @@ tenants:
             - 172.16.3.16/31
             - 172.16.3.12/31
             - 172.16.3.0/31
+            - 172.16.3.18/31
 
             nodes:
             - smm313
@@ -1593,6 +1594,7 @@ tenants:
             - smm312
             - smm310
             - smm153
+            - cdv472
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3010]
@@ -1601,6 +1603,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3010
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1610,6 +1613,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3011
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1619,6 +1623,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3012
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1628,6 +1633,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3013
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1637,6 +1643,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3014
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1646,6 +1653,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3015
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1655,6 +1663,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3016
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1664,6 +1673,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3017
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1673,6 +1683,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3018
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1682,6 +1693,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3019
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1691,6 +1703,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3020
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1700,6 +1713,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3021
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1709,6 +1723,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3022
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1718,6 +1733,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3023
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1727,6 +1743,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3024
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1736,6 +1753,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3025
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1745,6 +1763,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3026
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1754,6 +1773,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3027
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1763,6 +1783,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3028
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1772,6 +1793,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3029
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1781,6 +1803,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3030
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1790,6 +1813,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3031
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1799,6 +1823,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3032
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1808,6 +1833,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3033
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1817,6 +1843,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3034
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1826,6 +1853,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3035
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1835,6 +1863,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3036
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1844,6 +1873,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3037
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1853,6 +1883,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3038
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1862,6 +1893,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3039
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1871,6 +1903,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3040
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1880,6 +1913,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3041
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1889,6 +1923,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3042
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1898,6 +1933,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3043
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1907,6 +1943,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3044
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1916,6 +1953,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3045
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1925,6 +1963,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3046
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1934,6 +1973,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3047
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1943,6 +1983,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3048
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1952,6 +1993,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3049
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1961,6 +2003,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3050
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1970,6 +2013,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3051
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1979,6 +2023,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3052
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1988,6 +2033,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3053
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -1997,6 +2043,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3054
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2006,6 +2053,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3055
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2015,6 +2063,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3056
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2024,6 +2073,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3057
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2033,6 +2083,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3058
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2042,6 +2093,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3059
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2051,6 +2103,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3060
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2060,6 +2113,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3061
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2069,6 +2123,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3062
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2078,6 +2133,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3063
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2087,6 +2143,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3064
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2096,6 +2153,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3065
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2105,6 +2163,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3066
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2114,6 +2173,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3067
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2123,6 +2183,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3068
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2132,6 +2193,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3069
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2141,6 +2203,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3070
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2150,6 +2213,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3071
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2159,6 +2223,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3072
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2168,6 +2233,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3073
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2177,6 +2243,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3074
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2186,6 +2253,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3075
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2195,6 +2263,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3076
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2204,6 +2273,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3077
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2213,6 +2283,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3078
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2222,6 +2293,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3079
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2231,6 +2303,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3080
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2240,6 +2313,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3081
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2249,6 +2323,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3082
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2258,6 +2333,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3083
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2267,6 +2343,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3084
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2276,6 +2353,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3085
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2285,6 +2363,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3086
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2294,6 +2373,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3087
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2303,6 +2383,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3088
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2312,6 +2393,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3089
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2321,6 +2403,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3090
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2330,6 +2413,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3091
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2339,6 +2423,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3092
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2348,6 +2433,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3093
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2357,6 +2443,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3094
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2366,6 +2453,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3095
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2375,6 +2463,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3096
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2384,6 +2473,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3097
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2393,6 +2483,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3098
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2402,6 +2493,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3099
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2411,6 +2503,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3100
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2420,6 +2513,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3101
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2429,6 +2523,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3102
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2438,6 +2533,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3103
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2447,6 +2543,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3104
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2456,6 +2553,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3105
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2465,6 +2563,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3106
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2474,6 +2573,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3107
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2483,6 +2583,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3108
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2492,6 +2593,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3109
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2501,6 +2603,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3110
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2510,6 +2613,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3111
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2519,6 +2623,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3112
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2528,6 +2633,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3113
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2537,6 +2643,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3114
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2546,6 +2653,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3115
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2555,6 +2663,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3116
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2564,6 +2673,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3117
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2573,6 +2683,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3118
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2582,6 +2693,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3119
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2591,6 +2703,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3120
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2600,6 +2713,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3121
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2609,6 +2723,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3122
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2618,6 +2733,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3123
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2627,6 +2743,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3124
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2636,6 +2753,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3125
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2645,6 +2763,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3126
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2654,6 +2773,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3127
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2663,6 +2783,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3128
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2672,6 +2793,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3129
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2681,6 +2803,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3130
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2690,6 +2813,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3131
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2699,6 +2823,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3132
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2708,6 +2833,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3133
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2717,6 +2843,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3134
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2726,6 +2853,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3135
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2735,6 +2863,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3136
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2744,6 +2873,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3137
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2753,6 +2883,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3138
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2762,6 +2893,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3139
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2771,6 +2903,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3140
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2780,6 +2913,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3141
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2789,6 +2923,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3142
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2798,6 +2933,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3143
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2807,6 +2943,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3144
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2816,6 +2953,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3145
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2825,6 +2963,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3146
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2834,6 +2973,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3147
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2843,6 +2983,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3148
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2852,6 +2993,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3149
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2861,6 +3003,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3150
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2870,6 +3013,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3151
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2879,6 +3023,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3152
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2888,6 +3033,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3153
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2897,6 +3043,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3154
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2906,6 +3053,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3155
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2915,6 +3063,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3156
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2924,6 +3073,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3157
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2933,6 +3083,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3158
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2942,6 +3093,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3159
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2951,6 +3103,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3160
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2960,6 +3113,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3161
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2969,6 +3123,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3162
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2978,6 +3133,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3163
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2987,6 +3143,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3164
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -2996,6 +3153,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3165
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3005,6 +3163,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3166
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3014,6 +3173,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3167
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3023,6 +3183,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3168
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3032,6 +3193,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3169
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3041,6 +3203,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3170
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3050,6 +3213,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3171
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3059,6 +3223,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3172
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3068,6 +3233,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3173
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3077,6 +3243,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3174
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3086,6 +3253,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3175
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3095,6 +3263,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3176
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3104,6 +3273,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3177
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3113,6 +3283,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3178
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3122,6 +3293,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3179
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3131,6 +3303,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3180
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3140,6 +3313,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3181
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3149,6 +3323,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3182
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3158,6 +3333,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3183
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3167,6 +3343,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3184
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3176,6 +3353,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3185
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3185,6 +3363,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3186
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3194,6 +3373,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3187
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3203,6 +3383,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3188
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3212,6 +3393,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3189
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3221,6 +3403,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3190
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3230,6 +3413,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3191
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3239,6 +3423,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3192
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3248,6 +3433,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3193
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3257,6 +3443,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3194
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3266,6 +3453,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3195
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3275,6 +3463,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3196
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3284,6 +3473,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3197
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3293,6 +3483,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3198
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3302,6 +3493,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3199
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3311,6 +3503,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3200
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3320,6 +3513,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3201
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3329,6 +3523,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3202
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3338,6 +3533,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3203
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3347,6 +3543,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3204
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3356,6 +3553,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3205
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3365,6 +3563,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3206
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3374,6 +3573,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3207
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3383,6 +3583,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3208
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3392,6 +3593,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3209
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3401,6 +3603,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3210
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3410,6 +3613,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3211
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3419,6 +3623,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3212
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3428,6 +3633,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3213
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3437,6 +3643,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3214
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3446,6 +3653,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3215
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3455,6 +3663,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3216
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3464,6 +3673,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3217
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3473,6 +3683,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3218
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3482,6 +3693,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3219
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3491,6 +3703,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3220
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3500,6 +3713,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3221
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3509,6 +3723,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3222
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3518,6 +3733,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3223
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3527,6 +3743,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3224
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3536,6 +3753,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3225
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3545,6 +3763,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3226
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3554,6 +3773,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3227
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3563,6 +3783,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3228
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3572,6 +3793,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3229
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3581,6 +3803,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3230
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3590,6 +3813,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3231
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3599,6 +3823,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3232
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3608,6 +3833,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3233
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3617,6 +3843,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3234
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3626,6 +3853,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3235
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3635,6 +3863,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3236
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3644,6 +3873,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3237
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3653,6 +3883,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3238
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3662,6 +3893,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3239
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3671,6 +3903,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3240
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3680,6 +3913,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3241
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3689,6 +3923,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3242
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3698,6 +3933,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3243
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3707,6 +3943,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3244
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3716,6 +3953,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3245
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3725,6 +3963,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3246
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3734,6 +3973,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3247
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3743,6 +3983,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3248
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3752,6 +3993,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3249
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3761,6 +4003,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3250
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3770,6 +4013,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3251
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3779,6 +4023,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3252
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3788,6 +4033,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3253
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3797,6 +4043,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3254
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3806,6 +4053,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3255
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3815,6 +4063,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3256
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3824,6 +4073,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3257
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3833,6 +4083,7 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3258
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -3842,2006 +4093,2507 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3259
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3260]
             ip_addresses: [172.16.6.244/31]
+            ipv6_addresses: [fda7:65::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3260
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3261]
             ip_addresses: [172.16.6.246/31]
+            ipv6_addresses: [fda7:65:0:1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3261
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3262]
             ip_addresses: [172.16.6.248/31]
+            ipv6_addresses: [fda7:65:0:2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3262
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3263]
             ip_addresses: [172.16.6.250/31]
+            ipv6_addresses: [fda7:65:0:3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3263
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3264]
             ip_addresses: [172.16.6.252/31]
+            ipv6_addresses: [fda7:65:0:4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3264
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3265]
             ip_addresses: [172.16.6.254/31]
+            ipv6_addresses: [fda7:65:0:5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3265
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3266]
             ip_addresses: [172.16.7.0/31]
+            ipv6_addresses: [fda7:65:0:6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3266
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3267]
             ip_addresses: [172.16.7.2/31]
+            ipv6_addresses: [fda7:65:0:7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3267
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3268]
             ip_addresses: [172.16.7.4/31]
+            ipv6_addresses: [fda7:65:0:8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3268
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3269]
             ip_addresses: [172.16.7.6/31]
+            ipv6_addresses: [fda7:65:0:9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3269
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3270]
             ip_addresses: [172.16.7.8/31]
+            ipv6_addresses: [fda7:65:0:a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3270
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3271]
             ip_addresses: [172.16.7.10/31]
+            ipv6_addresses: [fda7:65:0:b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3271
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3272]
             ip_addresses: [172.16.7.12/31]
+            ipv6_addresses: [fda7:65:0:c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3272
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3273]
             ip_addresses: [172.16.7.14/31]
+            ipv6_addresses: [fda7:65:0:d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3273
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3274]
             ip_addresses: [172.16.7.16/31]
+            ipv6_addresses: [fda7:65:0:e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3274
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3275]
             ip_addresses: [172.16.7.18/31]
+            ipv6_addresses: [fda7:65:0:f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3275
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3276]
             ip_addresses: [172.16.7.20/31]
+            ipv6_addresses: [fda7:65:0:10::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3276
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3277]
             ip_addresses: [172.16.7.22/31]
+            ipv6_addresses: [fda7:65:0:11::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3277
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3278]
             ip_addresses: [172.16.7.24/31]
+            ipv6_addresses: [fda7:65:0:12::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3278
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3279]
             ip_addresses: [172.16.7.26/31]
+            ipv6_addresses: [fda7:65:0:13::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3279
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3280]
             ip_addresses: [172.16.7.28/31]
+            ipv6_addresses: [fda7:65:0:14::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3280
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3281]
             ip_addresses: [172.16.7.30/31]
+            ipv6_addresses: [fda7:65:0:15::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3281
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3282]
             ip_addresses: [172.16.7.32/31]
+            ipv6_addresses: [fda7:65:0:16::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3282
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3283]
             ip_addresses: [172.16.7.34/31]
+            ipv6_addresses: [fda7:65:0:17::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3283
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3284]
             ip_addresses: [172.16.7.36/31]
+            ipv6_addresses: [fda7:65:0:18::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3284
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3285]
             ip_addresses: [172.16.7.38/31]
+            ipv6_addresses: [fda7:65:0:19::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3285
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3286]
             ip_addresses: [172.16.7.40/31]
+            ipv6_addresses: [fda7:65:0:1a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3286
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3287]
             ip_addresses: [172.16.7.42/31]
+            ipv6_addresses: [fda7:65:0:1b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3287
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3288]
             ip_addresses: [172.16.7.44/31]
+            ipv6_addresses: [fda7:65:0:1c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3288
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3289]
             ip_addresses: [172.16.7.46/31]
+            ipv6_addresses: [fda7:65:0:1d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3289
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3290]
             ip_addresses: [172.16.7.48/31]
+            ipv6_addresses: [fda7:65:0:1e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3290
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3291]
             ip_addresses: [172.16.7.50/31]
+            ipv6_addresses: [fda7:65:0:1f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3291
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3292]
             ip_addresses: [172.16.7.52/31]
+            ipv6_addresses: [fda7:65:0:20::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3292
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3293]
             ip_addresses: [172.16.7.54/31]
+            ipv6_addresses: [fda7:65:0:21::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3293
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3294]
             ip_addresses: [172.16.7.56/31]
+            ipv6_addresses: [fda7:65:0:22::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3294
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3295]
             ip_addresses: [172.16.7.58/31]
+            ipv6_addresses: [fda7:65:0:23::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3295
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3296]
             ip_addresses: [172.16.7.60/31]
+            ipv6_addresses: [fda7:65:0:24::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3296
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3297]
             ip_addresses: [172.16.7.62/31]
+            ipv6_addresses: [fda7:65:0:25::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3297
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3298]
             ip_addresses: [172.16.7.64/31]
+            ipv6_addresses: [fda7:65:0:26::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3298
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3299]
             ip_addresses: [172.16.7.66/31]
+            ipv6_addresses: [fda7:65:0:27::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3299
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3300]
             ip_addresses: [172.16.7.68/31]
+            ipv6_addresses: [fda7:65:0:28::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3300
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3301]
             ip_addresses: [172.16.7.70/31]
+            ipv6_addresses: [fda7:65:0:29::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3301
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3302]
             ip_addresses: [172.16.7.72/31]
+            ipv6_addresses: [fda7:65:0:2a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3302
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3303]
             ip_addresses: [172.16.7.74/31]
+            ipv6_addresses: [fda7:65:0:2b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3303
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3304]
             ip_addresses: [172.16.7.76/31]
+            ipv6_addresses: [fda7:65:0:2c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3304
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3305]
             ip_addresses: [172.16.7.78/31]
+            ipv6_addresses: [fda7:65:0:2d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3305
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3306]
             ip_addresses: [172.16.7.80/31]
+            ipv6_addresses: [fda7:65:0:2e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3306
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3307]
             ip_addresses: [172.16.7.82/31]
+            ipv6_addresses: [fda7:65:0:2f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3307
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3308]
             ip_addresses: [172.16.7.84/31]
+            ipv6_addresses: [fda7:65:0:30::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3308
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3309]
             ip_addresses: [172.16.7.86/31]
+            ipv6_addresses: [fda7:65:0:31::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3309
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3310]
             ip_addresses: [172.16.7.88/31]
+            ipv6_addresses: [fda7:65:0:32::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3310
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3311]
             ip_addresses: [172.16.7.90/31]
+            ipv6_addresses: [fda7:65:0:33::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3311
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3312]
             ip_addresses: [172.16.7.92/31]
+            ipv6_addresses: [fda7:65:0:34::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3312
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3313]
             ip_addresses: [172.16.7.94/31]
+            ipv6_addresses: [fda7:65:0:35::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3313
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3314]
             ip_addresses: [172.16.7.96/31]
+            ipv6_addresses: [fda7:65:0:36::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3314
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3315]
             ip_addresses: [172.16.7.98/31]
+            ipv6_addresses: [fda7:65:0:37::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3315
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3316]
             ip_addresses: [172.16.7.100/31]
+            ipv6_addresses: [fda7:65:0:38::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3316
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3317]
             ip_addresses: [172.16.7.102/31]
+            ipv6_addresses: [fda7:65:0:39::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3317
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3318]
             ip_addresses: [172.16.7.104/31]
+            ipv6_addresses: [fda7:65:0:3a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3318
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3319]
             ip_addresses: [172.16.7.106/31]
+            ipv6_addresses: [fda7:65:0:3b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3319
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3320]
             ip_addresses: [172.16.7.108/31]
+            ipv6_addresses: [fda7:65:0:3c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3320
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3321]
             ip_addresses: [172.16.7.110/31]
+            ipv6_addresses: [fda7:65:0:3d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3321
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3322]
             ip_addresses: [172.16.7.112/31]
+            ipv6_addresses: [fda7:65:0:3e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3322
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3323]
             ip_addresses: [172.16.7.114/31]
+            ipv6_addresses: [fda7:65:0:3f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3323
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3324]
             ip_addresses: [172.16.7.116/31]
+            ipv6_addresses: [fda7:65:0:40::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3324
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3325]
             ip_addresses: [172.16.7.118/31]
+            ipv6_addresses: [fda7:65:0:41::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3325
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3326]
             ip_addresses: [172.16.7.120/31]
+            ipv6_addresses: [fda7:65:0:42::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3326
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3327]
             ip_addresses: [172.16.7.122/31]
+            ipv6_addresses: [fda7:65:0:43::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3327
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3328]
             ip_addresses: [172.16.7.124/31]
+            ipv6_addresses: [fda7:65:0:44::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3328
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3329]
             ip_addresses: [172.16.7.126/31]
+            ipv6_addresses: [fda7:65:0:45::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3329
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3330]
             ip_addresses: [172.16.7.128/31]
+            ipv6_addresses: [fda7:65:0:46::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3330
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3331]
             ip_addresses: [172.16.7.130/31]
+            ipv6_addresses: [fda7:65:0:47::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3331
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3332]
             ip_addresses: [172.16.7.132/31]
+            ipv6_addresses: [fda7:65:0:48::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3332
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3333]
             ip_addresses: [172.16.7.134/31]
+            ipv6_addresses: [fda7:65:0:49::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3333
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3334]
             ip_addresses: [172.16.7.136/31]
+            ipv6_addresses: [fda7:65:0:4a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3334
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3335]
             ip_addresses: [172.16.7.138/31]
+            ipv6_addresses: [fda7:65:0:4b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3335
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3336]
             ip_addresses: [172.16.7.140/31]
+            ipv6_addresses: [fda7:65:0:4c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3336
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3337]
             ip_addresses: [172.16.7.142/31]
+            ipv6_addresses: [fda7:65:0:4d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3337
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3338]
             ip_addresses: [172.16.7.144/31]
+            ipv6_addresses: [fda7:65:0:4e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3338
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3339]
             ip_addresses: [172.16.7.146/31]
+            ipv6_addresses: [fda7:65:0:4f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3339
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3340]
             ip_addresses: [172.16.7.148/31]
+            ipv6_addresses: [fda7:65:0:50::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3340
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3341]
             ip_addresses: [172.16.7.150/31]
+            ipv6_addresses: [fda7:65:0:51::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3341
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3342]
             ip_addresses: [172.16.7.152/31]
+            ipv6_addresses: [fda7:65:0:52::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3342
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3343]
             ip_addresses: [172.16.7.154/31]
+            ipv6_addresses: [fda7:65:0:53::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3343
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3344]
             ip_addresses: [172.16.7.156/31]
+            ipv6_addresses: [fda7:65:0:54::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3344
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3345]
             ip_addresses: [172.16.7.158/31]
+            ipv6_addresses: [fda7:65:0:55::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3345
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3346]
             ip_addresses: [172.16.7.160/31]
+            ipv6_addresses: [fda7:65:0:56::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3346
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3347]
             ip_addresses: [172.16.7.162/31]
+            ipv6_addresses: [fda7:65:0:57::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3347
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3348]
             ip_addresses: [172.16.7.164/31]
+            ipv6_addresses: [fda7:65:0:58::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3348
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3349]
             ip_addresses: [172.16.7.166/31]
+            ipv6_addresses: [fda7:65:0:59::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3349
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3350]
             ip_addresses: [172.16.7.168/31]
+            ipv6_addresses: [fda7:65:0:5a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3350
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3351]
             ip_addresses: [172.16.7.170/31]
+            ipv6_addresses: [fda7:65:0:5b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3351
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3352]
             ip_addresses: [172.16.7.172/31]
+            ipv6_addresses: [fda7:65:0:5c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3352
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3353]
             ip_addresses: [172.16.7.174/31]
+            ipv6_addresses: [fda7:65:0:5d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3353
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3354]
             ip_addresses: [172.16.7.176/31]
+            ipv6_addresses: [fda7:65:0:5e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3354
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3355]
             ip_addresses: [172.16.7.178/31]
+            ipv6_addresses: [fda7:65:0:5f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3355
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3356]
             ip_addresses: [172.16.7.180/31]
+            ipv6_addresses: [fda7:65:0:60::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3356
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3357]
             ip_addresses: [172.16.7.182/31]
+            ipv6_addresses: [fda7:65:0:61::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3357
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3358]
             ip_addresses: [172.16.7.184/31]
+            ipv6_addresses: [fda7:65:0:62::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3358
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3359]
             ip_addresses: [172.16.7.186/31]
+            ipv6_addresses: [fda7:65:0:63::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3359
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3360]
             ip_addresses: [172.16.7.188/31]
+            ipv6_addresses: [fda7:65:0:64::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3360
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3361]
             ip_addresses: [172.16.7.190/31]
+            ipv6_addresses: [fda7:65:0:65::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3361
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3362]
             ip_addresses: [172.16.7.192/31]
+            ipv6_addresses: [fda7:65:0:66::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3362
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3363]
             ip_addresses: [172.16.7.194/31]
+            ipv6_addresses: [fda7:65:0:67::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3363
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3364]
             ip_addresses: [172.16.7.196/31]
+            ipv6_addresses: [fda7:65:0:68::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3364
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3365]
             ip_addresses: [172.16.7.198/31]
+            ipv6_addresses: [fda7:65:0:69::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3365
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3366]
             ip_addresses: [172.16.7.200/31]
+            ipv6_addresses: [fda7:65:0:6a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3366
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3367]
             ip_addresses: [172.16.7.202/31]
+            ipv6_addresses: [fda7:65:0:6b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3367
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3368]
             ip_addresses: [172.16.7.204/31]
+            ipv6_addresses: [fda7:65:0:6c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3368
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3369]
             ip_addresses: [172.16.7.206/31]
+            ipv6_addresses: [fda7:65:0:6d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3369
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3370]
             ip_addresses: [172.16.7.208/31]
+            ipv6_addresses: [fda7:65:0:6e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3370
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3371]
             ip_addresses: [172.16.7.210/31]
+            ipv6_addresses: [fda7:65:0:6f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3371
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3372]
             ip_addresses: [172.16.7.212/31]
+            ipv6_addresses: [fda7:65:0:70::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3372
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3373]
             ip_addresses: [172.16.7.214/31]
+            ipv6_addresses: [fda7:65:0:71::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3373
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3374]
             ip_addresses: [172.16.7.216/31]
+            ipv6_addresses: [fda7:65:0:72::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3374
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3375]
             ip_addresses: [172.16.7.218/31]
+            ipv6_addresses: [fda7:65:0:73::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3375
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3376]
             ip_addresses: [172.16.7.220/31]
+            ipv6_addresses: [fda7:65:0:74::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3376
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3377]
             ip_addresses: [172.16.7.222/31]
+            ipv6_addresses: [fda7:65:0:75::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3377
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3378]
             ip_addresses: [172.16.7.224/31]
+            ipv6_addresses: [fda7:65:0:76::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3378
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3379]
             ip_addresses: [172.16.7.226/31]
+            ipv6_addresses: [fda7:65:0:77::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3379
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3380]
             ip_addresses: [172.16.7.228/31]
+            ipv6_addresses: [fda7:65:0:78::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3380
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3381]
             ip_addresses: [172.16.7.230/31]
+            ipv6_addresses: [fda7:65:0:79::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3381
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3382]
             ip_addresses: [172.16.7.232/31]
+            ipv6_addresses: [fda7:65:0:7a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3382
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3383]
             ip_addresses: [172.16.7.234/31]
+            ipv6_addresses: [fda7:65:0:7b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3383
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3384]
             ip_addresses: [172.16.7.236/31]
+            ipv6_addresses: [fda7:65:0:7c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3384
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3385]
             ip_addresses: [172.16.7.238/31]
+            ipv6_addresses: [fda7:65:0:7d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3385
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3386]
             ip_addresses: [172.16.7.240/31]
+            ipv6_addresses: [fda7:65:0:7e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3386
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3387]
             ip_addresses: [172.16.7.242/31]
+            ipv6_addresses: [fda7:65:0:7f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3387
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3388]
             ip_addresses: [172.16.7.244/31]
+            ipv6_addresses: [fda7:65:0:80::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3388
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3389]
             ip_addresses: [172.16.7.246/31]
+            ipv6_addresses: [fda7:65:0:81::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3389
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3390]
             ip_addresses: [172.16.7.248/31]
+            ipv6_addresses: [fda7:65:0:82::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3390
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3391]
             ip_addresses: [172.16.7.250/31]
+            ipv6_addresses: [fda7:65:0:83::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3391
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3392]
             ip_addresses: [172.16.7.252/31]
+            ipv6_addresses: [fda7:65:0:84::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3392
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3393]
             ip_addresses: [172.16.7.254/31]
+            ipv6_addresses: [fda7:65:0:85::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3393
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3394]
             ip_addresses: [172.16.8.0/31]
+            ipv6_addresses: [fda7:65:0:86::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3394
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3395]
             ip_addresses: [172.16.8.2/31]
+            ipv6_addresses: [fda7:65:0:87::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3395
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3396]
             ip_addresses: [172.16.8.4/31]
+            ipv6_addresses: [fda7:65:0:88::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3396
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3397]
             ip_addresses: [172.16.8.6/31]
+            ipv6_addresses: [fda7:65:0:89::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3397
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3398]
             ip_addresses: [172.16.8.8/31]
+            ipv6_addresses: [fda7:65:0:8a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3398
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3399]
             ip_addresses: [172.16.8.10/31]
+            ipv6_addresses: [fda7:65:0:8b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3399
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3400]
             ip_addresses: [172.16.8.12/31]
+            ipv6_addresses: [fda7:65:0:8c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3400
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3401]
             ip_addresses: [172.16.8.14/31]
+            ipv6_addresses: [fda7:65:0:8d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3401
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3402]
             ip_addresses: [172.16.8.16/31]
+            ipv6_addresses: [fda7:65:0:8e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3402
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3403]
             ip_addresses: [172.16.8.18/31]
+            ipv6_addresses: [fda7:65:0:8f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3403
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3404]
             ip_addresses: [172.16.8.20/31]
+            ipv6_addresses: [fda7:65:0:90::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3404
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3405]
             ip_addresses: [172.16.8.22/31]
+            ipv6_addresses: [fda7:65:0:91::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3405
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3406]
             ip_addresses: [172.16.8.24/31]
+            ipv6_addresses: [fda7:65:0:92::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3406
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3407]
             ip_addresses: [172.16.8.26/31]
+            ipv6_addresses: [fda7:65:0:93::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3407
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3408]
             ip_addresses: [172.16.8.28/31]
+            ipv6_addresses: [fda7:65:0:94::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3408
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3409]
             ip_addresses: [172.16.8.30/31]
+            ipv6_addresses: [fda7:65:0:95::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3409
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3410]
             ip_addresses: [172.16.8.32/31]
+            ipv6_addresses: [fda7:65:0:96::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3410
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3411]
             ip_addresses: [172.16.8.34/31]
+            ipv6_addresses: [fda7:65:0:97::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3411
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3412]
             ip_addresses: [172.16.8.36/31]
+            ipv6_addresses: [fda7:65:0:98::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3412
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3413]
             ip_addresses: [172.16.8.38/31]
+            ipv6_addresses: [fda7:65:0:99::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3413
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3414]
             ip_addresses: [172.16.8.40/31]
+            ipv6_addresses: [fda7:65:0:9a::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3414
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3415]
             ip_addresses: [172.16.8.42/31]
+            ipv6_addresses: [fda7:65:0:9b::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3415
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3416]
             ip_addresses: [172.16.8.44/31]
+            ipv6_addresses: [fda7:65:0:9c::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3416
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3417]
             ip_addresses: [172.16.8.46/31]
+            ipv6_addresses: [fda7:65:0:9d::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3417
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3418]
             ip_addresses: [172.16.8.48/31]
+            ipv6_addresses: [fda7:65:0:9e::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3418
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3419]
             ip_addresses: [172.16.8.50/31]
+            ipv6_addresses: [fda7:65:0:9f::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3419
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3420]
             ip_addresses: [172.16.8.52/31]
+            ipv6_addresses: [fda7:65:0:a0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3420
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3421]
             ip_addresses: [172.16.8.54/31]
+            ipv6_addresses: [fda7:65:0:a1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3421
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3422]
             ip_addresses: [172.16.8.56/31]
+            ipv6_addresses: [fda7:65:0:a2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3422
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3423]
             ip_addresses: [172.16.8.58/31]
+            ipv6_addresses: [fda7:65:0:a3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3423
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3424]
             ip_addresses: [172.16.8.60/31]
+            ipv6_addresses: [fda7:65:0:a4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3424
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3425]
             ip_addresses: [172.16.8.62/31]
+            ipv6_addresses: [fda7:65:0:a5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3425
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3426]
             ip_addresses: [172.16.8.64/31]
+            ipv6_addresses: [fda7:65:0:a6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3426
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3427]
             ip_addresses: [172.16.8.66/31]
+            ipv6_addresses: [fda7:65:0:a7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3427
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3428]
             ip_addresses: [172.16.8.68/31]
+            ipv6_addresses: [fda7:65:0:a8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3428
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3429]
             ip_addresses: [172.16.8.70/31]
+            ipv6_addresses: [fda7:65:0:a9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3429
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3430]
             ip_addresses: [172.16.8.72/31]
+            ipv6_addresses: [fda7:65:0:aa::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3430
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3431]
             ip_addresses: [172.16.8.74/31]
+            ipv6_addresses: [fda7:65:0:ab::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3431
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3432]
             ip_addresses: [172.16.8.76/31]
+            ipv6_addresses: [fda7:65:0:ac::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3432
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3433]
             ip_addresses: [172.16.8.78/31]
+            ipv6_addresses: [fda7:65:0:ad::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3433
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3434]
             ip_addresses: [172.16.8.80/31]
+            ipv6_addresses: [fda7:65:0:ae::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3434
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3435]
             ip_addresses: [172.16.8.82/31]
+            ipv6_addresses: [fda7:65:0:af::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3435
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3436]
             ip_addresses: [172.16.8.84/31]
+            ipv6_addresses: [fda7:65:0:b0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3436
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3437]
             ip_addresses: [172.16.8.86/31]
+            ipv6_addresses: [fda7:65:0:b1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3437
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3438]
             ip_addresses: [172.16.8.88/31]
+            ipv6_addresses: [fda7:65:0:b2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3438
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3439]
             ip_addresses: [172.16.8.90/31]
+            ipv6_addresses: [fda7:65:0:b3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3439
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3440]
             ip_addresses: [172.16.8.92/31]
+            ipv6_addresses: [fda7:65:0:b4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3440
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3441]
             ip_addresses: [172.16.8.94/31]
+            ipv6_addresses: [fda7:65:0:b5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3441
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3442]
             ip_addresses: [172.16.8.96/31]
+            ipv6_addresses: [fda7:65:0:b6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3442
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3443]
             ip_addresses: [172.16.8.98/31]
+            ipv6_addresses: [fda7:65:0:b7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3443
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3444]
             ip_addresses: [172.16.8.100/31]
+            ipv6_addresses: [fda7:65:0:b8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3444
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3445]
             ip_addresses: [172.16.8.102/31]
+            ipv6_addresses: [fda7:65:0:b9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3445
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3446]
             ip_addresses: [172.16.8.104/31]
+            ipv6_addresses: [fda7:65:0:ba::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3446
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3447]
             ip_addresses: [172.16.8.106/31]
+            ipv6_addresses: [fda7:65:0:bb::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3447
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3448]
             ip_addresses: [172.16.8.108/31]
+            ipv6_addresses: [fda7:65:0:bc::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3448
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3449]
             ip_addresses: [172.16.8.110/31]
+            ipv6_addresses: [fda7:65:0:bd::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3449
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3450]
             ip_addresses: [172.16.8.112/31]
+            ipv6_addresses: [fda7:65:0:be::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3450
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3451]
             ip_addresses: [172.16.8.114/31]
+            ipv6_addresses: [fda7:65:0:bf::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3451
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3452]
             ip_addresses: [172.16.8.116/31]
+            ipv6_addresses: [fda7:65:0:c0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3452
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3453]
             ip_addresses: [172.16.8.118/31]
+            ipv6_addresses: [fda7:65:0:c1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3453
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3454]
             ip_addresses: [172.16.8.120/31]
+            ipv6_addresses: [fda7:65:0:c2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3454
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3455]
             ip_addresses: [172.16.8.122/31]
+            ipv6_addresses: [fda7:65:0:c3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3455
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3456]
             ip_addresses: [172.16.8.124/31]
+            ipv6_addresses: [fda7:65:0:c4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3456
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3457]
             ip_addresses: [172.16.8.126/31]
+            ipv6_addresses: [fda7:65:0:c5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3457
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3458]
             ip_addresses: [172.16.8.128/31]
+            ipv6_addresses: [fda7:65:0:c6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3458
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3459]
             ip_addresses: [172.16.8.130/31]
+            ipv6_addresses: [fda7:65:0:c7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3459
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3460]
             ip_addresses: [172.16.8.132/31]
+            ipv6_addresses: [fda7:65:0:c8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3460
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3461]
             ip_addresses: [172.16.8.134/31]
+            ipv6_addresses: [fda7:65:0:c9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3461
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3462]
             ip_addresses: [172.16.8.136/31]
+            ipv6_addresses: [fda7:65:0:ca::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3462
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3463]
             ip_addresses: [172.16.8.138/31]
+            ipv6_addresses: [fda7:65:0:cb::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3463
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3464]
             ip_addresses: [172.16.8.140/31]
+            ipv6_addresses: [fda7:65:0:cc::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3464
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3465]
             ip_addresses: [172.16.8.142/31]
+            ipv6_addresses: [fda7:65:0:cd::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3465
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3466]
             ip_addresses: [172.16.8.144/31]
+            ipv6_addresses: [fda7:65:0:ce::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3466
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3467]
             ip_addresses: [172.16.8.146/31]
+            ipv6_addresses: [fda7:65:0:cf::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3467
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3468]
             ip_addresses: [172.16.8.148/31]
+            ipv6_addresses: [fda7:65:0:d0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3468
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3469]
             ip_addresses: [172.16.8.150/31]
+            ipv6_addresses: [fda7:65:0:d1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3469
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3470]
             ip_addresses: [172.16.8.152/31]
+            ipv6_addresses: [fda7:65:0:d2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3470
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3471]
             ip_addresses: [172.16.8.154/31]
+            ipv6_addresses: [fda7:65:0:d3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3471
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3472]
             ip_addresses: [172.16.8.156/31]
+            ipv6_addresses: [fda7:65:0:d4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3472
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3473]
             ip_addresses: [172.16.8.158/31]
+            ipv6_addresses: [fda7:65:0:d5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3473
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3474]
             ip_addresses: [172.16.8.160/31]
+            ipv6_addresses: [fda7:65:0:d6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3474
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3475]
             ip_addresses: [172.16.8.162/31]
+            ipv6_addresses: [fda7:65:0:d7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3475
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3476]
             ip_addresses: [172.16.8.164/31]
+            ipv6_addresses: [fda7:65:0:d8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3476
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3477]
             ip_addresses: [172.16.8.166/31]
+            ipv6_addresses: [fda7:65:0:d9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3477
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3478]
             ip_addresses: [172.16.8.168/31]
+            ipv6_addresses: [fda7:65:0:da::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3478
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3479]
             ip_addresses: [172.16.8.170/31]
+            ipv6_addresses: [fda7:65:0:db::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3479
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3480]
             ip_addresses: [172.16.8.172/31]
+            ipv6_addresses: [fda7:65:0:dc::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3480
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3481]
             ip_addresses: [172.16.8.174/31]
+            ipv6_addresses: [fda7:65:0:dd::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3481
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3482]
             ip_addresses: [172.16.8.176/31]
+            ipv6_addresses: [fda7:65:0:de::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3482
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3483]
             ip_addresses: [172.16.8.178/31]
+            ipv6_addresses: [fda7:65:0:df::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3483
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3484]
             ip_addresses: [172.16.8.180/31]
+            ipv6_addresses: [fda7:65:0:e0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3484
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3485]
             ip_addresses: [172.16.8.182/31]
+            ipv6_addresses: [fda7:65:0:e1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3485
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3486]
             ip_addresses: [172.16.8.184/31]
+            ipv6_addresses: [fda7:65:0:e2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3486
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3487]
             ip_addresses: [172.16.8.186/31]
+            ipv6_addresses: [fda7:65:0:e3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3487
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3488]
             ip_addresses: [172.16.8.188/31]
+            ipv6_addresses: [fda7:65:0:e4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3488
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3489]
             ip_addresses: [172.16.8.190/31]
+            ipv6_addresses: [fda7:65:0:e5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3489
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3490]
             ip_addresses: [172.16.8.192/31]
+            ipv6_addresses: [fda7:65:0:e6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3490
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3491]
             ip_addresses: [172.16.8.194/31]
+            ipv6_addresses: [fda7:65:0:e7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3491
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3492]
             ip_addresses: [172.16.8.196/31]
+            ipv6_addresses: [fda7:65:0:e8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3492
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3493]
             ip_addresses: [172.16.8.198/31]
+            ipv6_addresses: [fda7:65:0:e9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3493
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3494]
             ip_addresses: [172.16.8.200/31]
+            ipv6_addresses: [fda7:65:0:ea::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3494
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3495]
             ip_addresses: [172.16.8.202/31]
+            ipv6_addresses: [fda7:65:0:eb::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3495
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3496]
             ip_addresses: [172.16.8.204/31]
+            ipv6_addresses: [fda7:65:0:ec::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3496
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3497]
             ip_addresses: [172.16.8.206/31]
+            ipv6_addresses: [fda7:65:0:ed::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3497
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3498]
             ip_addresses: [172.16.8.208/31]
+            ipv6_addresses: [fda7:65:0:ee::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3498
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3499]
             ip_addresses: [172.16.8.210/31]
+            ipv6_addresses: [fda7:65:0:ef::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3499
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3500]
             ip_addresses: [172.16.8.212/31]
+            ipv6_addresses: [fda7:65:0:f0::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3500
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3501]
             ip_addresses: [172.16.8.214/31]
+            ipv6_addresses: [fda7:65:0:f1::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3501
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3502]
             ip_addresses: [172.16.8.216/31]
+            ipv6_addresses: [fda7:65:0:f2::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3502
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3503]
             ip_addresses: [172.16.8.218/31]
+            ipv6_addresses: [fda7:65:0:f3::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3503
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3504]
             ip_addresses: [172.16.8.220/31]
+            ipv6_addresses: [fda7:65:0:f4::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3504
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3505]
             ip_addresses: [172.16.8.222/31]
+            ipv6_addresses: [fda7:65:0:f5::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3505
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3506]
             ip_addresses: [172.16.8.224/31]
+            ipv6_addresses: [fda7:65:0:f6::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3506
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3507]
             ip_addresses: [172.16.8.226/31]
+            ipv6_addresses: [fda7:65:0:f7::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3507
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3508]
             ip_addresses: [172.16.8.228/31]
+            ipv6_addresses: [fda7:65:0:f8::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3508
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.3509]
             ip_addresses: [172.16.8.230/31]
+            ipv6_addresses: [fda7:65:0:f9::1/64]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-3509
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
@@ -9864,6 +10616,13 @@ tenants:
             # ebgp_multihop: 1
             nodes:
             - smm154
+            remote_as: "65502"
+          172.16.3.19:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - cdv472
             remote_as: "65502"
           172.16.5.1:
             maximum_routes: 0
@@ -15500,6 +16259,8 @@ tenants:
             - Ethernet21/1.2002
             ip_addresses:
             - 172.16.3.0/31
+            ipv6_addresses:
+            - fd00:1::/127
             nodes:
             - smm153
         bgp_peers:

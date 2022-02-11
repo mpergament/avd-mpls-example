@@ -94,7 +94,7 @@ tenants:
             - Ethernet11/4.3001
             - Ethernet33/1.3000
             - Ethernet21/1.2010
-
+            - Ethernet51/1.3000
 
             ip_addresses:
             - 172.16.3.6/31
@@ -104,6 +104,7 @@ tenants:
             - 172.16.3.16/31
             - 172.16.3.12/31
             - 172.16.3.0/31
+            - 172.16.3.18/31
 
             nodes:
             - smm313
@@ -113,6 +114,7 @@ tenants:
             - smm312
             - smm310
             - smm153
+            - cdv472
 {% set bgp_session_count = namespace(value=250) %}
 {% set base_ip = namespace(value="172.16.0.0/20") %}
 {% set base_ipv6 = namespace(value="fda7::0/56") %}
@@ -125,18 +127,22 @@ tenants:
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
 {% endfor %}
 {% set bgp_session_count = namespace(value=500) %}
 {% set base_ip = namespace(value="172.16.0.0/20") %}
+{% set base_ipv6 = namespace(value="fda7:65::0/56") %}
 {% for count in range(250, bgp_session_count.value) %}
           - description: TENANT_B_SITE_3_INTRA_L3VPN
             enabled: true
             interfaces: [Ethernet11/4.{{ 3010 + count }}]
             ip_addresses: [{{ base_ip.value|ansible.netcommon.ipsubnet(31, count+640) }}]
+            ipv6_addresses: [{{ base_ipv6.value|ansible.netcommon.ipsubnet(64, count - 250)|ansible.netcommon.ipaddr('1') }}]
             raw_eos_cli: |
               traffic-policy input EDGE-PROTECTION-CUST-IN-{{ 3010 + count }}
               shape rate 100000 kbps
+              flow-spec ipv4 ipv6
             nodes: [smm153]
 {% endfor %}
 {% set bgp_session_count = namespace(value=250) %}
@@ -186,6 +192,13 @@ tenants:
             # ebgp_multihop: 1
             nodes:
             - smm154
+            remote_as: "65502"
+          172.16.3.19:
+            maximum_routes: 0
+            description: TENANT_B_CPE_SITE3
+            # ebgp_multihop: 1
+            nodes:
+            - cdv472
             remote_as: "65502"
 {%  set ip_count = namespace(value=0) %}
 {%  set octet3 = namespace(value=5) %}
@@ -342,6 +355,8 @@ tenants:
             - Ethernet21/1.2002
             ip_addresses:
             - 172.16.3.0/31
+            ipv6_addresses:
+            - fd00:1::/127
             nodes:
             - smm153
         bgp_peers:
