@@ -44,6 +44,16 @@ tenants:
 {%        set id2_count.value = id2_count.value  + service.ids|length %}
 {%        set total_count.value = total_count.value  + 1 %}
 {%        endfor %}
+      - name: L2-transparent-test
+        type: vpws-pseudowire
+        endpoints:
+          - id: 470
+            nodes: ["cdv470"]
+            interfaces: ["Ethernet50/1"]
+          - id: 313
+            nodes: ["smm313"]
+            interfaces: ["Ethernet11/1"]
+        lldp_disable: true
     vrfs:
 {%        set total_count = namespace(value=0) %}
 {%        for p2mp_id in tenant.p2mp_service_count  %}

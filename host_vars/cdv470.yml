@@ -1,0 +1,4 @@
+---
+il_port_specific_ethernet_interfaces:
+  Ethernet50/1:
+    speed: 40g

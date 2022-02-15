@@ -217,8 +217,9 @@ p:
               !
             interface Ethernet11/1.1011
               encapsulation dot1q vlan 1011
-              ip address unnumbered loopback0
+              ip address 192.168.7.0/31
               isis enable MPLS_UNDERLAY
+              isis bfd
               isis circuit-type level-2
               isis network point-to-point
               isis authentication mode md5
@@ -226,8 +227,9 @@ p:
 
             interface Ethernet11/1.1021
               encapsulation dot1q vlan 1021
-              ip address unnumbered loopback0
+              ip address 192.168.7.4/31
               isis enable MPLS_UNDERLAY
+              isis bfd
               isis circuit-type level-2
               isis network point-to-point
               isis authentication mode md5
@@ -270,8 +272,9 @@ p:
               !
             interface Ethernet11/1.1012
               encapsulation dot1q vlan 1012
-              ip address unnumbered loopback0
+              ip address 192.168.7.2/31
               isis enable MPLS_UNDERLAY
+              isis bfd
               isis circuit-type level-2
               isis network point-to-point
               isis authentication mode md5
@@ -279,8 +282,9 @@ p:
 
             interface Ethernet11/1.1022
               encapsulation dot1q vlan 1022
-              ip address unnumbered loopback0
+              ip address 192.168.7.6/31
               isis enable MPLS_UNDERLAY
+              isis bfd
               isis circuit-type level-2
               isis network point-to-point
               isis authentication mode md5

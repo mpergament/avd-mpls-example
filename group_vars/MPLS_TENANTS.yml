@@ -239,6 +239,16 @@ tenants:
             port_channel:
               mode: active
               short_esi: 0202:0202:0008
+      - name: L2-transparent-test
+        type: vpws-pseudowire
+        endpoints:
+          - id: 470
+            nodes: ["cdv470"]
+            interfaces: ["Ethernet50/1"]
+          - id: 313
+            nodes: ["smm313"]
+            interfaces: ["Ethernet11/1"]
+        lldp_disable: true
     vrfs:
       P2MP_TENANT_A_0:
         vrf_id: 30001
