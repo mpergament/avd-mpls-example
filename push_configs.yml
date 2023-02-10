@@ -1,0 +1,17 @@
+---
+- name: Push configuration
+  hosts: MPLS_FABRIC
+  connection: local
+  gather_facts: false
+  collections:
+    - arista.avd
+    - arista.cvp
+
+  tasks:
+    - name: deploy configuration to device
+      vars:
+        ansible_command_timeout: 1200
+        ansible_connect_timeout: 1200
+      tags: []
+      import_role:
+         name: arista.avd.eos_config_deploy_eapi

@@ -21,40 +21,94 @@ all:
         PE:
           vars:
             type: pe
-          children:
-            SITE1:
-              hosts:
-                pe1:
-                  ansible_host: 10.30.30.101
-                pe2:
-                  ansible_host: 10.30.30.102
-            SITE2:
-              hosts:
-                pe3:
-                  ansible_host: 10.30.30.103
-            SITE3:
-              hosts:
-                pe5:
-                  ansible_host: 10.30.30.105
-            P:
-              vars:
-                type: p
-              hosts:
-                p4:
-                  ansible_host: 10.30.30.104
-                p6:
-                  ansible_host: 10.30.30.106
-            RR:
-              vars:
-                type: rr
-              hosts:
-                rr7:
-                  ansible_host: 10.30.30.107
+          hosts:
+            BAS-PE1:
+              ansible_host: 10.255.51.42
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            BAS-PE2:
+              ansible_host: 10.255.60.125
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            KAU-PE2:
+              ansible_host: 10.255.74.15
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            KAU-PE3-1G:
+              ansible_host: 10.255.86.18
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            KAU-PE4-1G:
+              ansible_host: 10.255.1.196
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            MUN-PE2:
+              ansible_host: 10.255.93.161
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            MUN-PE3-1G:
+              ansible_host: 10.255.48.105
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            MUN-PE4-1G:
+              ansible_host: 10.255.66.236
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
 
+        RR:
+          vars:
+            type: rr
+          hosts:
+            MUN-PE1:
+              ansible_host: 10.255.107.113
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+            KAU-PE1:
+              ansible_host: 10.255.21.196
+              ansible_user: cvpadmin
+              ansible_ssh_pass: cvp123!
+        # CPE:
+        #   vars:
+        #     type: cpe
+        #   hosts:
+        #     BAS-CE2:
+        #       ansible_host: 10.255.66.88
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
+        #     BAS-CE3:
+        #       ansible_host: 10.255.124.129
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
+        #     KAU-CE1:
+        #       ansible_host: 10.255.124.16
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
+        #     KAU-CE2:
+        #       ansible_host: 10.255.2.2
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
+        #     KAU-CE3:
+        #       ansible_host: 10.255.33.79
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
+        #     MUN-CE1:
+        #       ansible_host: 10.255.0.126
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
+        #     MUN-CE2:
+        #       ansible_host: 10.255.95.81
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
+        #     MUN-CE3:
+        #       ansible_host: 10.255.58.77
+        #       ansible_user: cvpadmin
+        #       ansible_ssh_pass: cvp123!
     MPLS_TENANTS:
       children:
         PE:
+        RR:
 
     MPLS_ENDPOINT_CONNECTIONS:
       children:
         PE:
+        RR:
