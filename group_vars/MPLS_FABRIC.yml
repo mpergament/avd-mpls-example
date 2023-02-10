@@ -259,7 +259,7 @@ core_interfaces:
       profile: default_bb_profile
     - nodes: [ KAU-PE4-1G, KAU-PE2]
       id: 12
-      interfaces: [ Ethernet3, Ethernet2 ]
+      interfaces: [ Ethernet3, Ethernet3 ]
       profile: default_bb_profile
     - nodes: [ KAU-PE2, KAU-PE1]
       id: 13
